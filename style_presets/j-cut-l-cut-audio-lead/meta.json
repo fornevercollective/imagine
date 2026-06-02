@@ -1,0 +1,10 @@
+{
+  "slug": "j-cut-l-cut-audio-lead",
+  "display": "J-Cut / L-Cut Audio Lead (Edit Timeline)",
+  "category": "cinematic_genre",
+  "tags": ["edit", "timeline", "audio", "sound-design", "transition"],
+  "best_for": "story flow in sequences, professional edit feel",
+  "notes": "Describe in prompt for multi-shot or imply in single clip pacing.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

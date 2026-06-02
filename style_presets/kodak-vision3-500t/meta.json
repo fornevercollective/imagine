@@ -1,0 +1,10 @@
+{
+  "slug": "kodak-vision3-500t",
+  "display": "Kodak Vision3 500T (Motion Picture)",
+  "category": "film_emulation",
+  "tags": ["kodak", "motion-picture", "cinematic", "lut", "night", "tungsten"],
+  "best_for": "cinematic video, night interiors, feature film look",
+  "notes": "The gold standard 500T negative for modern features.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

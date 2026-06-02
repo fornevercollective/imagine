@@ -1,0 +1,10 @@
+{
+  "slug": "cooke-anamorphic",
+  "display": "Cooke Anamorphic /i Lenses",
+  "category": "cinematic_genre",
+  "tags": ["lens", "anamorphic", "cooke", "distortion", "bokeh"],
+  "best_for": "premium modern anamorphic, beauty in widescreen",
+  "notes": "Warmer, more flattering anamorphic.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

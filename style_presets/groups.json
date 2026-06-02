@@ -13,7 +13,11 @@
     "cinestill-50d",
     "cinestill-800t",
     "ilford-hp5-400-bw",
-    "kodachrome-64"
+    "kodachrome-64",
+    "kodak-vision3-500t",
+    "fuji-eterna-250d",
+    "arri-alexa-logc-to-rec709",
+    "heavy-35mm-film-grain-gate-weave"
   ],
   "pinterest_aesthetic": [
     "cottagecore",
@@ -41,6 +45,15 @@
     "ethereal-fantasy",
     "gritty-documentary",
     "vintage-35mm",
-    "moody-teal-drama"
+    "moody-teal-drama",
+    "bleach-bypass-lut",
+    "teal-orange-hollywood-cc",
+    "panavision-c-series-anamorphic",
+    "cooke-anamorphic",
+    "anamorphic-lens-breathing-flare",
+    "fisheye-extreme-distortion",
+    "j-cut-l-cut-audio-lead",
+    "cross-process-e-6-to-c-41",
+    "day-for-night-lut"
   ]
 }

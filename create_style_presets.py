@@ -365,6 +365,126 @@ PRESETS = [
         "best_for": "dramatic character portraits, interior scenes",
         "notes": "Current 'prestige' TV color science."
     },
+    # === Major Motion Picture Camera LUTs, Film Stocks, Color Correction LUTs ===
+    {
+        "slug": "kodak-vision3-500t",
+        "display": "Kodak Vision3 500T (Motion Picture)",
+        "category": "film_emulation",
+        "tags": ["kodak", "motion-picture", "cinematic", "lut", "night", "tungsten"],
+        "prompt": "shot on Kodak Vision3 500T 35mm motion picture negative film, tungsten balanced, rich blacks, beautiful skin under mixed lighting, fine grain structure when scanned, subtle halation, classic Hollywood night look, color corrected to Rec.709 with modern print emulation LUT",
+        "best_for": "cinematic video, night interiors, feature film look",
+        "notes": "The gold standard 500T negative for modern features."
+    },
+    {
+        "slug": "fuji-eterna-250d",
+        "display": "Fuji Eterna 250D (Motion Picture)",
+        "category": "film_emulation",
+        "tags": ["fuji", "motion-picture", "cinematic", "lut", "daylight"],
+        "prompt": "shot on Fuji Eterna 250D motion picture film, daylight balanced, low contrast cinematic with soft rolloff, excellent highlight handling, fine grain, used in many Asian and European features, natural color science with gentle saturation",
+        "best_for": "day exterior cinematic, soft drama",
+        "notes": "Low-con filmic alternative to Vision3."
+    },
+    {
+        "slug": "arri-alexa-logc-to-rec709",
+        "display": "ARRI Alexa LogC to Rec.709 (Digital Cinema LUT)",
+        "category": "film_emulation",
+        "tags": ["arri", "digital-cinema", "lut", "color-correction", "logc"],
+        "prompt": "ARRI Alexa 35 or Mini LF LogC capture, color corrected with official ARRI LogC to Rec.709 LUT, natural yet cinematic dynamic range, beautiful highlight rolloff, subtle green/magenta bias in shadows controllable, used on countless features and series, clean high-end digital film look with optional film grain overlay",
+        "best_for": "high-end digital cinema, commercials, prestige TV",
+        "notes": "The modern digital 'film' standard."
+    },
+    {
+        "slug": "bleach-bypass-lut",
+        "display": "Bleach Bypass / Skip Bleach LUT",
+        "category": "cinematic_genre",
+        "tags": ["lut", "color-correction", "contrast", "desat", "saving-private-ryan"],
+        "prompt": "bleach bypass film process LUT (or digital emulation), desaturated colors with crushed blacks and lifted grainy highlights, high contrast, silvery sheen on skin and metals, used in Saving Private Ryan, 300, many war and gritty dramas, combined with heavy grain and slight green push in shadows",
+        "best_for": "gritty war, intense drama, high-contrast looks",
+        "notes": "Classic high-contrast desat film effect."
+    },
+    {
+        "slug": "teal-orange-hollywood-cc",
+        "display": "Teal-Orange Hollywood Color Correction LUT",
+        "category": "cinematic_genre",
+        "tags": ["lut", "color-correction", "blockbuster", "teal-orange"],
+        "prompt": "modern blockbuster color correction LUT: cool teal/cyan in shadows and midtones, warm orange in skin and practical highlights, crushed blacks, lifted toe, high contrast, typical of Transformers, Fast & Furious, many 2010s+ tentpoles, often paired with anamorphic flares and heavy VFX polish",
+        "best_for": "action, sci-fi, commercial cinematic",
+        "notes": "The ubiquitous modern tentpole grade."
+    },
+    # === Lens Distortions, Camera Systems, Film Effects ===
+    {
+        "slug": "panavision-c-series-anamorphic",
+        "display": "Panavision C-Series Anamorphic Lenses",
+        "category": "cinematic_genre",
+        "tags": ["lens", "anamorphic", "panavision", "distortion", "flares"],
+        "prompt": "shot on vintage Panavision C-Series anamorphic primes (2.35:1 or 2.39:1), characteristic blue horizontal lens flares on bright sources, oval bokeh, subtle barrel distortion and edge softness, slight focus breathing, filmic breathing on focus pulls, high-end 70s-90s cinema look (used on Star Wars, Blade Runner, many classics), combined with modern clean scan",
+        "best_for": "epic widescreen, anamorphic character, classic Hollywood",
+        "notes": "The iconic anamorphic lens package."
+    },
+    {
+        "slug": "cooke-anamorphic",
+        "display": "Cooke Anamorphic /i Lenses",
+        "category": "cinematic_genre",
+        "tags": ["lens", "anamorphic", "cooke", "distortion", "bokeh"],
+        "prompt": "shot on Cooke Anamorphic /i series lenses, warm golden flares (less blue than Panavision), smooth oval bokeh, gentle distortion, excellent for skin, modern high-end anamorphic with the classic 'Cooke look' of rounded focus falloff, often paired with S4 spherical for mixed packages",
+        "best_for": "premium modern anamorphic, beauty in widescreen",
+        "notes": "Warmer, more flattering anamorphic."
+    },
+    {
+        "slug": "heavy-35mm-film-grain-gate-weave",
+        "display": "Heavy 35mm Film Grain + Gate Weave + Dirt",
+        "category": "film_emulation",
+        "tags": ["film-effect", "grain", "weave", "dirt", "scratches", "analog"],
+        "prompt": "scanned 35mm film print with heavy organic grain (visible even in highlights), natural gate weave (subtle random frame shift), occasional light dirt specks and hair in gate, small scratches on print, film flicker in highlights, slight vertical weave on pans, authentic photochemical film texture (not digital noise overlay)",
+        "best_for": "authentic film look, period, gritty realism",
+        "notes": "Add on top of any stock LUT for real film feel."
+    },
+    {
+        "slug": "anamorphic-lens-breathing-flare",
+        "display": "Anamorphic Lens Breathing + Flares",
+        "category": "cinematic_genre",
+        "tags": ["lens", "breathing", "flare", "distortion", "effect"],
+        "prompt": "strong anamorphic lens characteristics: focus breathing (image size changes on focus pull), horizontal blue or amber flares streaking across frame from practicals/neons, characteristic oval bokeh that stretches in background, edge falloff and mild barrel on wide end, 2x or 1.33x squeeze look even in 16:9 delivery",
+        "best_for": "cinematic lens signature, emotional focus pulls",
+        "notes": "Lens artifact as storytelling tool."
+    },
+    {
+        "slug": "fisheye-extreme-distortion",
+        "display": "Fisheye / Extreme Wide Lens Distortion",
+        "category": "cinematic_genre",
+        "tags": ["lens", "fisheye", "distortion", "wide", "effect"],
+        "prompt": "extreme fisheye or very wide spherical lens (8-15mm equiv), heavy barrel distortion curving straight lines at edges, exaggerated perspective, bulging center, used for disorienting horror, sci-fi POV, or comedic wide shots, often with strong vignetting and chromatic aberration at edges",
+        "best_for": "POV horror, surreal wide, action crash cams",
+        "notes": "Deliberate lens abuse for effect."
+    },
+    # === Film Edit Timeline, Color Correction, Additional Effects ===
+    {
+        "slug": "j-cut-l-cut-audio-lead",
+        "display": "J-Cut / L-Cut Audio Lead (Edit Timeline)",
+        "category": "cinematic_genre",
+        "tags": ["edit", "timeline", "audio", "sound-design", "transition"],
+        "prompt": "cinematic editing style with audio lead: sound from the next scene bleeds in 1-2 seconds before picture cut (J-cut) or picture changes while previous scene audio lingers (L-cut), used for smooth narrative flow or tension, combine with visual match cut on color/action or dissolve, subtle room tone crossfade",
+        "best_for": "story flow in sequences, professional edit feel",
+        "notes": "Describe in prompt for multi-shot or imply in single clip pacing."
+    },
+    {
+        "slug": "cross-process-e-6-to-c-41",
+        "display": "Cross-Process (E-6 to C-41) LUT",
+        "category": "cinematic_genre",
+        "tags": ["lut", "cross-process", "color", "vintage", "effect"],
+        "prompt": "cross-processed film LUT (slide film developed in negative chemistry or vice-versa), wildly shifted colors: greens turn magenta, skin sickly yellow-green, high contrast, crazy saturation in some channels, used in 90s music videos, fashion editorials, Trainspotting style grunge, very experimental and unpredictable",
+        "best_for": "edgy fashion, 90s, surreal color experiments",
+        "notes": "Unpredictable but powerful creative LUT."
+    },
+    {
+        "slug": "day-for-night-lut",
+        "display": "Day for Night / Nuit Américaine LUT",
+        "category": "cinematic_genre",
+        "tags": ["lut", "day-for-night", "effect", "night", "classic"],
+        "prompt": "classic day-for-night film technique LUT: underexposed blue-tinted daylight shot to simulate night, deep shadows, bright moonlit highlights on skin/water, slight fog or haze, used extensively in classic cinema before fast film stocks (e.g. many 60s-70s westerns and horrors), combined with heavy grain and practical 'moon' backlight",
+        "best_for": "period night exteriors on budget, classic technique",
+        "notes": "Historical film production cheat turned aesthetic."
+    },
 ]
 
 def ensure_dir(p: Path):

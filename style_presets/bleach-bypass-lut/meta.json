@@ -1,0 +1,10 @@
+{
+  "slug": "bleach-bypass-lut",
+  "display": "Bleach Bypass / Skip Bleach LUT",
+  "category": "cinematic_genre",
+  "tags": ["lut", "color-correction", "contrast", "desat", "saving-private-ryan"],
+  "best_for": "gritty war, intense drama, high-contrast looks",
+  "notes": "Classic high-contrast desat film effect.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

@@ -12,6 +12,10 @@
       "type": "string",
       "description": "The core subject / character / scene description that stays consistent. The style of each beat is layered on top."
     },
+    "character_ancestry_bible": {
+      "type": "string",
+      "description": "Full filled Ancestry + Anatomy Bible from character_bibles/ancestory/ (face shapes, micro/macro hair by body zone, body proportions with hominin tree relations, subsurface IR tiger stripes, melanin dispersion + irradiance refraction %). Repeat verbatim in every beat's prompt for cross-style consistency. See ancestry_bible_madlibs_template.md."
+    },
     "continuity_notes": {
       "type": "string",
       "description": "Extra instructions for keeping character, clothing, lighting logic, identity consistent across style changes."

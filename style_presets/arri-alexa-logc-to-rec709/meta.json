@@ -1,0 +1,10 @@
+{
+  "slug": "arri-alexa-logc-to-rec709",
+  "display": "ARRI Alexa LogC to Rec.709 (Digital Cinema LUT)",
+  "category": "film_emulation",
+  "tags": ["arri", "digital-cinema", "lut", "color-correction", "logc"],
+  "best_for": "high-end digital cinema, commercials, prestige TV",
+  "notes": "The modern digital 'film' standard.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

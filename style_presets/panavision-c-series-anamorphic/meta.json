@@ -1,0 +1,10 @@
+{
+  "slug": "panavision-c-series-anamorphic",
+  "display": "Panavision C-Series Anamorphic Lenses",
+  "category": "cinematic_genre",
+  "tags": ["lens", "anamorphic", "panavision", "distortion", "flares"],
+  "best_for": "epic widescreen, anamorphic character, classic Hollywood",
+  "notes": "The iconic anamorphic lens package.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "total": 38,
+    "total": 47,
     "categories": [
       "cinematic_genre",
       "film_emulation",
@@ -462,6 +462,84 @@
         "drama",
         "netflix"
       ]
+    },
+    {
+      "slug": "kodak-vision3-500t",
+      "display": "Kodak Vision3 500T (Motion Picture)",
+      "category": "film_emulation",
+      "tags": ["kodak", "motion-picture", "cinematic", "lut", "night", "tungsten"]
+    },
+    {
+      "slug": "fuji-eterna-250d",
+      "display": "Fuji Eterna 250D (Motion Picture)",
+      "category": "film_emulation",
+      "tags": ["fuji", "motion-picture", "cinematic", "lut", "daylight"]
+    },
+    {
+      "slug": "arri-alexa-logc-to-rec709",
+      "display": "ARRI Alexa LogC to Rec.709 (Digital Cinema LUT)",
+      "category": "film_emulation",
+      "tags": ["arri", "digital-cinema", "lut", "color-correction", "logc"]
+    },
+    {
+      "slug": "bleach-bypass-lut",
+      "display": "Bleach Bypass / Skip Bleach LUT",
+      "category": "cinematic_genre",
+      "tags": ["lut", "color-correction", "contrast", "desat", "saving-private-ryan"]
+    },
+    {
+      "slug": "teal-orange-hollywood-cc",
+      "display": "Teal-Orange Hollywood Color Correction LUT",
+      "category": "cinematic_genre",
+      "tags": ["lut", "color-correction", "blockbuster", "teal-orange"]
+    },
+    {
+      "slug": "panavision-c-series-anamorphic",
+      "display": "Panavision C-Series Anamorphic Lenses",
+      "category": "cinematic_genre",
+      "tags": ["lens", "anamorphic", "panavision", "distortion", "flares"]
+    },
+    {
+      "slug": "cooke-anamorphic",
+      "display": "Cooke Anamorphic /i Lenses",
+      "category": "cinematic_genre",
+      "tags": ["lens", "anamorphic", "cooke", "distortion", "bokeh"]
+    },
+    {
+      "slug": "heavy-35mm-film-grain-gate-weave",
+      "display": "Heavy 35mm Film Grain + Gate Weave + Dirt",
+      "category": "film_emulation",
+      "tags": ["film-effect", "grain", "weave", "dirt", "scratches", "analog"]
+    },
+    {
+      "slug": "anamorphic-lens-breathing-flare",
+      "display": "Anamorphic Lens Breathing + Flares",
+      "category": "cinematic_genre",
+      "tags": ["lens", "breathing", "flare", "distortion", "effect"]
+    },
+    {
+      "slug": "fisheye-extreme-distortion",
+      "display": "Fisheye / Extreme Wide Lens Distortion",
+      "category": "cinematic_genre",
+      "tags": ["lens", "fisheye", "distortion", "wide", "effect"]
+    },
+    {
+      "slug": "j-cut-l-cut-audio-lead",
+      "display": "J-Cut / L-Cut Audio Lead (Edit Timeline)",
+      "category": "cinematic_genre",
+      "tags": ["edit", "timeline", "audio", "sound-design", "transition"]
+    },
+    {
+      "slug": "cross-process-e-6-to-c-41",
+      "display": "Cross-Process (E-6 to C-41) LUT",
+      "category": "cinematic_genre",
+      "tags": ["lut", "cross-process", "color", "vintage", "effect"]
+    },
+    {
+      "slug": "day-for-night-lut",
+      "display": "Day for Night / Nuit Américaine LUT",
+      "category": "cinematic_genre",
+      "tags": ["lut", "day-for-night", "effect", "night", "classic"]
     }
   ]
 }

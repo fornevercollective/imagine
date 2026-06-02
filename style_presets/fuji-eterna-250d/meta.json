@@ -1,0 +1,10 @@
+{
+  "slug": "fuji-eterna-250d",
+  "display": "Fuji Eterna 250D (Motion Picture)",
+  "category": "film_emulation",
+  "tags": ["fuji", "motion-picture", "cinematic", "lut", "daylight"],
+  "best_for": "day exterior cinematic, soft drama",
+  "notes": "Low-con filmic alternative to Vision3.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

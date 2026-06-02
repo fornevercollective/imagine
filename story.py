@@ -45,11 +45,14 @@ def load_style_prompt(story_beat: dict) -> str:
 
 def build_beat_prompt(story: dict, beat: dict, base_input_desc: str = "") -> str:
     base = story["base_prompt"]
+    ancestry_bible = story.get("character_ancestry_bible", "").strip()
     style_p = load_style_prompt(beat)
     add = beat.get("prompt_add", "")
     cont = story.get("continuity_notes", "Preserve exact likeness of the main subject across styles.")
 
-    full = f"{base}. {style_p}. {add}. {cont}"
+    # Prepend full ancestry bible (face/body/hair/skin/hominin) for lock-in if provided
+    prefix = f"{ancestry_bible}. " if ancestry_bible else ""
+    full = f"{prefix}{base}. {style_p}. {add}. {cont}"
     if base_input_desc:
         full += f" Reference photo: {base_input_desc}"
     return full.strip()
@@ -70,6 +73,8 @@ def cmd_prepare(args):
     print(f"# STORY PREPARE: {story['title']}")
     print(f"# Genre: {story['genre']} | Arc: {story.get('arc_type')}")
     print(f"# Base subject: {story['base_prompt'][:80]}...")
+    if story.get("character_ancestry_bible"):
+        print(f"# Ancestry Bible: present (full face/body/hair/skin/hominin details prepended to every beat)")
     print(f"# Input ref: {input_path or 'TBD'}")
     print(f"# Beats: {len(story['beats'])} | Target duration: {story.get('total_duration_sec')}s\n")
 

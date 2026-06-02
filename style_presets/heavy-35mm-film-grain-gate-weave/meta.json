@@ -1,0 +1,10 @@
+{
+  "slug": "heavy-35mm-film-grain-gate-weave",
+  "display": "Heavy 35mm Film Grain + Gate Weave + Dirt",
+  "category": "film_emulation",
+  "tags": ["film-effect", "grain", "weave", "dirt", "scratches", "analog"],
+  "best_for": "authentic film look, period, gritty realism",
+  "notes": "Add on top of any stock LUT for real film feel.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

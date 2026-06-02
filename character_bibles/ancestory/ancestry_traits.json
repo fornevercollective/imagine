@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "source": "https://fornevercollective.github.io/ancestory/",
+    "description": "Structured traits for accurate, diverse character bibles in Grok Imagine prompts. Use with the madlibs template in README.md and stories JSONs for hominin-accurate anatomy, skin science, hair, and body morphology. Combine with style_presets/ for full prompt.",
+    "version": "1.0",
+    "usage": "Fill {placeholders} in the Character Bible block. Repeat verbatim for consistency across image/video generations and story beats."
+  },
+  "face_shapes": [
+    "oval (balanced proportions, slightly wider at cheekbones, soft jaw)",
+    "round (soft curves, equal width and length, full cheeks)",
+    "square (strong angular jaw, wide forehead and jawline equal width)",
+    "heart-shaped (wide forehead and cheekbones tapering to pointed chin)",
+    "diamond (high prominent cheekbones, narrow forehead and jaw)",
+    "oblong/rectangular (long face, similar width forehead to jaw, high forehead)",
+    "triangular (narrow forehead widening to strong square jaw)",
+    "inverted triangle (wide forehead and cheekbones, narrow pointed chin)",
+    "pear/teardrop (narrow forehead, wider jaw and full lower face)",
+    "anthropological variants: robust Neanderthal-like with heavy supraorbital ridge and occipital bun; gracile sapiens with high vaulted cranium and reduced brow; archaic Homo erectus with low flat forehead and projecting face"
+  ],
+  "hair": {
+    "scalp_hair": {
+      "texture_types": ["straight (type 1)", "wavy (type 2)", "curly (type 3)", "coily/kinky (type 4)"],
+      "density": ["sparse", "medium", "dense/thick"],
+      "patterns": ["straight fall", "loose waves", "tight curls", "afro volume", "braided", "dreadlocked", "undercut", "slicked", "natural afro"],
+      "color_base": "eumelanin dominant black/brown or pheomelanin red/blonde with dispersion %",
+      "length_and_style": "short cropped, shoulder length, long flowing, tied in specific cultural styles"
+    },
+    "facial_hair": {
+      "micro_fuzz": "vellus peach fuzz across cheeks, upper lip, chin for soft youthful or female presentation; fine vellus on forehead and sideburns",
+      "macro_terminal": "beard growth patterns (full, goatee, mustache, sideburns, patchy), density, curl pattern matching scalp, stubble length for 5-o'clock shadow realism"
+    },
+    "upper_torso_hair": "chest hair density (none to heavy terminal), abdominal trail, shoulder/back micro fuzz vs macro patches",
+    "under_arms": "axillary hair density and length (micro vellus to thick terminal curls), often trimmed or natural per cultural styling",
+    "lower_torso_legs": "leg hair (macro terminal on shins/calves/thighs in males, lighter vellus in many ancestries), pubic hair patterns (triangular, diamond, etc.)",
+    "micro_macro_fuzz_hair_notes": "Distinguish vellus (fine, short, lightly pigmented 'fuzz' covering most body for subtle texture and light refraction) vs terminal (thicker, longer, pigmented 'hair' in androgen-sensitive areas). Include in prompts for subsurface realism and 'natural skin' feel under different lighting/LUTs."
+  },
+  "body_shapes_and_proportions": {
+    "overall_somatotypes_and_anthropological": [
+      "ectomorph: tall, lean, long limbs, narrow frame (common in equatorial Nilotic ancestries, high crural index from hominin savanna adaptations)",
+      "mesomorph: athletic, broad shoulders, muscular torso, balanced (many Eurasian and recent admixture builds)",
+      "endomorph: softer, wider hips/waist, higher body fat storage capacity (adaptations in certain cold or feast-famine hominin lines)",
+      "steatopygous: pronounced gluteal fat deposits (Khoisan and some African ancestries, evolutionary fat storage)",
+      "robust archaic: short stature, barrel chest, thick bones, short limbs (Neanderthal-derived)",
+      "gracile modern: slender build, long legs relative to torso (Out-of-Africa sapiens)"
+    ],
+    "upper_torso": "shoulder width vs hip ratio, pectoral development, ribcage flare, waist taper, latissimus/upper back width; male vs female dimorphism in shoulder girdle",
+    "lower_torso": "hip width (wide for childbirth in sapiens females), glute shape (round, square, heart), thigh thickness, calf definition, leg length proportion to torso (intermembral index variations across hominin tree)",
+    "limb_details": "arm length/forearm vs upper arm, hand/foot size relative, joint prominence (knobby vs smooth from ancestry/activity)"
+  },
+  "styling_and_presentation": {
+    "hair_styling": "culturally specific (cornrows, locs, topknot, shaved patterns, oiled and slicked for reflectance)",
+    "body_styling": "groomed vs natural body hair (shaved underarms/legs for smooth subsurface show, or retained for texture), skin treatments (oiled for sheen and refraction, ashen for dry look), posture and muscle tone from lifestyle (hunter-gatherer lean vs agricultural stocky)",
+    "relation_to_clothing": "how body shape interacts with draping fabric, muscle/fat distribution affecting silhouette under period or modern styling"
+  },
+  "hominin_tree_relation": {
+    "description": "Specify admixture percentages and trait expression for genetic 'realism' and diversity. Tie physical features back to evolutionary branches for prompt accuracy and to avoid generic 'diverse' descriptions.",
+    "examples": [
+      "85% recent Homo sapiens sapiens (East African origin) + 15% Neanderthal introgression: manifests as robust brow ridge contribution, slightly receding forehead, thicker nasal bridge, higher muscle mass potential, cold-climate skin adaptations with lower eumelanin baseline but high dispersion capability",
+      "95%+ Homo sapiens with minimal archaic: high forehead, gracile face, variable skin melanin calibrated to latitude (high % for equatorial UV protection with dense basal layer packing)",
+      "Denisovan admixture (2-5% in some Oceanian/Asian lines): adaptations for high altitude/UV including altered skin vascularity and melanin patterning, contributing to unique subsurface light behavior",
+      "Multi-way admixture (e.g. 70% West African + 20% European + 10% East Asian): blended face shapes, hair textures, body proportions reflecting reticulate evolution on the hominin tree"
+    ],
+    "use_in_prompts": "Add as suffix or integrated: '... with {X}% {hominin branch} ancestry expressing as {specific visible traits like brow, limb proportions, melanin distribution}'"
+  },
+  "skin_science_subsurface": {
+    "sub_surface_ir_tiger_stripes": "subsurface scattering (SSS) with visible 'tiger stripe' patterning (melanin bands or vascular Blaschko-like lines) enhanced in side/raking light or simulated IR; {percentage}% of irradiance penetrates epidermis to scatter in dermis creating soft glow and depth; stripes more pronounced in certain ancestries with dispersed melanin clusters",
+    "melanin_dispersion_and_refraction_of_irradiance_percentage": "Eumelanin (brown-black) and pheomelanin (red-yellow) dispersed in stratum basale and spinosum layers at {X}% density for Fitzpatrick skin type; irradiance refraction/absorption: fair skin ~55-65% reflectance with high SSS glow, medium ~30-45%, deep skin ~10-20% reflectance but rich subsurface color from multiple scattering; add 'tiger striping' for micro-variation and realism under film LUTs (e.g. '35% subsurface irradiance refraction with faint tiger-stripe melanin dispersion visible on collarbones and temples in golden hour side light')",
+    "additional_skin_details": "pore size/density varying by ancestry and body area, skin thickness (thinner on eyelids, thicker on soles), undertones (blue/pink/yellow/green from blood/ melanin), reaction to light (sheen on high oil, matte on dry, iridescent in certain admixtures)"
+  }
+}

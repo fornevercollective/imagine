@@ -1,0 +1,16 @@
+{
+  "slug": "cybercore",
+  "display": "Cybercore",
+  "category": "pinterest_aesthetic",
+  "tags": [
+    "pinterest",
+    "cyber",
+    "tech",
+    "neon",
+    "futuristic"
+  ],
+  "best_for": "fashion tech, futuristic portraits, night urban",
+  "notes": "More fashion focused than full cyberpunk.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

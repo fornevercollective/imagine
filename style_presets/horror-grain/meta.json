@@ -1,0 +1,16 @@
+{
+  "slug": "horror-grain",
+  "display": "Horror / Desaturated Grain",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "horror",
+    "grain",
+    "desaturated",
+    "eerie"
+  ],
+  "best_for": "eerie portraits, dark scenes, tension",
+  "notes": "Creepy, skin looks unhealthy, dread inducing.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

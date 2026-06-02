@@ -1,0 +1,46 @@
+{
+  "film_emulation": [
+    "kodak-portra-400",
+    "kodak-ektar-100",
+    "kodak-gold-200",
+    "kodak-ultramax-400",
+    "kodak-tri-x-400-bw",
+    "fuji-velvia-50",
+    "fuji-superia-400",
+    "fuji-pro-400h",
+    "fuji-acros-100-bw",
+    "fuji-eterna-500",
+    "cinestill-50d",
+    "cinestill-800t",
+    "ilford-hp5-400-bw",
+    "kodachrome-64"
+  ],
+  "pinterest_aesthetic": [
+    "cottagecore",
+    "dark-academia",
+    "light-academia",
+    "fairycore",
+    "old-money-aesthetic",
+    "clean-girl",
+    "y2k-aesthetic",
+    "cybercore",
+    "grunge-90s",
+    "barbiecore"
+  ],
+  "cinematic_genre": [
+    "film-noir",
+    "neo-noir",
+    "cyberpunk-neon",
+    "teal-orange-blockbuster",
+    "western-sepia",
+    "horror-grain",
+    "dune-sci-fi",
+    "golden-hour-romance",
+    "vhs-80s",
+    "anamorphic-cinematic",
+    "ethereal-fantasy",
+    "gritty-documentary",
+    "vintage-35mm",
+    "moody-teal-drama"
+  ]
+}

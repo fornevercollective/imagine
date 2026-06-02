@@ -1,0 +1,90 @@
+{
+  "title": "Dusk to Neon: The Fade",
+  "genre": "neo-noir to cyberpunk transformation",
+  "arc_type": "3-act",
+  "base_prompt": "a solitary young woman with sharp features, long dark coat, short black hair with a silver streak, standing in an empty urban street at transition from day to night, carrying a small mysterious package, cinematic character study, preserve exact face, body type, clothing details, and expression across all shots",
+  "continuity_notes": "Keep the woman's face, silver streak in hair, coat shape and buttons, the package, and general pose consistent. Use previous output as strong reference image when moving to next style. Only the color grade, grain, lighting mood, and world details should change dramatically with each style.",
+  "total_duration_sec": 72,
+  "beats": [
+    {
+      "beat_id": "act1_opening",
+      "name": "The Last Warm Light",
+      "style_slug": "kodak-portra-400",
+      "source": "presets",
+      "duration_sec": 10,
+      "narrative_beat": "Setup / Ordinary World. Introduce the character and quiet moment before everything changes. Warm, human, vulnerable.",
+      "prompt_add": "gentle golden hour side light fading, soft wind moving her hair and coat hem, she looks down at the package with quiet curiosity, very subtle handheld feel, filmic breathing, establishing the real world before the fall",
+      "transition": "slow push in from wide to medium as light starts to cool",
+      "ref_strategy": "base_photo"
+    },
+    {
+      "beat_id": "act1_inciting",
+      "name": "The Shadow Falls",
+      "style_slug": "dark-academia",
+      "source": "presets",
+      "duration_sec": 8,
+      "narrative_beat": "Inciting Incident. First hint of the mystery / darker world. The light dies, scholarly/old world mood takes over.",
+      "prompt_add": "the sky darkens quickly into stormy twilight, long shadows from unseen buildings, she pulls coat tighter, first rain drops, package seems to glow faintly, moody window light from a distant library or old building, increasing tension",
+      "transition": "match cut on the package + color temperature drop into rich browns and deep greens",
+      "ref_strategy": "previous_image"
+    },
+    {
+      "beat_id": "act2_rising",
+      "name": "Rain and Memory",
+      "style_slug": "neo-noir",
+      "source": "presets",
+      "duration_sec": 10,
+      "narrative_beat": "Rising Action. The world turns dangerous and stylish. Urban noir rain, reflections, the package becomes important.",
+      "prompt_add": "heavy cold rain, wet pavement reflections of sodium streetlights, she walks with purpose now, coat collar up, neon sign flickers in background reflecting in puddles, cigarette smoke or steam, high contrast, classic detective mood, camera tracks beside her",
+      "transition": "rain intensifies with a slow dolly move, color shifts to desaturated with red accent on package",
+      "ref_strategy": "previous_image"
+    },
+    {
+      "beat_id": "act2_crisis",
+      "name": "The Glitch",
+      "style_slug": "cyberpunk-neon",
+      "source": "presets",
+      "duration_sec": 12,
+      "narrative_beat": "Crisis / Midpoint twist. Reality fractures. The street becomes future, tech intrudes, the package reacts.",
+      "prompt_add": "the world glitches into dense cyberpunk night: holographic kanji and ads flicker over the old buildings, heavy rain + neon magenta/cyan reflections everywhere, the package emits soft digital light and particles, her eyes catch reflections of code, anamorphic flares, she looks around in alarm as the city transforms around her, dynamic handheld + slight push in",
+      "transition": "aggressive style bleed + digital glitch transition on the package opening slightly",
+      "ref_strategy": "previous_image"
+    },
+    {
+      "beat_id": "act3_climax",
+      "name": "The Choice in the Light",
+      "style_slug": "teal-orange-blockbuster",
+      "source": "presets",
+      "duration_sec": 10,
+      "narrative_beat": "Climax. Big emotional / action beat. High stakes cinematic. She makes the decision with the package.",
+      "prompt_add": "epic scale even on a single character: dramatic teal shadows, orange rim light from a giant unseen light source or explosion in distance, wind and rain whipping dramatically, she holds the package up to the light, intense close-up to wide heroic framing, anamorphic lens flares, high contrast blockbuster energy, determination on her face",
+      "transition": "big swell, color punch into teal-orange, slow motion elements on rain and hair",
+      "ref_strategy": "previous_image"
+    },
+    {
+      "beat_id": "act3_resolution",
+      "name": "After the Neon",
+      "style_slug": "golden-hour-romance",
+      "source": "presets",
+      "duration_sec": 8,
+      "narrative_beat": "Resolution / New Equilibrium. After the storm, a strange peace or bittersweet new reality. Warm but changed.",
+      "prompt_add": "the storm passes, first warm golden light breaks through the clouds and neon haze, steam rises, she stands alone in the middle of the now-quiet street, package is open or transformed subtly, soft glowing backlight wraps her, gentle wind, a single tear or small smile, resolution with lingering questions, very soft romantic drama color and focus, final slow push or crane up as credits feel",
+      "transition": "long cross dissolve + color temperature warming, last neon reflections fade to gold",
+      "ref_strategy": "previous_image"
+    },
+    {
+      "beat_id": "tag",
+      "name": "The Package Remains",
+      "style_slug": "vintage-35mm",
+      "source": "presets",
+      "duration_sec": 6,
+      "narrative_beat": "Final image / stinger. Memory / aftermath. Slight aged film print feeling.",
+      "prompt_add": "final static or very slow push on her silhouette against the now calm street, the package on the wet ground or in her hands, faded vintage 35mm print look, slight film weave and grain, one last warm highlight, the feeling that this has all happened before or will happen again, quiet poetic close",
+      "transition": "fade to the aged print look, hold on final frame",
+      "ref_strategy": "previous_image"
+    }
+  ],
+  "audio_notes": "Native Imagine video audio: start with soft rain + distant city hum + subtle emotional piano or strings (warm acoustic in first beats). Build tension with low synth drone and increasing rain intensity + distant thunder in crisis/climax. Neon section gets electronic pulse + distorted radio chatter. Resolution returns to warm acoustic guitar + rain softening. Final tag almost silent with only very distant city and soft reverb. Voiceover optional: the woman whispering one line at the package in the last beat.",
+  "output_target": "stories/outputs/dusk-to-neon-full.mp4",
+  "notes": "Example of flowing one character through many visual styles while telling a complete mini story arc. Use strong image reference chaining for face/coat/package consistency. Generate each beat's video clip individually then concat with crossfades in post (or ask Grok to help assemble)."
+}

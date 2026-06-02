@@ -1,0 +1,16 @@
+{
+  "slug": "vintage-35mm",
+  "display": "Vintage 35mm Film Fade",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "vintage",
+    "35mm",
+    "fade",
+    "grain"
+  ],
+  "best_for": "period pieces, nostalgia, emotional memory",
+  "notes": "Aged film print degradation.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

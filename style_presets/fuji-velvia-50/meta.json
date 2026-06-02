@@ -1,0 +1,16 @@
+{
+  "slug": "fuji-velvia-50",
+  "display": "Fuji Velvia 50",
+  "category": "film_emulation",
+  "tags": [
+    "fuji",
+    "vsco",
+    "saturated",
+    "landscape",
+    "vivid"
+  ],
+  "best_for": "nature, travel, bold color, scenery",
+  "notes": "Most saturated film stock. Great for epic landscapes.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

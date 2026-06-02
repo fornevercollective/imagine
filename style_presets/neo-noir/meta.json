@@ -1,0 +1,16 @@
+{
+  "slug": "neo-noir",
+  "display": "Neo-Noir",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "noir",
+    "color",
+    "rain",
+    "urban"
+  ],
+  "best_for": "moody urban portraits, night rain, thriller",
+  "notes": "Color evolution of classic noir.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

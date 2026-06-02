@@ -1,0 +1,16 @@
+{
+  "slug": "anamorphic-cinematic",
+  "display": "Anamorphic Cinematic",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "anamorphic",
+    "lens",
+    "flares",
+    "widescreen"
+  ],
+  "best_for": "any cinematic, adds instant production value",
+  "notes": "Lens characteristics more than color grade. Combine with others.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

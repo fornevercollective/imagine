@@ -1,0 +1,16 @@
+{
+  "slug": "film-noir",
+  "display": "Film Noir",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "bw",
+    "noir",
+    "dramatic",
+    "shadows"
+  ],
+  "best_for": "dramatic B&W portraits, mystery, shadows",
+  "notes": "The original cinematic B&W look.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

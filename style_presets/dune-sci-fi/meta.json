@@ -1,0 +1,16 @@
+{
+  "slug": "dune-sci-fi",
+  "display": "Dune Sci-Fi Epic",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "sci-fi",
+    "desert",
+    "epic",
+    "denis"
+  ],
+  "best_for": "epic wide shots, sci-fi portraits, grand scale",
+  "notes": "Modern epic sci-fi reference (Dune 2021/24).",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "ilford-hp5-400-bw",
+  "display": "Ilford HP5 Plus 400 (B&W)",
+  "category": "film_emulation",
+  "tags": [
+    "ilford",
+    "bw",
+    "vsco",
+    "versatile",
+    "grain"
+  ],
+  "best_for": "street photography, documentary, dramatic B&W",
+  "notes": "Workhorse B&W film.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

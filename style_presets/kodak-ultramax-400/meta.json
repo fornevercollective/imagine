@@ -1,0 +1,15 @@
+{
+  "slug": "kodak-ultramax-400",
+  "display": "Kodak Ultramax 400",
+  "category": "film_emulation",
+  "tags": [
+    "kodak",
+    "vsco",
+    "everyday",
+    "grainy"
+  ],
+  "best_for": "street, travel, all purpose",
+  "notes": "Modern everyday Kodak stock.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "fuji-acros-100-bw",
+  "display": "Fuji Acros 100 (B&W)",
+  "category": "film_emulation",
+  "tags": [
+    "fuji",
+    "bw",
+    "vsco",
+    "fine-grain",
+    "portrait"
+  ],
+  "best_for": "fine art, architecture, delicate portraits",
+  "notes": "One of the finest grain B&W films.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

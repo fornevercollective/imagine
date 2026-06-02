@@ -1,0 +1,15 @@
+{
+  "slug": "teal-orange-blockbuster",
+  "display": "Teal Orange Blockbuster",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "teal-orange",
+    "hollywood",
+    "action"
+  ],
+  "best_for": "epic portraits, action, commercial cinematic",
+  "notes": "The most overused (but effective) modern cinematic grade.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

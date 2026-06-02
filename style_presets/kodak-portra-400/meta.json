@@ -1,0 +1,17 @@
+{
+  "slug": "kodak-portra-400",
+  "display": "Kodak Portra 400",
+  "category": "film_emulation",
+  "tags": [
+    "kodak",
+    "vsco",
+    "portrait",
+    "natural",
+    "warm",
+    "film"
+  ],
+  "best_for": "portraits, people, soft natural light, lifestyle",
+  "notes": "Classic VSCO favorite. Flattering, low contrast, creamy.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

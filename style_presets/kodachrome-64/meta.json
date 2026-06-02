@@ -1,0 +1,16 @@
+{
+  "slug": "kodachrome-64",
+  "display": "Kodachrome 64",
+  "category": "film_emulation",
+  "tags": [
+    "kodak",
+    "slide",
+    "vintage",
+    "saturated",
+    "iconic"
+  ],
+  "best_for": "iconic vintage color, travel, documentary",
+  "notes": "The most famous slide film ever.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

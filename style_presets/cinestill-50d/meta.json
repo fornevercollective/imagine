@@ -1,0 +1,15 @@
+{
+  "slug": "cinestill-50d",
+  "display": "Cinestill 50D",
+  "category": "film_emulation",
+  "tags": [
+    "cinestill",
+    "cinematic",
+    "halations",
+    "daylight"
+  ],
+  "best_for": "cinematic portraits, golden hour, night lights with glow",
+  "notes": "Popular 'movie film' look with signature halation.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

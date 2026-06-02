@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Imagine Story Arc",
+  "description": "Defines a narrative video that flows through multiple visual styles / LUT presets with thematic beats and story structure. Used to generate or assemble a coherent multi-style video from one or more base images.",
+  "type": "object",
+  "required": ["title", "genre", "base_prompt", "beats"],
+  "properties": {
+    "title": { "type": "string" },
+    "genre": { "type": "string", "description": "e.g. neo-noir-transformation, coming-of-age-sci-fi" },
+    "arc_type": { "type": "string", "enum": ["3-act", "heros-journey", "5-act", "custom"], "default": "3-act" },
+    "base_prompt": {
+      "type": "string",
+      "description": "The core subject / character / scene description that stays consistent. The style of each beat is layered on top."
+    },
+    "continuity_notes": {
+      "type": "string",
+      "description": "Extra instructions for keeping character, clothing, lighting logic, identity consistent across style changes."
+    },
+    "total_duration_sec": { "type": "number", "default": 60 },
+    "beats": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["beat_id", "name", "style_slug", "source", "duration_sec", "narrative_beat", "prompt_add"],
+        "properties": {
+          "beat_id": { "type": "string", "description": "e.g. act1_opening, climax" },
+          "name": { "type": "string", "description": "Human label e.g. The Arrival" },
+          "style_slug": { "type": "string", "description": "slug from featured_templates/ or style_presets/" },
+          "source": { "type": "string", "enum": ["featured", "presets"] },
+          "duration_sec": { "type": "number", "minimum": 3, "maximum": 20 },
+          "narrative_beat": {
+            "type": "string",
+            "description": "The story moment this beat represents (setup, inciting incident, rising action, crisis, climax, resolution, etc.)"
+          },
+          "prompt_add": {
+            "type": "string",
+            "description": "Additional motion, camera, action, mood, or thematic instruction for this specific beat. Will be combined with base_prompt + style's own prompt."
+          },
+          "transition": {
+            "type": "string",
+            "description": "How to transition into this beat visually (e.g. slow cross dissolve, whip pan, match cut on color, style bleed)"
+          },
+          "ref_strategy": {
+            "type": "string",
+            "enum": ["base_photo", "previous_clip_last_frame", "previous_image"],
+            "default": "base_photo",
+            "description": "What to use as image reference for consistency when generating this beat's clip."
+          }
+        }
+      }
+    },
+    "audio_notes": {
+      "type": "string",
+      "description": "Suggestions for native Imagine audio or post: score, voiceover, SFX that follow the arc."
+    },
+    "output_target": {
+      "type": "string",
+      "description": "Where the final stitched or described video should live, e.g. stories/outputs/dusk-to-neon.mp4"
+    }
+  }
+}

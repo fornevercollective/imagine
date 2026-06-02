@@ -1,0 +1,16 @@
+{
+  "slug": "cinestill-800t",
+  "display": "Cinestill 800T",
+  "category": "film_emulation",
+  "tags": [
+    "cinestill",
+    "cinematic",
+    "night",
+    "tungsten",
+    "halations"
+  ],
+  "best_for": "night scenes, neon, urban, moody cinematic",
+  "notes": "The go-to for cinematic night + neon glows.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

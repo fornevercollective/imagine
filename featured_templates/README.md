@@ -1,8 +1,12 @@
-# Grok Imagine Featured Templates
+# Grok Imagine Featured Templates (subset)
 
-Folders for all current **Featured Templates** from [grok.com/imagine](https://grok.com/imagine).
+The 23 official templates from grok.com/imagine.
 
-Use this to quickly iterate one photo + prompt across **all styles**, collecting outputs into per-template `img/` and `vid/` subfolders.
+**Prefer the root `sweep.py` and `style_presets/` for most work** — they give you way more granular VSCO/film/Pinterest/cinematic control + story arcs.
+
+This subdir is kept for direct "one-click template" usage in the Grok UI and for legacy compatibility.
+
+Use `python ../sweep.py prepare --source featured ...` from the project root for unified batching that also includes the extended presets.
 
 ## Structure
 

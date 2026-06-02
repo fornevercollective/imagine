@@ -1,0 +1,16 @@
+{
+  "slug": "moody-teal-drama",
+  "display": "Moody Teal Drama",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "teal",
+    "moody",
+    "drama",
+    "netflix"
+  ],
+  "best_for": "dramatic character portraits, interior scenes",
+  "notes": "Current 'prestige' TV color science.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

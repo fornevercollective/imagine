@@ -1,0 +1,16 @@
+{
+  "slug": "golden-hour-romance",
+  "display": "Golden Hour Romance",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "romance",
+    "warm",
+    "golden",
+    "soft"
+  ],
+  "best_for": "romance, couples, beauty in warm light",
+  "notes": "The most flattering cinematic for people.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

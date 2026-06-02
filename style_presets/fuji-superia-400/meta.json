@@ -1,0 +1,16 @@
+{
+  "slug": "fuji-superia-400",
+  "display": "Fuji Superia 400",
+  "category": "film_emulation",
+  "tags": [
+    "fuji",
+    "vsco",
+    "90s",
+    "consumer",
+    "grain"
+  ],
+  "best_for": "90s nostalgia, street, candid",
+  "notes": "Popular 90s point-and-shoot film.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

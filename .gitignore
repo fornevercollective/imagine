@@ -1,0 +1,32 @@
+# Generated media (uncomment if you want to track specific outputs)
+# *.mp4
+# *.mov
+# *.jpg
+# *.jpeg
+# *.png
+# *.webp
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large or temp
+*.log
+outputs/
+style_presets/*/img/*
+style_presets/*/vid/*
+!style_presets/*/img/.gitkeep
+!style_presets/*/vid/.gitkeep
+
+featured_templates/*/img/*
+featured_templates/*/vid/*
+!featured_templates/*/img/.gitkeep
+!featured_templates/*/vid/.gitkeep
+
+stories/outputs/*
+!stories/outputs/.gitkeep

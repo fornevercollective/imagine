@@ -1,0 +1,16 @@
+{
+  "slug": "vhs-80s",
+  "display": "VHS 80s / Lo-fi",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "vhs",
+    "80s",
+    "lofi",
+    "analog"
+  ],
+  "best_for": "80s nostalgia, retro video, lo-fi music video",
+  "notes": "Analog video degradation as aesthetic.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

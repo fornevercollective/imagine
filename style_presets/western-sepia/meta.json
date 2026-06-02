@@ -1,0 +1,16 @@
+{
+  "slug": "western-sepia",
+  "display": "Western Sepia / Dusty",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "western",
+    "sepia",
+    "dusty",
+    "vintage"
+  ],
+  "best_for": "western, desert, rugged portraits, period",
+  "notes": "Ties into existing Spaghetti Western featured template.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

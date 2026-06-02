@@ -1,0 +1,16 @@
+{
+  "slug": "kodak-gold-200",
+  "display": "Kodak Gold 200",
+  "category": "film_emulation",
+  "tags": [
+    "kodak",
+    "vsco",
+    "vintage",
+    "warm",
+    "90s"
+  ],
+  "best_for": "vintage, summer, candid, family photos",
+  "notes": "Iconic warm consumer film look.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

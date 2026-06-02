@@ -1,0 +1,16 @@
+{
+  "slug": "kodak-ektar-100",
+  "display": "Kodak Ektar 100",
+  "category": "film_emulation",
+  "tags": [
+    "kodak",
+    "vsco",
+    "saturated",
+    "vibrant",
+    "landscape"
+  ],
+  "best_for": "landscapes, color pop, product, fashion",
+  "notes": "Punchier, more saturated than Portra.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

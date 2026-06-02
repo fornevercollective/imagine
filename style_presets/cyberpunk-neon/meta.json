@@ -1,0 +1,16 @@
+{
+  "slug": "cyberpunk-neon",
+  "display": "Cyberpunk Neon",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "cyberpunk",
+    "neon",
+    "night",
+    "future"
+  ],
+  "best_for": "night futuristic, neon portraits, sci-fi action",
+  "notes": "The ultimate neon rain cyber look.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

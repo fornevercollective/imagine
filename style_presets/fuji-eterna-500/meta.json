@@ -1,0 +1,15 @@
+{
+  "slug": "fuji-eterna-500",
+  "display": "Fuji Eterna 500",
+  "category": "film_emulation",
+  "tags": [
+    "fuji",
+    "cinematic",
+    "movie",
+    "low-contrast"
+  ],
+  "best_for": "cinematic video stills, narrative, low contrast beauty",
+  "notes": "Real movie film stock. Perfect base for video too.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

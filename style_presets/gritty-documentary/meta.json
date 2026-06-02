@@ -1,0 +1,16 @@
+{
+  "slug": "gritty-documentary",
+  "display": "Gritty Documentary",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "documentary",
+    "gritty",
+    "natural",
+    "handheld"
+  ],
+  "best_for": "realism, street, interview style, authentic",
+  "notes": "Anti-glamour, truth seeking look.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

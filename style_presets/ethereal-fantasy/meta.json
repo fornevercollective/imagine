@@ -1,0 +1,16 @@
+{
+  "slug": "ethereal-fantasy",
+  "display": "Ethereal Fantasy",
+  "category": "cinematic_genre",
+  "tags": [
+    "cinematic",
+    "fantasy",
+    "ethereal",
+    "glow",
+    "soft"
+  ],
+  "best_for": "fantasy portraits, magical scenes, beauty",
+  "notes": "Soft magical glow fantasy.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

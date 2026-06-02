@@ -1,0 +1,16 @@
+{
+  "slug": "kodak-tri-x-400-bw",
+  "display": "Kodak Tri-X 400 (B&W)",
+  "category": "film_emulation",
+  "tags": [
+    "kodak",
+    "bw",
+    "vsco",
+    "grain",
+    "classic"
+  ],
+  "best_for": "dramatic portraits, street, documentary",
+  "notes": "The classic B&W film grain king.",
+  "source": "extended_preset_for_grok_imagine",
+  "version": "1.0"
+}

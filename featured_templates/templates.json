@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "source": "https://grok.com/imagine",
+    "last_updated": "2026-06-02",
+    "count": 23,
+    "note": "Featured Templates section. Use for consistent photo-to-style sweeps."
+  },
+  "templates": [
+    {
+      "slug": "chibi",
+      "display": "Chibi",
+      "category": "style",
+      "notes": "Cute exaggerated cartoon style, popular for characters."
+    },
+    {
+      "slug": "professional-headshot",
+      "display": "Professional Headshot",
+      "category": "portrait",
+      "notes": "Clean studio portrait, corporate / profile photo look."
+    },
+    {
+      "slug": "logo-editor",
+      "display": "Logo Editor",
+      "category": "graphic",
+      "notes": "For logo concepts, icons, branding from photo or text."
+    },
+    {
+      "slug": "70s-street-style",
+      "display": "70s Street Style",
+      "category": "fashion",
+      "notes": "Retro 1970s fashion, street photography vibe."
+    },
+    {
+      "slug": "quality-enhancer",
+      "display": "Quality Enhancer",
+      "category": "enhance",
+      "notes": "Upscale / polish / detail boost. Good base refiner."
+    },
+    {
+      "slug": "comic-book",
+      "display": "Comic Book",
+      "category": "style",
+      "notes": "Bold comic / graphic novel illustration style."
+    },
+    {
+      "slug": "object-remover",
+      "display": "Object Remover",
+      "category": "edit",
+      "notes": "Inpainting / removal tool. Prompt what to remove."
+    },
+    {
+      "slug": "product-showcase",
+      "display": "Product Showcase",
+      "category": "product",
+      "notes": "Clean product photography presentation."
+    },
+    {
+      "slug": "glossy-product-shot",
+      "display": "Glossy Product Shot",
+      "category": "product",
+      "notes": "High-end glossy / reflective product render."
+    },
+    {
+      "slug": "80s-anime",
+      "display": "80s Anime",
+      "category": "style",
+      "notes": "Retro 1980s anime / cel animation aesthetic."
+    },
+    {
+      "slug": "watercolor-portrait",
+      "display": "Watercolor Portrait",
+      "category": "style",
+      "notes": "Soft watercolor painting style, good for portraits."
+    },
+    {
+      "slug": "video-game",
+      "display": "Video Game",
+      "category": "style",
+      "notes": "Video game character / screenshot / render style."
+    },
+    {
+      "slug": "3d-animation",
+      "display": "3D Animation",
+      "category": "style",
+      "notes": "3D CGI / Pixar-like animation look."
+    },
+    {
+      "slug": "spaghetti-western",
+      "display": "Spaghetti Western",
+      "category": "style",
+      "notes": "Classic western movie, dusty, cinematic, Sergio Leone vibe."
+    },
+    {
+      "slug": "haze-portrait",
+      "display": "Haze Portrait",
+      "category": "portrait",
+      "notes": "Dreamy / hazy / soft focus portrait lighting."
+    },
+    {
+      "slug": "funky-dance",
+      "display": "Funky Dance",
+      "category": "motion",
+      "notes": "Energetic dance motion, great for photo-to-video animation."
+    },
+    {
+      "slug": "future-past",
+      "display": "Future Past",
+      "category": "style",
+      "notes": "Retro-futuristic blend, synthwave / 80s sci-fi mixed with vintage."
+    },
+    {
+      "slug": "roman-empire",
+      "display": "Roman Empire",
+      "category": "style",
+      "notes": "Ancient Roman aesthetic, togas, marble, epic historical."
+    },
+    {
+      "slug": "ad-astra",
+      "display": "Ad Astra",
+      "category": "style",
+      "notes": "Space / cosmic / astronaut epic journey feel."
+    },
+    {
+      "slug": "add-girlfriend",
+      "display": "Add Girlfriend",
+      "category": "edit",
+      "notes": "Composite / add a partner figure into scene (use carefully)."
+    },
+    {
+      "slug": "future-family",
+      "display": "Future Family",
+      "category": "edit",
+      "notes": "Family scene generation or aging / future vision composites."
+    },
+    {
+      "slug": "laser-fight",
+      "display": "Laser Fight",
+      "category": "action",
+      "notes": "Sci-fi action, lasers, dynamic fight choreography (video strong)."
+    },
+    {
+      "slug": "sunny-morning",
+      "display": "Sunny Morning",
+      "category": "mood",
+      "notes": "Bright warm morning light, cheerful natural vibe."
+    }
+  ]
+}

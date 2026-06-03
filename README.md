@@ -1,3 +1,20 @@
+**Output : Grok SuperHeavy**
+
+<div align="center">
+<img src="assets/composites/superheavy-original-vs-text-medium-format.jpg" alt="Grok SuperHeavy medium format side-by-side: left original real watercolor portrait reference, right the version generated purely from the character text ancestry bible (no photo ref)" width="860">
+</div>
+
+**Left:** Original provided watercolor portrait reference (from `IMG_2166.jp2`).  
+**Right:** The image created directly from the character text reference / MASTER ANCESTRY + ANATOMY BIBLE (pure text prompt, no source photo — the "text bible reconstruction").
+
+<div align="center">
+<img src="assets/composites/superheavy-iterations-kodak-instapix.jpg" alt="SuperHeavy style iterations of the character shown at Kodak Instapix / small instant photo size: Kodak Portra, Dark Academia, Cyberpunk Neon" width="860">
+</div>
+
+*All other iterations (Kodak Portra 400, dark academia, cyberpunk neon, etc.) rendered at small "Kodak Instapix" / instant print scale in a contact-strip layout (clean local composite, no AI ghosting). Every photo ever generated for this character is kept permanently in assets/ (and the canonical style_presets/ + featured_templates/ folders). See the live example section below for the full list and new organized subfolders (`references/`, `iterations/`, `composites/`).*
+
+The real reference photo + the superheavy agent prompt (with `repo: https://github.com/fornevercollective/imagine`) + the full ancestry bible + madlibs + style preset language produces the locked character bible and all these consistent outputs.
+
 # imagine
 
 Grok Imagine workspace for rapid style iteration and narrative video construction.
@@ -108,6 +125,34 @@ Grok will:
 This turns the entire project (all the accumulated knowledge) into something any Grok session can "read" on demand from the GitHub link + image. Perfect for rapid, high-fidelity iteration without manually copying bibles every time.
 
 You can also paste the super prompt here (in this workspace) + describe your image + "use the local repo files" and I'll simulate the exact same output + "save" results to the correct folders using the tools.
+
+**Live example at top of this README + in folder structure:** The top "**Output : Grok SuperHeavy**" section now features two clean composite images (generated locally with exact pixel placement to avoid any AI blending/ghosting artifacts):
+
+- `assets/composites/superheavy-original-vs-text-medium-format.jpg` (and the -clean variant): Side-by-side **medium format** diptych. Left = the real original watercolor portrait reference (sourced from the user's `IMG_2166.jp2`). Right = **the image generated purely from the character text reference** (the detailed "MASTER ANCESTRY + ANATOMY BIBLE + CHARACTER REFERENCE" block + madlibs description, with no photo reference attached — exactly "the image you created out the character text reference" using the superheavy process and repo instructions).
+
+- `assets/composites/superheavy-iterations-kodak-instapix.jpg`: The three other style iterations (Kodak Portra, dark academia, cyberpunk neon) composited as small **Kodak Instapix / instant photo** prints in a horizontal strip with white borders.
+
+**All generated photos are now permanently kept** (no more pruning from assets/ or the style folders). Historical versions (including the earlier AI-composited attempts that had the double-ghosting / original photo layering bug you reported) are still present in `assets/` and have been renamed with `-AI-GHOSTED-v1` suffix for clarity. Organized copies live in:
+- `assets/references/` — original + text-bible reconstruction
+- `assets/iterations/` — the styled outputs
+- `assets/composites/` — the placed side-by-side and instapix versions used in the banner
+
+The real reference + superheavy prompt (`repo: https://github.com/fornevercollective/imagine`) + ancestry bible + style presets produces the locked bible (shown below) and all consistent outputs. Full-res individuals also exist in the canonical landing spots:
+
+- Real master ref: `featured_templates/watercolor-portrait/img/00-master-ref.jpg`
+- Kodak Portra: `style_presets/kodak-portra-400/img/00-grok-superheavy-master.jpg`
+- Dark academia: `style_presets/dark-academia/img/00-grok-superheavy.jpg`
+- Cyberpunk neon: `style_presets/cyberpunk-neon/img/00-grok-superheavy.jpg`
+
+(The text-bible reconstruction is also at `assets/grok-superheavy-text-bible-reference.jpg` and `assets/references/text-bible-reconstruction.jpg`; real ref at `assets/grok-superheavy-watercolor-master-ref.jpg` / `assets/references/original-watercolor-ref.jpg`.)
+
+**Master Ancestry + Anatomy Bible + Character Reference (locked block, repeated verbatim for all consistency in SuperHeavy iterations):**
+
+```
+MASTER ANCESTRY + ANATOMY BIBLE + CHARACTER REFERENCE: A ruggedly handsome 40-year-old man of mixed European ancestry with subtle Neanderthal-influenced robust features (strong square jaw, prominent brow ridge, broad facial structure). Deep-set thoughtful eyes behind thin rectangular metal-frame glasses, warm olive-to-fair skin with natural melanin dispersion and subsurface scattering that catches soft light with gentle warmth. Full, thick brown beard with integrated silver/gray strands throughout, neatly groomed but textured; dark brown wavy hair pulled into a top knot bun with loose strands framing the face. Broad-shouldered athletic build, wearing layered casual outdoor attire: blue denim jacket over camouflage neck gaiter/scarf and hooded base layer. Maximum fidelity to reference portrait for face, beard pattern, glasses, hair bun, exact clothing details, and overall likeness across all styles and beats.
+```
+
+This block (or the fuller version from `character_bibles/ancestory/ancestry_bible_madlibs_template.md` filled for the subject) + the film preset language from the target style's `prompt.txt` is prepended to every subsequent generation prompt for locked identity while the visual treatment (LUT, grain, flares, etc.) changes.
 
 The example story "Dusk to Neon" takes one character from warm Kodak Portra daylight → dark academia → classic neo-noir rain → full cyberpunk neon → blockbuster teal-orange climax → warm golden resolution → final vintage 35mm tag. All while advancing a 3-act mini-narrative with clear thematic beats.
 

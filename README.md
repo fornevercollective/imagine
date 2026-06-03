@@ -1,8 +1,7 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/fornevercollective/imagine/refs/heads/main/assets/early-generation-stray.jpg" alt="Grok SuperHeavy ref:" height="720" width="360">
+<img src="https://raw.githubusercontent.com/fornevercollective/imagine/refs/heads/main/assets/early-generation-stray.jpg" alt="Grok SuperHeavy ref:" height="880" width="1168">
 </div>
-**Output : Grok SuperHeavy**
-**
+**Output : Grok SuperHeavy :
 Image Analysis (Master Reference)
 The subject is a middle-aged man (~35-45) with a strong, rugged yet thoughtful presence. Key traits:
 

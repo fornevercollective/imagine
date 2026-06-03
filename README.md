@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/fornevercollective/imagine/refs/heads/main/assets/early-generation-stray.jpg" alt="Grok SuperHeavy ref:" height="880" width="1168">
+<img src="https://raw.githubusercontent.com/fornevercollective/imagine/refs/heads/main/assets/early-generation-stray.jpg" alt="Grok SuperHeavy ref:" height="1168" width="880">
 </div>
 **Output : Grok SuperHeavy :
 Image Analysis (Master Reference)

@@ -1,7 +1,5 @@
 <div align="center">
-<img src="https://github.com/fornevercollective/imagine
-https://raw.githubusercontent.com/fornevercollective/imagine/refs/heads/main/assets/grok-superheavy-watercolor-master-ref.jpg" alt="Grok SuperHeavy ref:" width="860">
-<img src="https://raw.githubusercontent.com/fornevercollective/imagine/refs/heads/main/assets/early-generation-stray.jpg" alt="Grok SuperHeavy ref:" width="860">
+<img src="https://raw.githubusercontent.com/fornevercollective/imagine/refs/heads/main/assets/early-generation-stray.jpg" alt="Grok SuperHeavy ref:" height="720" width="360">
 </div>
 **Output : Grok SuperHeavy**
 **

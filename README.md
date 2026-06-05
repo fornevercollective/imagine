@@ -1,4 +1,25 @@
-**Output : Grok SuperHeavy**
+<div align="center">
+<img src="https://raw.githubusercontent.com/fornevercollective/imagine/refs/heads/main/assets/early-generation-stray.jpg" alt="Grok SuperHeavy ref:" height="1168" width="880">
+</div>
+**Output : Grok SuperHeavy :
+Image Analysis (Master Reference)
+The subject is a middle-aged man (~35-45) with a strong, rugged yet thoughtful presence. Key traits:
+
+Face: Square/strong jawline with rounded contours, high cheekbones, deep-set expressive eyes behind rectangular wireframe glasses, prominent brow, full textured brown beard with gray/silver strands integrated throughout (especially lower), mustache blending seamlessly. Warm, weathered skin with natural texture.
+Hair: Dark brown hair tied in a top knot/bun with loose strands; thick, wavy texture.
+Build/Attire: Broad shoulders, wearing a blue denim-style jacket over a camouflage-patterned neck gaiter/scarf and hooded layer. Casual, outdoorsy vibe.
+Setting in ref: Lush, vibrant watercolor floral/garden background with greens, reds, yellows — soft, artistic, glowing light.
+
+I'll treat this as the Master Reference for high-fidelity consistency across iterations.
+Iteration Plan (Following Repo Structure)
+
+Master Ancestry + Character Bible (locked block for all future prompts).
+Style Variations — batch a few key presets (film emulation + cinematic + aesthetic).
+Narrative/Story Potential — seed a simple arc idea inspired by "dusk-to-neon" style transitions.
+Generated Examples — I'll create and render new images using Grok Imagine, staying faithful to the repo's cinematic/film LUT approach.
+
+refined Master Character Bible block based on the repo template:
+MASTER ANCESTRY + ANATOMY BIBLE + CHARACTER REFERENCE: A ruggedly handsome 40-year-old man of mixed European ancestry with subtle Neanderthal-influenced robust features (strong square jaw, prominent brow ridge, broad facial structure). Deep-set thoughtful eyes behind thin rectangular metal-frame glasses, warm olive-to-fair skin with natural melanin dispersion and subsurface scattering that catches soft light with gentle warmth. Full, thick brown beard with integrated silver/gray strands throughout, neatly groomed but textured; dark brown wavy hair pulled into a top knot bun with loose strands framing the face. Broad-shouldered athletic build, wearing layered casual outdoor attire: blue denim jacket over camouflage neck gaiter/scarf and hooded base layer. Maximum fidelity to reference portrait for face, beard pattern, glasses, hair bun, exact clothing details, and overall likeness across all styles and beats.
 
 <div align="center">
 <img src="assets/composites/superheavy-original-vs-text-medium-format.jpg" alt="Grok SuperHeavy medium format side-by-side: left original real watercolor portrait reference, right the version generated purely from the character text ancestry bible (no photo ref)" width="860">

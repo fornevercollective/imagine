@@ -1,0 +1,837 @@
+/* Shared chrome for holo-viewer + holo_id_badges — header, stage navigator, skull hero gallery */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+
+:root {
+  --holo-bg: #0a0b0f;
+  --holo-surface: #111318;
+  --holo-surface2: #1a1d24;
+  --holo-accent: #00f0ff;
+  --holo-accent2: #ff00aa;
+  --holo-text: #e6e8ee;
+  --holo-muted: #8a8f9a;
+}
+
+.holo-chrome-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(10, 11, 15, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #222;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.holo-chrome-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  background: linear-gradient(90deg, var(--holo-accent), var(--holo-accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.holo-chrome-tagline {
+  font-size: 11px;
+  color: var(--holo-muted);
+  line-height: 1.3;
+}
+
+.holo-chrome-nav {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.holo-chrome-nav .btn-featured,
+.holo-chrome-nav a {
+  flex: 0 0 auto;
+  padding: 5px 11px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.12s, border-color 0.12s, color 0.12s, filter 0.12s;
+}
+
+.holo-chrome-nav button.btn-featured {
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1.2;
+}
+
+.holo-chrome-nav .btn-featured.is-active,
+.holo-chrome-nav .btn-featured.btn-featured-primary,
+.holo-chrome-nav a.is-active {
+  background: linear-gradient(90deg, var(--holo-accent), var(--holo-accent2));
+  color: #000;
+  border: none;
+}
+
+.holo-chrome-nav .btn-featured.is-active:hover,
+.holo-chrome-nav .btn-featured.btn-featured-primary:hover,
+.holo-chrome-nav a.is-active:hover {
+  filter: brightness(1.06);
+}
+
+.holo-chrome-nav .btn-featured.is-inactive,
+.holo-chrome-nav .btn-featured.btn-featured-secondary,
+.holo-chrome-nav a.is-inactive {
+  background: transparent;
+  color: var(--holo-muted);
+  border: 1px solid #333;
+}
+
+.holo-chrome-nav .btn-featured.is-inactive:hover,
+.holo-chrome-nav .btn-featured.btn-featured-secondary:hover,
+.holo-chrome-nav a.is-inactive:hover {
+  border-color: #444;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--holo-text);
+}
+
+.holo-chrome-bar {
+  background: var(--holo-bg);
+  border-bottom: 1px solid #222;
+}
+
+.holo-chrome-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+}
+
+.holo-chrome-section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--holo-muted);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+
+/* Stage navigator: prev | holo card | data panel | next */
+.holo-chrome-stage-nav {
+  display: grid;
+  grid-template-columns: auto minmax(160px, 200px) minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: stretch;
+  margin-bottom: 10px;
+}
+
+.holo-chrome-nav-btn {
+  align-self: center;
+  justify-self: center;
+  flex-shrink: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: var(--holo-surface2);
+  color: var(--holo-text);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+}
+
+.holo-chrome-nav-btn:hover:not(:disabled) {
+  border-color: var(--holo-accent);
+  background: #222;
+  box-shadow: 0 0 14px -4px rgba(0, 240, 255, 0.35);
+}
+
+.holo-chrome-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.holo-chrome-flip-card {
+  outline: none;
+  min-width: 0;
+  align-self: start;
+}
+
+.holo-chrome-card-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  align-self: start;
+}
+
+.holo-chrome-stage-portrait {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.holo-chrome-stage-portrait-inner {
+  width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.55);
+}
+
+.holo-chrome-stage-portrait-head {
+  height: 24px;
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.1), rgba(255, 0, 170, 0.06));
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  padding: 0 8px;
+  color: var(--holo-accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #222;
+}
+
+.holo-chrome-stage-portrait-art {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  min-height: 280px;
+  background: #000;
+  overflow: hidden;
+}
+
+.holo-chrome-stage-portrait-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.holo-chrome-stage-portrait-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    165deg,
+    rgba(0, 240, 255, 0.1) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 0, 170, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+.holo-chrome-stage-portrait-placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  text-align: center;
+  color: var(--holo-muted);
+  font-size: 10px;
+  line-height: 1.35;
+  background: linear-gradient(165deg, #0a0b0f 0%, #111318 100%);
+}
+
+.holo-chrome-stage-portrait-placeholder-icon {
+  font-size: 28px;
+  color: rgba(0, 240, 255, 0.35);
+  line-height: 1;
+}
+
+.holo-chrome-stage-portrait.is-missing .holo-chrome-stage-portrait-art img {
+  display: none;
+}
+
+.holo-chrome-stage-portrait.is-missing .holo-chrome-stage-portrait-placeholder {
+  display: flex;
+}
+
+.holo-chrome-stage-portrait-foot {
+  padding: 8px 10px 10px;
+  background: #111;
+  border-top: 1px solid #222;
+}
+
+.holo-chrome-flip-card:focus-visible .holo-chrome-flip-card-inner {
+  box-shadow:
+    0 0 0 2px var(--holo-bg),
+    0 0 0 4px var(--holo-accent),
+    0 0 28px -6px rgba(0, 240, 255, 0.5),
+    0 0 40px -12px rgba(255, 0, 170, 0.25);
+}
+
+.holo-chrome-flip-card-inner {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.55);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.holo-chrome-flip-card-glow {
+  border-color: rgba(0, 240, 255, 0.45);
+  box-shadow:
+    0 0 22px -6px rgba(0, 240, 255, 0.45),
+    0 0 36px -12px rgba(255, 0, 170, 0.2),
+    0 8px 24px -6px rgba(0, 0, 0, 0.55);
+}
+
+.holo-chrome-flip-card-head {
+  height: 28px;
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.12), rgba(255, 0, 170, 0.08));
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0 8px;
+  color: var(--holo-accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #222;
+}
+
+.holo-chrome-flip-card-index {
+  color: #fff;
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+}
+
+.holo-chrome-flip-card-art {
+  height: 168px;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+.holo-chrome-flip-card-stage-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(120px, 52vw, 168px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(165deg, rgba(0, 240, 255, 0.55) 0%, rgba(255, 0, 170, 0.4) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.28;
+  pointer-events: none;
+  user-select: none;
+}
+
+.holo-chrome-flip-card-art.has-example-art .holo-chrome-flip-card-stage-bg {
+  font-size: clamp(100px, 44vw, 140px);
+  opacity: 0.1;
+}
+
+.holo-chrome-flip-card-art img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+  display: block;
+}
+
+.holo-chrome-flip-card-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 240, 255, 0.12) 0%,
+    transparent 35%,
+    transparent 65%,
+    rgba(255, 0, 170, 0.1) 100%
+  );
+  pointer-events: none;
+}
+
+.holo-chrome-flip-card-art.is-generic img {
+  opacity: 0.35;
+  filter: saturate(0.6);
+}
+
+.holo-chrome-flip-card-foot {
+  padding: 8px 10px 10px;
+  background: #111;
+  border-top: 1px solid #222;
+}
+
+.holo-chrome-flip-card-name {
+  font-weight: 600;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.holo-chrome-flip-card-era {
+  color: var(--holo-muted);
+  font-size: 9px;
+  margin-top: 3px;
+  line-height: 1.3;
+}
+
+.holo-chrome-stage-data-panel.data-panel {
+  width: auto;
+  min-width: 0;
+  background: var(--holo-surface);
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 18px;
+  margin-top: 0;
+  overflow-y: auto;
+  max-height: min(520px, 70vh);
+}
+
+.holo-chrome-data-stage-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--holo-text);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.holo-chrome-data-stage-era {
+  color: var(--holo-muted);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.holo-chrome-section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--holo-muted);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.holo-chrome-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.holo-chrome-admixture {
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--holo-text);
+}
+
+.holo-chrome-fossil-refs {
+  font-size: 12px;
+  opacity: 0.85;
+  line-height: 1.4;
+  color: var(--holo-text);
+}
+
+.holo-chrome-data-block {
+  margin-top: 14px;
+}
+
+.holo-chrome-stage-data-panel .migration {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  background: #0a0b0f;
+  padding: 10px 12px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  border-left: 3px solid var(--holo-accent);
+  color: #c8ccd4;
+}
+
+.holo-chrome-stage-data-panel .prompt-box {
+  background: #0a0b0f;
+  border: 1px dashed #444;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 11px;
+  font-family: ui-monospace, monospace;
+  white-space: pre-wrap;
+  max-height: 140px;
+  overflow: auto;
+  line-height: 1.35;
+  color: var(--holo-text);
+}
+
+.holo-chrome-mixamo {
+  font-size: 12px;
+  background: #0a0b0f;
+  padding: 10px;
+  border-radius: 8px;
+  line-height: 1.4;
+  color: var(--holo-text);
+}
+
+.holo-chrome-stage-data-panel .data-panel-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.holo-chrome-action-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: var(--holo-surface2);
+  color: var(--holo-text);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.holo-chrome-action-btn:hover {
+  border-color: var(--holo-accent);
+  background: #222;
+}
+
+.holo-chrome-action-btn-primary {
+  background: linear-gradient(90deg, var(--holo-accent), var(--holo-accent2));
+  color: #000;
+  border-color: transparent;
+}
+
+.holo-chrome-action-btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+.holo-chrome-stage-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.holo-chrome-stage-dots {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.holo-chrome-stage-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid #444;
+  background: #222;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+}
+
+.holo-chrome-stage-dot:hover {
+  border-color: var(--holo-accent);
+  transform: scale(1.15);
+}
+
+.holo-chrome-stage-dot.is-active {
+  background: linear-gradient(135deg, var(--holo-accent), var(--holo-accent2));
+  border-color: transparent;
+  box-shadow: 0 0 10px -2px rgba(0, 240, 255, 0.6);
+  transform: scale(1.2);
+}
+
+.holo-chrome-stage-counter {
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--holo-muted);
+  flex-shrink: 0;
+}
+
+/* Legacy deck card styles (removed from UI; kept for enrich-lite-deck references if any) */
+.holo-chrome-deck-card {
+  width: 78px;
+  height: 108px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 7px;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+  transition: border-color 0.15s, transform 0.1s;
+}
+
+.holo-chrome-deck-card:hover {
+  transform: translateY(-1px);
+  border-color: #555;
+}
+
+.holo-chrome-deck-card.is-active {
+  border-color: var(--holo-accent);
+  box-shadow: 0 0 12px -4px rgba(0, 240, 255, 0.45);
+}
+
+.holo-chrome-deck-card-head {
+  height: 18px;
+  background: #1a1d24;
+  font-size: 6px;
+  padding: 1px 3px;
+  color: var(--holo-accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #222;
+}
+
+.holo-chrome-deck-card-art {
+  height: 60px;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+.holo-chrome-deck-card-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  display: block;
+}
+
+.holo-chrome-deck-card-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(0, 240, 255, 0.15));
+  pointer-events: none;
+}
+
+.holo-chrome-deck-card-foot {
+  height: 28px;
+  padding: 2px 3px;
+  background: #111;
+  font-size: 6px;
+  line-height: 1.1;
+}
+
+.holo-chrome-deck-card-name {
+  font-weight: 600;
+  color: #fff;
+  font-size: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.holo-chrome-deck-card-era {
+  color: #888;
+  font-size: 5px;
+}
+
+.holo-chrome-deck-card-spec {
+  color: var(--holo-accent);
+  font-family: ui-monospace, monospace;
+  font-size: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.holo-chrome-skull-gallery {
+  padding-bottom: 12px;
+}
+
+.holo-chrome-skull-gallery-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 0 10px;
+  background: transparent;
+  border: none;
+  color: var(--holo-accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.15s;
+  text-align: left;
+}
+
+.holo-chrome-skull-gallery-toggle:hover {
+  color: var(--holo-text);
+}
+
+.holo-chrome-skull-gallery-chevron {
+  display: inline-block;
+  font-size: 11px;
+  opacity: 0.7;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.holo-chrome-skull-gallery.collapsed .holo-chrome-skull-gallery-chevron {
+  transform: rotate(180deg);
+}
+
+.holo-chrome-skull-gallery-body {
+  overflow: hidden;
+  transition: max-height 0.25s ease, opacity 0.2s ease, margin 0.25s ease;
+  max-height: 4000px;
+  opacity: 1;
+}
+
+.holo-chrome-skull-gallery.collapsed .holo-chrome-skull-gallery-body {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.holo-chrome-skull-gallery-desc {
+  font-size: 12px;
+  color: var(--holo-muted);
+  margin: 0 0 12px;
+  line-height: 1.45;
+}
+
+.holo-chrome-skull-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.holo-chrome-skull-hero-card {
+  background: var(--holo-surface2);
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 10px;
+  transition: border-color 0.12s, transform 0.1s;
+}
+
+.holo-chrome-skull-hero-card:hover,
+.holo-chrome-skull-hero-card:focus-visible {
+  border-color: var(--holo-accent);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.holo-chrome-skull-hero-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+  background: #111;
+}
+
+.holo-chrome-skull-hero-info {
+  padding: 6px 8px;
+  line-height: 1.2;
+}
+
+.holo-chrome-skull-hero-name {
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--holo-text);
+}
+
+.holo-chrome-skull-hero-spec {
+  color: var(--holo-accent);
+  font-family: ui-monospace, monospace;
+  font-size: 9px;
+}
+
+.holo-chrome-skull-hero-meta {
+  color: #888;
+  font-size: 9px;
+}
+
+.holo-chrome-skull-gallery-footnote {
+  font-size: 10px;
+  color: #666;
+  margin: 6px 0 0;
+}
+
+.holo-chrome-skull-hero-error {
+  color: var(--holo-accent2);
+  padding: 8px;
+  font-size: 11px;
+}
+
+@media (max-width: 768px) {
+  .holo-chrome-stage-nav {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+  }
+  .holo-chrome-card-column,
+  .holo-chrome-flip-card {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .holo-chrome-stage-data-panel.data-panel {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    max-height: none;
+  }
+  .holo-chrome-nav-btn:first-of-type {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: stretch;
+  }
+  .holo-chrome-nav-btn:last-of-type {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: stretch;
+  }
+  .holo-chrome-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .holo-chrome-header {
+    flex-wrap: wrap;
+    padding: 10px 16px;
+  }
+  .holo-chrome-bar-inner {
+    padding: 10px 16px;
+  }
+  .holo-chrome-nav .btn-featured,
+  .holo-chrome-nav a {
+    font-size: 11px;
+    padding: 4px 9px;
+  }
+}

@@ -1,0 +1,1 @@
+BATCH COMPLETED: Ref image run through all 23 featured styles with real Grok Imagine outputs (proof-001.jpg in each). See proof-sheet.html for the full contact sheet with baselines. Tue Jun  2 22:08:19 PDT 2026

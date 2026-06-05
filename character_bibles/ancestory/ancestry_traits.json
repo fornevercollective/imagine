@@ -53,14 +53,15 @@
     "relation_to_clothing": "how body shape interacts with draping fabric, muscle/fat distribution affecting silhouette under period or modern styling"
   },
   "hominin_tree_relation": {
-    "description": "Specify admixture percentages and trait expression for genetic 'realism' and diversity. Tie physical features back to evolutionary branches for prompt accuracy and to avoid generic 'diverse' descriptions.",
+    "description": "Specify admixture percentages and trait expression for genetic 'realism' and diversity. Tie physical features back to evolutionary branches for prompt accuracy and to avoid generic 'diverse' descriptions. See hominin_data/hominin_lineage_timeline.json for full stages 0-10 with fossil refs (Bone Clones, Smithsonian 3D, Australian Museum), unified_migration_lineage solid column, and per-stage prompt_traits + bible_snippets.",
     "examples": [
       "85% recent Homo sapiens sapiens (East African origin) + 15% Neanderthal introgression: manifests as robust brow ridge contribution, slightly receding forehead, thicker nasal bridge, higher muscle mass potential, cold-climate skin adaptations with lower eumelanin baseline but high dispersion capability",
       "95%+ Homo sapiens with minimal archaic: high forehead, gracile face, variable skin melanin calibrated to latitude (high % for equatorial UV protection with dense basal layer packing)",
       "Denisovan admixture (2-5% in some Oceanian/Asian lines): adaptations for high altitude/UV including altered skin vascularity and melanin patterning, contributing to unique subsurface light behavior",
-      "Multi-way admixture (e.g. 70% West African + 20% European + 10% East Asian): blended face shapes, hair textures, body proportions reflecting reticulate evolution on the hominin tree"
+      "Multi-way admixture (e.g. 70% West African + 20% European + 10% East Asian): blended face shapes, hair textures, body proportions reflecting reticulate evolution on the hominin tree",
+      "Deep hominin stage iteration (e.g.  Stage 5 Homo erectus/ergaster ~1.6mya 'Turkana Boy' base + 2% Neanderthal overlay in modern): low vault heavy torus brow, long legs short arms modern proportions, first endurance biped body plan; see lineage JSON for exact 'unified_migration_lineage' column and Mixamo/Three.js pose guidance"
     ],
-    "use_in_prompts": "Add as suffix or integrated: '... with {X}% {hominin branch} ancestry expressing as {specific visible traits like brow, limb proportions, melanin distribution}'"
+    "use_in_prompts": "Add as suffix or integrated: '... with {X}% {hominin branch} ancestry expressing as {specific visible traits like brow, limb proportions, melanin distribution}'. For full historical iteration use the hominin_lineage_timeline.json stages + their bible_snippet fields directly in the madlibs. Reference specific fossils: 'face and cranium exactly as in Bone Clones cast of [Turkana Boy / Kabwe / Neanderthal Amud 1] or Smithsonian 3D hominin scan'."
   },
   "skin_science_subsurface": {
     "sub_surface_ir_tiger_stripes": "subsurface scattering (SSS) with visible 'tiger stripe' patterning (melanin bands or vascular Blaschko-like lines) enhanced in side/raking light or simulated IR; {percentage}% of irradiance penetrates epidermis to scatter in dermis creating soft glow and depth; stripes more pronounced in certain ancestries with dispersed melanin clusters",

@@ -1,0 +1,6 @@
+{
+  "slug": "holo-skull-badge",
+  "display": "Holo Skull Badge",
+  "category": "product",
+  "notes": "Built on Product Showcase template for clean presentation of the holo ID badge as the 'product'. Headshot photo -> holographic left pan through skull (accurate to hominin fossil refs) -> bones/skeleton reveal. Designed for repeatable digital playing card decks using the ancestory lineage data. Video shows the full pan sequence. Use the prompt.txt for exact instructions + insert stage-specific bible from character_bibles/ancestory/hominin_data/hominin_lineage_timeline.json for skull accuracy."
+}

@@ -71,7 +71,9 @@ This level of detail dramatically improves consistency and "aliveness" of skin/h
 ## Maintenance
 
 - Expand `ancestry_traits.json` with more options from ongoing ancestory research.
+- For deep historical / genetic migration iteration: use `hominin_data/hominin_lineage_timeline.json` (11 stages from Sahelanthropus ~7mya to modern global). Each stage has `unified_migration_lineage` (the "one solid column" for lineage estimations), `bible_snippet`, `prompt_traits`, `fossil_refs` (exact links to 3d.si.edu, Australian Museum casts, Bone Clones), `mixamo_threejs` (IK/pose/shape guidance), `genetic_admixture_estimates`.
 - When adding new hominin branches or skin metrics, mirror in the madlibs template and the main README's Character Bible section.
-- Test generations: Generate a master reference with neutral lighting + one of the film LUT presets, then vary only style/LUT while keeping the full bible fixed.
+- Test generations: Generate a master reference with neutral lighting + one of the film LUT presets, then vary only style/LUT while keeping the full bible fixed. Iterate lineage by swapping stage bible_snippet (e.g. "ancestor at Turkana Boy erectus stage" vs "same character with full modern sapiens + 1.8% Neanderthal overlay").
+- Holo ID badges: See `holo_id_badges/` prototype (self-contained HTML that loads the lineage JSON, timeline scrubber/iterator, genetic % , migration path viz, holo card UI inspired by the provided Spline + Instagram concepts). Use generated portraits (via the bibles + "holographic ID badge, iridescent, floating 3D portrait, spline style") as assets.
 
-See also the main project README.md for the core madlibs + how it integrates with sweep.py / story arcs.
+See also the main project README.md for the core madlibs + how it integrates with sweep.py / story arcs. Also `pot/` for tagging (add hominin-stage, fossil-ref, mixamo-ik, lineage-migration, holo-badge categories as needed and re-run generator).

@@ -1,0 +1,269 @@
+######################################################################
+# Grok Imagine BATCH PREPARE  | source=featured group=all
+# Input photo: /Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg
+# Base prompt: Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%.
+# Generated: 2026-06-02T21:47:05.707155
+# Total styles in this sweep: 23
+######################################################################
+
+INSTRUCTIONS:
+  1. Copy a photo into inputs/ (or use absolute path).
+  2. For each style below, ask me (Grok) or paste into grok.com/imagine:
+     - Use image_edit (best for consistency) with the reference photo + the full prompt.
+     - Or use the official template in UI for 'featured' ones.
+  3. I can run the entire batch for you in one go if you say: 'run the full prepare sweep for inputs/photo.jpg with prompt "..." using source presets'
+  4. Results will be saved to the matching <slug>/img/ and <slug>/vid/ .
+
+## Chibi  (chibi)  [featured/style]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Chibi featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/chibi/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Chibi featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/chibi/vid/
+
+------------------------------------------------------------
+
+## Professional Headshot  (professional-headshot)  [featured/portrait]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Professional Headshot featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/professional-headshot/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Professional Headshot featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/professional-headshot/vid/
+
+------------------------------------------------------------
+
+## Logo Editor  (logo-editor)  [featured/graphic]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Logo Editor featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/logo-editor/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Logo Editor featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/logo-editor/vid/
+
+------------------------------------------------------------
+
+## 70s Street Style  (70s-street-style)  [featured/fashion]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the 70s Street Style featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/70s-street-style/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the 70s Street Style featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/70s-street-style/vid/
+
+------------------------------------------------------------
+
+## Quality Enhancer  (quality-enhancer)  [featured/enhance]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Quality Enhancer featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/quality-enhancer/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Quality Enhancer featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/quality-enhancer/vid/
+
+------------------------------------------------------------
+
+## Comic Book  (comic-book)  [featured/style]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Comic Book featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/comic-book/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Comic Book featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/comic-book/vid/
+
+------------------------------------------------------------
+
+## Object Remover  (object-remover)  [featured/edit]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Object Remover featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/object-remover/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Object Remover featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/object-remover/vid/
+
+------------------------------------------------------------
+
+## Product Showcase  (product-showcase)  [featured/product]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Product Showcase featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/product-showcase/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Product Showcase featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/product-showcase/vid/
+
+------------------------------------------------------------
+
+## Glossy Product Shot  (glossy-product-shot)  [featured/product]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Glossy Product Shot featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/glossy-product-shot/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Glossy Product Shot featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/glossy-product-shot/vid/
+
+------------------------------------------------------------
+
+## 80s Anime  (80s-anime)  [featured/style]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the 80s Anime featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/80s-anime/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the 80s Anime featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/80s-anime/vid/
+
+------------------------------------------------------------
+
+## Watercolor Portrait  (watercolor-portrait)  [featured/style]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Watercolor Portrait featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/watercolor-portrait/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Watercolor Portrait featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/watercolor-portrait/vid/
+
+------------------------------------------------------------
+
+## Video Game  (video-game)  [featured/style]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Video Game featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/video-game/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Video Game featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/video-game/vid/
+
+------------------------------------------------------------
+
+## 3D Animation  (3d-animation)  [featured/style]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the 3D Animation featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/3d-animation/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the 3D Animation featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/3d-animation/vid/
+
+------------------------------------------------------------
+
+## Spaghetti Western  (spaghetti-western)  [featured/style]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Spaghetti Western featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/spaghetti-western/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Spaghetti Western featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/spaghetti-western/vid/
+
+------------------------------------------------------------
+
+## Haze Portrait  (haze-portrait)  [featured/portrait]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Haze Portrait featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/haze-portrait/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Haze Portrait featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/haze-portrait/vid/
+
+------------------------------------------------------------
+
+## Funky Dance  (funky-dance)  [featured/motion]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Funky Dance featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/funky-dance/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Funky Dance featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/funky-dance/vid/
+
+------------------------------------------------------------
+
+## Future Past  (future-past)  [featured/style]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Future Past featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/future-past/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Future Past featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/future-past/vid/
+
+------------------------------------------------------------
+
+## Roman Empire  (roman-empire)  [featured/style]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Roman Empire featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/roman-empire/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Roman Empire featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/roman-empire/vid/
+
+------------------------------------------------------------
+
+## Ad Astra  (ad-astra)  [featured/style]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Ad Astra featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/ad-astra/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Ad Astra featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/ad-astra/vid/
+
+------------------------------------------------------------
+
+## Add Girlfriend  (add-girlfriend)  [featured/edit]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Add Girlfriend featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/add-girlfriend/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Add Girlfriend featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/add-girlfriend/vid/
+
+------------------------------------------------------------
+
+## Future Family  (future-family)  [featured/edit]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Future Family featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/future-family/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Future Family featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/future-family/vid/
+
+------------------------------------------------------------
+
+## Laser Fight  (laser-fight)  [featured/action]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Laser Fight featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/laser-fight/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Laser Fight featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/laser-fight/vid/
+
+------------------------------------------------------------
+
+## Sunny Morning  (sunny-morning)  [featured/mood]
+### IMAGE
+image_edit( image=['/Users/qbit/dev/imagine/assets/references/original-watercolor-ref.jpg'], prompt="Apply the Sunny Morning featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting." )
+Target folder: featured_templates/sunny-morning/img/
+
+### VIDEO (image-to-video or template video)
+video_gen or image_to_video ref + prompt: "Apply the Sunny Morning featured template. Ruggedly handsome 40-year-old man with top knot, full brown beard with silver strands, thin rectangular wireframe glasses, broad shoulders, blue denim jacket over camo neck gaiter and hooded layer, in a vibrant garden. Preserve exact identity, face, beard pattern, glasses, hair, clothing, and expression 100%. Keep faithful to the reference photo subject, identity, pose, clothing, lighting. Animate with the template's signature motion. Preserve likeness across frames."
+Target folder: featured_templates/sunny-morning/vid/
+
+------------------------------------------------------------
+

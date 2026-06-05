@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holo Skull Badge Viewer • Product Showcase</title>
+<link rel="stylesheet" href="shared-chrome.css">
+<script src="shared-chrome.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="lineage-enrichment.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+  
+  :root {
+    --bg: #0a0b0f;
+    --surface: #111318;
+    --surface2: #1a1d24;
+    --accent: #00f0ff;
+    --accent2: #ff00aa;
+    --text: #e6e8ee;
+    --muted: #8a8f9a;
+    --hero-frame-h: clamp(168px, 22vw, 210px);
+    --hero-col-import: clamp(108px, 14vw, 138px);
+    --hero-col-id: clamp(128px, 20vw, 168px);
+    --hero-col-skull: clamp(128px, 18vw, 200px);
+    --hero-desc-max-h: clamp(64px, 12vw, 88px);
+  }
+  
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.5;
+  }
+  
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 11, 15, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #222;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin: 0 0 8px;
+  }
+  
+  .subtitle {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .hero-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .hero-visuals {
+    display: grid;
+    grid-template-columns: var(--hero-col-import) var(--hero-col-id) var(--hero-col-skull);
+    grid-template-rows: auto auto var(--hero-frame-h) auto;
+    gap: 6px 12px;
+    align-items: start;
+    width: fit-content;
+    max-width: min(100%, 560px);
+  }
+
+  .hero-import,
+  .hero-id-card,
+  .hero-skull {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 1 / -1;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .hero-import {
+    grid-column: 1;
+  }
+
+  .hero-id-card {
+    grid-column: 2;
+  }
+
+  .hero-skull {
+    grid-column: 3;
+  }
+
+  .hero-import-label { grid-row: 1; }
+  .hero-import-zone { grid-row: 3; }
+  .hero-import-descriptor { grid-row: 4; }
+
+  .hero-id-label { grid-row: 1; }
+  .hero-id-frame { grid-row: 3; }
+
+  .hero-skull-label { grid-row: 1; }
+  .hero-skull-type-label { grid-row: 2; }
+  .hero-skull-frame { grid-row: 3; }
+  .hero-skull-meta-label { grid-row: 4; }
+
+  .hero-import-label,
+  .hero-id-label,
+  .hero-skull-label,
+  .hero-skull-type-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .hero-skull-type-label {
+    text-align: center;
+    line-height: 1.25;
+    min-height: 1.25em;
+  }
+
+  .hero-skull-meta-label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 9px;
+    line-height: 1.35;
+    color: var(--muted);
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 100%;
+    word-break: break-word;
+    margin: 0;
+  }
+
+  .hero-import-zone {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: var(--hero-frame-h);
+    border-radius: 12px;
+    border: 1px dashed #444;
+    background: var(--surface2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .hero-import-zone:hover,
+  .hero-import-zone.dragover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px -8px rgba(0, 240, 255, 0.35);
+  }
+
+  .hero-import-zone img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #0a0b0f;
+  }
+
+  .hero-import-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 8px;
+    background: linear-gradient(transparent 55%, rgba(0, 0, 0, 0.75));
+    pointer-events: none;
+  }
+
+  .hero-import-overlay span {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #fff;
+    opacity: 0.85;
+  }
+
+  .hero-import-zone input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .hero-import-descriptor {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 8px;
+    line-height: 1.3;
+    color: var(--muted);
+    background: #0a0b0f;
+    border-radius: 6px;
+    border-left: 2px solid var(--accent);
+    padding: 5px 7px;
+    margin: 0;
+    max-width: 100%;
+    max-height: var(--hero-desc-max-h);
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-break: break-word;
+    white-space: pre-wrap;
+    align-self: start;
+  }
+
+  .hero-import-descriptor .desc-stage {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .hero-import-descriptor .desc-specimen {
+    color: var(--accent);
+  }
+
+  .hero-import-descriptor .desc-photo {
+    color: #888;
+    margin-top: 4px;
+    display: block;
+  }
+
+  .hero-id-frame {
+    width: 100%;
+    height: 100%;
+    max-height: var(--hero-frame-h);
+    border-radius: 12px;
+    border: 1px solid #333;
+    overflow: hidden;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+  }
+
+  .hero-id-frame img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .hero-skull-frame {
+    width: 100%;
+    height: 100%;
+    max-height: var(--hero-frame-h);
+    border-radius: 12px;
+    border: 1px solid #333;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 50% 35%, #1a2830 0%, var(--bg) 72%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    align-self: stretch;
+  }
+
+  .hero-skull-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 0 24px rgba(0, 240, 255, 0.4))
+            drop-shadow(0 0 40px rgba(255, 0, 170, 0.15));
+  }
+
+  @media (max-width: 768px) {
+    .hero-visuals {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: none;
+      justify-items: center;
+      width: 100%;
+      max-width: 280px;
+    }
+    .hero-import,
+    .hero-id-card,
+    .hero-skull {
+      grid-column: 1;
+      grid-row: auto;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 240px;
+    }
+    .hero-import-label,
+    .hero-import-zone,
+    .hero-import-descriptor,
+    .hero-id-label,
+    .hero-id-frame,
+    .hero-skull-label,
+    .hero-skull-type-label,
+    .hero-skull-frame,
+    .hero-skull-meta-label {
+      grid-row: auto;
+    }
+    .hero-import-zone,
+    .hero-id-frame,
+    .hero-skull-frame {
+      height: var(--hero-frame-h);
+      max-height: var(--hero-frame-h);
+    }
+  }
+  
+  .section {
+    margin-bottom: 32px;
+  }
+  
+  .section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .card {
+    background: var(--surface);
+    border: 1px solid #222;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+  }
+
+  .data-panel {
+    background: var(--surface);
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 18px;
+  }
+  
+  .holo-glow {
+    box-shadow: 0 0 25px -8px var(--accent), 
+                0 0 50px -15px var(--accent2);
+  }
+  
+  .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .asset {
+    background: var(--surface2);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #222;
+  }
+  
+  .asset img, .asset video {
+    width: 100%;
+    display: block;
+    background: #000;
+  }
+  
+  .asset-label {
+    padding: 10px 14px;
+    font-size: 12px;
+    background: var(--surface);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  .video-wrapper {
+    position: relative;
+  }
+  
+  video {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .info-grid { grid-template-columns: 1fr; }
+  }
+  
+  .info-box {
+    background: var(--surface2);
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  
+  .solid-column {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    background: #0a0b0f;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+    font-size: 13px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    margin: 8px 0;
+  }
+  
+  .stage-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color: #000;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 999px;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  
+  .data-table td {
+    padding: 8px 0;
+    border-bottom: 1px solid #222;
+    vertical-align: top;
+  }
+  
+  .data-table td:first-child {
+    color: var(--muted);
+    width: 140px;
+    font-weight: 500;
+  }
+  
+  .prompt-box {
+    background: #0a0b0f;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 14px;
+    font-family: ui-monospace, monospace;
+    font-size: 11.5px;
+    max-height: 220px;
+    overflow: auto;
+    white-space: pre-wrap;
+    line-height: 1.35;
+  }
+  
+  .btn {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid #333;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.1s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .btn:hover {
+    border-color: var(--accent);
+    background: #222;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color: #000;
+    border: none;
+    font-weight: 600;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: flex-end;
+  }
+
+  .header-nav .btn-featured {
+    flex: 0 0 auto;
+    width: fit-content;
+    justify-content: center;
+    padding: 5px 11px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    white-space: nowrap;
+    box-shadow: none;
+    transition: background 0.12s, border-color 0.12s, color 0.12s, filter 0.12s;
+  }
+
+  .header-nav .btn-featured-primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color: #000;
+    border: none;
+  }
+
+  .header-nav .btn-featured-primary:hover {
+    filter: brightness(1.06);
+    border-color: transparent;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    box-shadow: none;
+  }
+
+  .header-nav .btn-featured-secondary {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid #333;
+  }
+
+  .header-nav .btn-featured-secondary:hover {
+    border-color: #444;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
+    box-shadow: none;
+  }
+
+  @media (max-width: 640px) {
+    .header { flex-wrap: wrap; gap: 8px; }
+    .header-nav { width: auto; margin-left: auto; }
+    .header-nav .btn-featured { font-size: 11px; padding: 4px 9px; }
+  }
+
+  .launch-hint {
+    background: #1f232b;
+    border-bottom: 1px solid #333;
+  }
+
+  .launch-hint-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+
+  .launch-hint-toggle:hover {
+    color: var(--text);
+  }
+
+  .launch-hint-chevron {
+    display: inline-block;
+    font-size: 11px;
+    opacity: 0.7;
+    transition: transform 0.2s;
+  }
+
+  .launch-hint.collapsed .launch-hint-chevron {
+    transform: rotate(180deg);
+  }
+
+  .launch-hint-body {
+    padding: 0 20px 10px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.45;
+    overflow: hidden;
+    transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
+    max-height: 120px;
+    opacity: 1;
+  }
+
+  .launch-hint.collapsed .launch-hint-body {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .what-skull-section {
+    margin-bottom: 24px;
+  }
+
+  .what-skull-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 0 10px;
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+
+  .what-skull-toggle:hover {
+    color: var(--text);
+  }
+
+  .what-skull-chevron {
+    display: inline-block;
+    font-size: 11px;
+    opacity: 0.7;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+
+  .what-skull-section.collapsed .what-skull-chevron {
+    transform: rotate(180deg);
+  }
+
+  .what-skull-body {
+    overflow: hidden;
+    transition: max-height 0.25s ease, opacity 0.2s ease, margin 0.25s ease;
+    max-height: 900px;
+    opacity: 1;
+  }
+
+  .what-skull-section.collapsed .what-skull-body {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+  }
+
+  .enrichment-block {
+    margin-bottom: 28px;
+    scroll-margin-top: 120px;
+  }
+
+  .enrichment-section {
+    margin-bottom: 12px;
+    border: 1px solid #222;
+    border-radius: 12px;
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .enrichment-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+
+  .enrichment-toggle:hover { color: var(--text); }
+
+  .enrichment-chevron {
+    font-size: 11px;
+    opacity: 0.7;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+
+  .enrichment-section.collapsed .enrichment-chevron {
+    transform: rotate(180deg);
+  }
+
+  .enrichment-body {
+    padding: 0 16px 16px;
+    overflow: hidden;
+    transition: max-height 0.25s ease, opacity 0.2s ease;
+    max-height: 4000px;
+    opacity: 1;
+  }
+
+  .enrichment-section.collapsed .enrichment-body {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .enrich-controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .enrich-timeline {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+  }
+
+  .enrich-stage-btn {
+    background: var(--surface2);
+    border: 1px solid #333;
+    color: var(--text);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.1s;
+  }
+
+  .enrich-stage-btn:hover { border-color: var(--accent); }
+  .enrich-stage-btn.active {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color: #000;
+    font-weight: 600;
+    border-color: transparent;
+  }
+
+  .enrich-migration {
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+    background: #0a0b0f;
+    padding: 10px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    line-height: 1.4;
+    border-left: 3px solid var(--accent);
+  }
+
+  .enrich-prompt-box {
+    background: #0a0b0f;
+    border: 1px dashed #444;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-family: ui-monospace, monospace;
+    white-space: pre-wrap;
+    max-height: 140px;
+    overflow: auto;
+  }
+
+  .enrich-live-wrap {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .holo-card {
+    border-radius: 16px;
+    border: 1px solid #333;
+    overflow: hidden;
+    background: linear-gradient(145deg, #1a1d24, #111318);
+    box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.6);
+  }
+
+  .holo-header {
+    height: 36px;
+    background: linear-gradient(90deg, rgba(0, 240, 255, 0.15), rgba(255, 0, 170, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  .holo-header .holo-verified {
+    opacity: 0.65;
+    font-size: 8px;
+    letter-spacing: 0.4px;
+  }
+
+  .holo-portrait {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+    cursor: grab;
+  }
+
+  .holo-portrait:active { cursor: grabbing; }
+
+  .holo-specimen-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 28px;
+    background: rgba(26, 29, 36, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 8px;
+    font-family: ui-monospace, monospace;
+    color: var(--accent);
+    border-bottom: 1px solid #222;
+    pointer-events: none;
+  }
+
+  .holo-specimen-bar span:last-child {
+    color: #fff;
+    font-size: 7px;
+  }
+
+  #holo-3d-card {
+    display: block;
+    width: 100%;
+    height: 240px;
+    background: #000;
+  }
+
+  .holo-info {
+    padding: 12px 14px;
+    font-size: 11px;
+    background: #0f1115;
+    border-top: 1px solid #222;
+  }
+
+  .holo-info .holo-name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .holo-info .holo-era {
+    opacity: 0.6;
+    font-size: 11px;
+    margin-top: 3px;
+  }
+
+  .solid-col {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 10px;
+    background: var(--surface2);
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 8px;
+    white-space: pre-wrap;
+    line-height: 1.35;
+    border-left: 3px solid var(--accent);
+    max-height: 88px;
+    overflow: auto;
+  }
+
+  .stats {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .stats .stat {
+    background: var(--surface2);
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 9px;
+    border: 1px solid #333;
+  }
+
+  .migration {
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+    background: #0a0b0f;
+    padding: 10px 12px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    line-height: 1.4;
+    border-left: 3px solid var(--accent);
+  }
+
+  .data-panel .prompt-box {
+    background: #0a0b0f;
+    border: 1px dashed #444;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 11px;
+    font-family: ui-monospace, monospace;
+    white-space: pre-wrap;
+    max-height: 140px;
+    overflow: auto;
+    line-height: 1.35;
+  }
+
+  .data-panel-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+
+  .enrich-three-demo {
+    width: 100%;
+    height: 180px;
+    background: #0a0b0f;
+    border-radius: 12px;
+    border: 1px solid #222;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .enrich-lite-deck {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 8px;
+    background: #0a0b0f;
+    border: 1px solid #222;
+    border-radius: 8px;
+    min-height: 24px;
+  }
+
+  .enrich-footer-links {
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  .enrich-footer-links a { color: var(--accent); text-decoration: none; }
+  .enrich-footer-links a:hover { text-decoration: underline; }
+  
+  .stage-selector {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 12px 0;
+  }
+  
+  .stage-btn {
+    background: var(--surface2);
+    border: 1px solid #333;
+    color: var(--text);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .stage-btn.active, .stage-btn:hover {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+  }
+  
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+  
+  .label {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  
+  .holo-frame {
+    border: 1px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .holo-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      145deg,
+      rgba(0,240,255,0.08) 0%,
+      transparent 30%,
+      transparent 70%,
+      rgba(255,0,170,0.06) 100%
+    );
+    pointer-events: none;
+  }
+  
+  .meta-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .meta-pill {
+    background: var(--surface2);
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    border: 1px solid #222;
+  }
+  
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  
+  .scanline {
+    position: relative;
+  }
+  .scanline::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(transparent, rgba(0,240,255,0.3), transparent);
+    animation: scan 2.8s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes scan {
+    0% { top: -10%; }
+    100% { top: 110%; }
+  }
+</style>
+</head>
+<body>
+<!-- LOCAL LAUNCH BANNER (auto shows for file://) -->
+<div id="launch-banner" style="display:none; background:#1a1d24; border-bottom:2px solid #00f0ff; padding:12px 20px; font-size:14px; text-align:center; position:sticky; top:0; z-index:999;">
+  <strong>⚠️ You're viewing as file:// — assets (images, videos, 3D) often break.</strong><br>
+  <strong>After starting the server, do a hard refresh in browser: Cmd/Ctrl + Shift + R</strong><br>
+  Launch locally for full experience:
+  <button onclick="copyLaunchCommand()" style="margin:6px 4px; padding:4px 10px; background:#00f0ff; color:#000; border:none; border-radius:4px; cursor:pointer; font-weight:600;">Copy command</button>
+  <span style="font-family:monospace; background:#111; padding:2px 6px; border-radius:3px;">python -m http.server 8000</span>
+  or from this folder: <span style="font-family:monospace; background:#111; padding:2px 6px; border-radius:3px;">python launch-viewer.py</span>
+  then open <a href="http://localhost:8000/featured_templates/holo-skull-badge/holo-viewer.html" target="_blank" style="color:#00f0ff;">http://localhost:8000/featured_templates/holo-skull-badge/holo-viewer.html</a>
+</div>
+
+<div id="holo-chrome-root"></div>
+
+<div class="launch-hint collapsed" id="launch-hint">
+  <button type="button" class="launch-hint-toggle" id="launch-hint-toggle" aria-expanded="false" onclick="toggleLaunchHint()">
+    <span>Best experience — local server setup</span>
+    <span class="launch-hint-chevron" aria-hidden="true">▲</span>
+  </button>
+  <div class="launch-hint-body" id="launch-hint-body">
+    <strong>Best experience:</strong> From this folder run <code style="background:#111; padding:1px 4px;">python launch-viewer.py</code> (it serves from root + opens browser)<br>
+    Or from project root: <code style="background:#111; padding:1px 4px;">python -m http.server 8000</code> then visit 
+    <a href="http://localhost:8000/featured_templates/holo-skull-badge/holo-viewer.html" style="color:#00f0ff;">http://localhost:8000/featured_templates/holo-skull-badge/holo-viewer.html</a>
+    (file:// preview breaks images/videos/3D)
+  </div>
+</div>
+
+<div class="container">
+  <h1>Holo Skull Badge Viewer</h1>
+  <div class="hero-intro" id="hero">
+    <div class="hero-visuals">
+      <div class="hero-import">
+        <div class="hero-import-label">Import Photo</div>
+        <label class="hero-import-zone holo-glow" id="hero-import-zone">
+          <img id="hero-headshot-preview" src="img/base-headshot-ref.jpg" alt="Headshot reference">
+          <div class="hero-import-overlay"><span>Click or drop</span></div>
+          <input type="file" id="hero-headshot-input" accept="image/jpeg,image/png,image/webp" aria-label="Import headshot photo">
+        </label>
+        <div class="hero-import-descriptor" id="hero-import-descriptor" aria-live="polite"></div>
+      </div>
+      <div class="hero-id-card">
+        <div class="hero-id-label">ID Card</div>
+        <div class="hero-id-frame holo-glow">
+          <img id="hero-id-card-preview" src="img/example-holo-card.jpg" alt="Generated holo ID card — Stage 7 Neanderthal">
+        </div>
+      </div>
+      <div class="hero-skull">
+        <div class="hero-skull-label">Skull Reveal</div>
+        <div class="hero-skull-type-label" id="hero-skull-type-label" aria-live="polite">Homo neanderthalensis</div>
+        <div class="hero-skull-frame holo-glow">
+          <img src="img/skulls/neanderthal-skull.jpg" alt="Homo neanderthalensis skull — holo reveal layer">
+        </div>
+        <div class="hero-skull-meta-label" id="hero-skull-meta-label" aria-live="polite">~400-40 kya • Eurasia (Europe/Levant)</div>
+      </div>
+    </div>
+    <p class="subtitle">
+      Interactive viewer for the <strong>Holo Skull Badge</strong> preset (Product Showcase framing + holographic skull-to-bones pan reveals).
+      Powered by the hominin lineage timeline for accurate fossil skull and skeletal anatomy. Use the header stage navigator or the <strong>code</strong> / <strong>edit</strong> sections below for prompts, lineage columns, and lenticular card iteration.
+    </p>
+  </div>
+
+  <!-- DATA ENRICHMENT (consolidated from holo_id_badges) -->
+  <div id="data-enrichment" class="enrichment-block">
+    <div class="section-title">Lineage Data Enrichment</div>
+    <p style="font-size:12px; color:var(--muted); margin:0 0 14px;">Scrub Sahelanthropus → modern sapiens. Each stage exposes the unified <strong>migration_lineage</strong> solid column, fossil refs, bible snippets, and Mixamo/Three.js guidance — synced with the header stage navigator.</p>
+
+    <div class="enrichment-section" id="enrich-section-controls">
+      <button type="button" class="enrichment-toggle" aria-expanded="true" onclick="toggleEnrichSection('enrich-section-controls')">
+        <span>Timeline Controls</span>
+        <span class="enrichment-chevron" aria-hidden="true">▲</span>
+      </button>
+      <div class="enrichment-body">
+        <div class="enrich-controls">
+          <button class="btn" type="button" onclick="prevStage()">◀ Prev</button>
+          <button class="btn" type="button" onclick="nextStage()">Next ▶</button>
+          <button class="btn" type="button" onclick="randomStage()">Random Stage</button>
+          <button class="btn" type="button" onclick="copyBible()">Copy Prompt Snippet</button>
+          <button class="btn" type="button" onclick="copyPrompt()">Copy Full Prompt</button>
+          <button class="btn btn-primary" type="button" onclick="generateImaginePrompt()">Generate Imagine Prompt</button>
+        </div>
+        <div class="enrich-timeline" id="enrich-timeline" role="tablist" aria-label="Hominin timeline"></div>
+        <p style="font-size:11px; color:var(--muted); margin:8px 0 0;">Arrow keys: prev/next stage · Shift+C: copy bible · Header navigator also switches stage.</p>
+      </div>
+    </div>
+
+    <div class="enrichment-section" id="enrich-section-live">
+      <button type="button" class="enrichment-toggle" aria-expanded="true" onclick="toggleEnrichSection('enrich-section-live')">
+        <span>Live Lenticular Holo Card</span>
+        <span class="enrichment-chevron" aria-hidden="true">▲</span>
+      </button>
+      <div class="enrichment-body">
+        <p style="font-size:11px;color:var(--muted);margin:0 0 14px">Drag or touch-tilt the holo card for lenticular sequence: portrait → ±25° skull pans → augmented → skeleton. Full stage data (lineage, admixture, prompts) lives in the header Lineage Stage Navigator panel.</p>
+        <div class="enrich-live-wrap">
+          <div class="holo-card holo-glow">
+            <div class="holo-header">
+              <span>ANCESTORY • ID-<span id="enrich-card-stage">00</span></span>
+              <span class="holo-verified">VERIFIED LINEAGE</span>
+            </div>
+            <div id="holo-portrait-wrap" class="holo-portrait scanline">
+              <div class="holo-specimen-bar">
+                <span id="enrich-card-header-text">HOLO BADGE</span>
+                <span id="enrich-card-specimen">SPECIMEN: —</span>
+              </div>
+              <canvas id="holo-3d-card"></canvas>
+            </div>
+            <div class="holo-info">
+              <div class="holo-name" id="enrich-card-name">—</div>
+              <div class="holo-era" id="enrich-card-era">—</div>
+              <div class="solid-col" id="enrich-card-solid">—</div>
+              <div class="stats" id="enrich-card-stats"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="enrichment-section collapsed" id="enrich-section-lenticular">
+      <button type="button" class="enrichment-toggle" aria-expanded="false" onclick="toggleEnrichSection('enrich-section-lenticular')">
+        <span>Lenticular Deck &amp; Tree Comparisons</span>
+        <span class="enrichment-chevron" aria-hidden="true">▲</span>
+      </button>
+      <div class="enrichment-body">
+        <p style="font-size:12px;color:var(--muted);margin:0 0 10px">Technical reference deck: hero skulls on black with SpaceX-style metrology lines. Click a card to load into the live lenticular inspector.</p>
+        <button class="btn" type="button" onclick="loadFullLiteDeck()">Load Entire Haze Holo Deck (auto duplicated+flipped blurred stretched sides + iridescent center; red/blue glasses for 3D pop; prompt built-in)</button>
+        <div id="enrich-full-lite-deck" class="enrich-lite-deck" style="margin-top:10px"></div>
+        <div class="section-title" style="margin-top:16px">How I Delineate from Other Trees</div>
+        <div id="enrich-delineation-panel" class="data-panel" style="font-size:13px"></div>
+        <p style="font-size:11px;color:var(--muted);margin-top:10px">Full Three.js orbit surface is below in the viewer — use slider for holo reveal scrub.</p>
+      </div>
+    </div>
+
+    <div class="enrichment-section collapsed" id="enrich-section-skinning">
+      <button type="button" class="enrichment-toggle" aria-expanded="false" onclick="toggleEnrichSection('enrich-section-skinning')">
+        <span>Legacy Skinning Demo (additive blend reference)</span>
+        <span class="enrichment-chevron" aria-hidden="true">▲</span>
+      </button>
+      <div class="enrichment-body">
+        <div class="enrich-three-demo">
+          <span style="position:absolute;top:8px;left:10px;font-size:10px;background:rgba(0,0,0,0.6);padding:2px 6px;border-radius:3px">SKINNED + ADDITIVE</span>
+          <canvas id="enrich-three-canvas" width="600" height="180" style="width:100%;height:100%;display:block"></canvas>
+        </div>
+        <p style="font-size:10px;color:var(--muted);margin:8px 0 0">Minimal 2D procedural demo — production: Mixamo FBX + <a href="https://threejs.org/examples/webgl_animation_skinning_additive_blending.html" target="_blank" style="color:var(--accent)">Three.js additive</a>.</p>
+      </div>
+    </div>
+
+    <div class="enrichment-section collapsed" id="enrich-section-refs">
+      <button type="button" class="enrichment-toggle" aria-expanded="false" onclick="toggleEnrichSection('enrich-section-refs')">
+        <span>Sources &amp; Holo Concepts</span>
+        <span class="enrichment-chevron" aria-hidden="true">▲</span>
+      </button>
+      <div class="enrichment-body enrich-footer-links">
+        <p style="margin:0 0 8px">Data from <code>character_bibles/ancestory/hominin_data/hominin_lineage_timeline.json</code> — one solid column per stage for iteration. Pairs with <code>pot/</code> tags and <code>style_presets</code>.</p>
+        <p style="margin:0">
+          <a href="https://3d.si.edu/collections/hominin-fossils" target="_blank">Smithsonian 3D</a> ·
+          <a href="https://australian.museum/learn/science/human-evolution/human-evolution-skulls/" target="_blank">Australian Museum Skulls</a> ·
+          <a href="https://boneclones.com/category/fossil-hominids" target="_blank">Bone Clones</a> ·
+          <a href="https://www.mixamo.com/#/" target="_blank">Mixamo</a> ·
+          <a href="https://www.instagram.com/tadericson/p/CzsYfNVL2XX/" target="_blank">IG Holo ID</a> ·
+          <a href="https://community.spline.design/file/599304aa-55a7-431e-86ee-b3d8cd6ecca0" target="_blank">Spline</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEOS -->
+  <div class="section">
+    <div class="section-title">Holo Pan Video Sequence (left pan through skull → bones)</div>
+    
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:16px;">
+      
+      <!-- Ref 1 -->
+      <div class="asset video-wrapper">
+        <video controls preload="metadata" style="width:100%; background:#000;">
+          <source src="vid/holo-skull-pan-ref.mp4" type="video/mp4">
+        </video>
+        <div class="asset-label">
+          <span>🌀 Holo Skull Pan Ref (style target)</span>
+          <span class="meta-pill">6s</span>
+        </div>
+      </div>
+      
+      <!-- Ref 2 -->
+      <div class="asset video-wrapper">
+        <video controls preload="metadata" style="width:100%; background:#000;">
+          <source src="vid/augmented-final-ref.mp4" type="video/mp4">
+        </video>
+        <div class="asset-label">
+          <span>🎯 Augmented Final Ref (style target)</span>
+          <span class="meta-pill">6s</span>
+        </div>
+      </div>
+      
+      <!-- Generated -->
+      <div class="asset video-wrapper" style="grid-column: span 1;">
+        <video controls preload="metadata" style="width:100%; background:#000;">
+          <source src="vid/example-holo-pan.mp4" type="video/mp4">
+        </video>
+        <div class="asset-label">
+          <span>✨ Generated Example Pan (this preset)</span>
+          <span class="meta-pill">~6s</span>
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-top:8px; font-size:12px; color:var(--muted);">
+      The preset is designed so the video output matches the motion and holographic quality of the two reference videos while using Product Showcase framing.
+    </div>
+  </div>
+
+  <!-- WHAT SKULL AM I -->
+  <div class="section what-skull-section collapsed" id="what-skull-section">
+    <button type="button" class="what-skull-toggle" id="what-skull-toggle" aria-expanded="false" onclick="toggleWhatSkullSection()">
+      <span>What Skull Am I? (Photo-based estimation)</span>
+      <span class="what-skull-chevron" aria-hidden="true">▲</span>
+    </button>
+    <div class="what-skull-body" id="what-skull-body">
+      <div class="card" style="padding:16px; font-size:13px;">
+        <p><strong>For the example headshot used here:</strong> The initial preset run used a fixed Neanderthal stage (7) for dramatic effect. This created the size/shape mismatch you noticed — Neanderthal crania are long and low with heavy brow and occipital bun, very different from most modern heads.</p>
+        
+        <p><strong>Improved preset behavior (now in the prompts above):</strong></p>
+        <ul style="margin:6px 0 0 18px; padding:0;">
+          <li>Grok first <strong>analyzes the headshot photo</strong> to extract real skull dimensions (ratios, brow, jaw, overall shape).</li>
+          <li>The skull is <strong>morphed to exactly fit those measurements</strong> from the photo (same width, height, proportions as your visible head).</li>
+          <li>Then accurate hominin fossil traits (from the timeline JSON + Bone Clones/Smithsonian refs) are blended on top of the photo-matched skull.</li>
+          <li>You (or the prompt) can specify a stage or let it "auto-estimate best fitting influence" based on visible features (strong brow/jaw → Neanderthal lean; high forehead/gracile → sapiens lean).</li>
+        </ul>
+        <p style="margin-bottom:0;">Result: the skull "belongs" to the person in the photo while still showing real evolutionary bone structure. Re-generate using the updated prompt.txt in this folder for better matching on your headshots.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- THREE.JS PANABLE SURFACE -->
+  <div class="section">
+    <div class="section-title">Spline.design / Three.js Panable 3D Holo Skull Surface</div>
+    <div style="background:var(--surface2); border:1px solid #222; border-radius:16px; padding:16px;">
+      <p style="margin-top:0; color:var(--muted); font-size:13px;">
+        This is a self-contained Three.js demo of the "panable surface" you asked for (inspired by the linked Spline files: 
+        <a href="https://app.spline.design/file/3a0e7933-4ce5-47d7-aa9c-cdfdd973f9b5" target="_blank">Spline 1</a>, 
+        <a href="https://app.spline.design/file/999700e2-df6d-4afc-8150-85b06fd64008" target="_blank">Spline 2</a>).
+        Drag to rotate/pan the 3D skull. Use the slider to scrub the holographic reveal (head → skull → bones).
+        For production, generate consistent multi-angle stills + depth hints with this preset, import into Spline, and rig the scrub/pan + holo materials there.
+      </p>
+      
+      <div id="three-container" style="width:100%; height:420px; background:#050608; border-radius:12px; position:relative; overflow:hidden; border:1px solid #222;">
+        <canvas id="three-canvas" style="width:100%; height:100%; display:block;"></canvas>
+        <div style="position:absolute; top:8px; left:10px; font-size:11px; background:rgba(0,0,0,0.6); padding:2px 8px; border-radius:4px; pointer-events:none;">
+          Drag to orbit • Scroll to zoom • Slider = Holo Reveal
+        </div>
+      </div>
+      
+      <div style="margin-top:10px; display:flex; align-items:center; gap:10px;">
+        <label style="font-size:12px; min-width:90px;">Holo Reveal</label>
+        <input type="range" id="reveal-slider" min="0" max="100" value="65" style="flex:1;">
+        <span id="reveal-value" style="font-family:monospace; font-size:12px; width:40px;">65%</span>
+      </div>
+      
+      <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
+        <button class="btn" onclick="setSkullType(0)">Sahelanthropus (early)</button>
+        <button class="btn" onclick="setSkullType(5)">H. erectus (Turkana)</button>
+        <button class="btn" onclick="setSkullType(7)">Neanderthal (current example)</button>
+        <button class="btn" onclick="setSkullType(9)">Early Sapiens</button>
+        <button class="btn" onclick="setSkullType(10)">Modern (photo-matched)</button>
+        <button class="btn" style="margin-left:auto;" onclick="resetCamera()">Reset View</button>
+      </div>
+      <div style="font-size:11px; color:var(--muted); margin-top:6px;">
+        These change the skull proportions in the 3D model to match different stages from the lineage timeline. 
+        In a real Spline/Three.js production version, load textured models generated from this preset (multiple angles + normal/depth passes) for photo-accurate matching to your headshot.
+      </div>
+    </div>
+  </div>
+
+  <!-- PROMPT -->
+  <div class="section">
+    <div class="section-title">Full Prompt (copy for Grok Imagine)</div>
+    <div class="prompt-box" id="prompt-box" style="max-height:280px;"></div>
+    <div style="margin-top:8px;">
+      <button class="btn btn-primary" onclick="copyViewerPrompt()">📋 Copy Full Prompt</button>
+      <button class="btn" onclick="showUsage()">Show Usage Instructions</button>
+    </div>
+  </div>
+
+  <footer>
+    <strong>Turnkey Holo Badge Creation:</strong> 
+    Use <code>python create_holo_badge_deck.py --headshot your-photo.jpg --stage 7 --count 8 --out my-deck/</code> to generate a full set of digital playing cards.<br>
+    Each card gets its own prompt pre-filled with the correct lineage stage, solid migration column, and fossil-accurate skull description.<br>
+    Generated assets go into <code>featured_templates/holo-skull-badge/</code> (or your deck folder) for easy proof sheets and iteration.
+  </footer>
+</div>
+
+<script>
+// Embedded data from this card + minimal lineage for stage switching
+const CURRENT_CARD = {
+  "stage_index": 7,
+  "name": "Homo neanderthalensis (Neanderthals)",
+  "era": "Middle-Upper Pleistocene ~400-40 kya",
+  "unified_migration_lineage": "Eurasia (Europe + West Asia) from heidelbergensis branch. No Africa origin for classic forms. Solid column: 'Eurasia (Europe/ Levant) | 400kya split from sapiens line | cold-adapted | 1-2% introgression into non-African sapiens ~50-60kya | extinct ~40kya'.",
+  "genetic_admixture_estimates": "1-2% (up to ~4% in some) Neanderthal DNA in all non-African modern humans from ~50-60kya admixture events (multiple pulses). Higher in some Europeans/Asians; affects skin, immune, metabolism, brain.",
+  "cranial_face_bones": "Brain ~1200-1750cc (large, long low vault); massive double-arched brow, receding forehead, large midface, big nose (cold adaptation?), no chin or weak, 'bun' occipital, large orbits, midfacial prognathism.",
+  "ik_pose_shapes": "Mixamo: stocky mesomorph/ endomorph male rig (short limbs); 'power crouch', 'spear thrust close range', 'scavenge' animations. IK for stocky proportions. Three.js: additive 'barrel chest breathing' + 'heavy tool' + facial 'occipital bun' and 'big nose' morphs.",
+  "fossil_refs": "Australian Museum: multiple Homo neanderthalensis skulls (Amud 1, Le Moustier, Gibraltar, youth, 1, Galilee partial). Bone Clones: extensive Neanderthal skulls, skeletons, postcranial (full sets, reconstructions by Sawyer/Maley). Smithsonian 3D hominin (Neanderthal scans)."
+};
+
+const PROMPT_TEXT = `Apply the Product Showcase featured template. 
+
+Clean high-end studio product photography presentation of a single premium futuristic holographic ID badge / digital collectible playing card as the central "product" being showcased. The badge has glossy iridescent holographic glass-like material, strong rainbow refraction and light play, subtle scanlines, floating 3D depth, sci-fi high-tech aesthetic.
+
+The card prominently features the exact person from the reference headshot photo (preserve 100% identity, face shape, skin tone, hair, expression, and likeness in the initial clear portrait layer).
+
+The design shows a smooth cinematic holographic left pan / morph transition: starting with the sharp clear headshot portrait on the card -> shimmering iridescent holo dissolve and left pan revealing a highly detailed anatomically accurate skull with evolutionary bone structure -> continued pan and reveal through the skull to upper bones and skeleton (clavicles, ribs, vertebrae, humerus etc.) all in the same holographic iridescent floating style with subtle glowing bone landmarks.
+
+For the skull and skeleton layer use precise real-world hominin fossil anatomy: Australian Museum: multiple Homo neanderthalensis skulls (Amud 1, Le Moustier, Gibraltar, youth, 1, Galilee partial), Bone Clones: extensive Neanderthal skulls, skeletons, postcranial (full sets, reconstructions by Sawyer/Maley), Smithsonian 3D hominin (Neanderthal scans). with 1.8% Neanderthal archaic admixture (from ~50kya Eurasian contact) expressing as long low-vaulted cranium with prominent double-arched supraorbital torus and occipital bun, receding forehead, large robust midface with broad nose and midfacial prognathism, weak or absent chin, stocky cold-adapted body with barrel chest, short distal limbs, thick bones, powerful build, pale-medium skin with excellent multiple scattering subsurface and tiger-stripe potential under side light, robust hair patterns.
+
+MOTION (VIDEO): 5-7 second fluid sequence with gentle left pan showing the full holo transition from portrait -> skull -> bones/skeleton -> final augmented card state. Match the holographic skull pan motion style and final augmented aesthetic of the reference videos.`;
+
+const STAGES_SUMMARY = [
+  {i:0, name:"Sahelanthropus", era:"~7 mya", skull:"Small brain, heavy continuous brow torus"},
+  {i:2, name:"A. afarensis (Lucy)", era:"~3.2 mya", skull:"Prognathic, moderate brow, small cranium"},
+  {i:5, name:"H. erectus (Turkana)", era:"~1.6 mya", skull:"Low vault, heavy torus, robust but human-like"},
+  {i:7, name:"Neanderthal", era:"~400-40 kya", skull:"Long low cranium, double brow, occipital bun, big nose"},
+  {i:9, name:"Early Sapiens", era:"~300 kya", skull:"High vault, vertical forehead, reduced brow, chin"},
+  {i:10, name:"Modern Sapiens", era:"~50 kya → now", skull:"Fully gracile modern cranium + population variation"}
+];
+
+let currentStageIndex = 7;
+let LINEAGE_STAGES = null;
+let heroImportMeta = { filename: null, width: null, height: null };
+
+// Three.js panable holo skull surface (must be declared before init / HoloChrome callbacks)
+let scene, camera, renderer;
+let skullGroup;
+let currentSkullType = 7;
+let revealPercent = 65;
+
+function truncateDescriptorText(text, maxLen = 110) {
+  if (!text) return '';
+  const s = String(text).replace(/\s+/g, ' ').trim();
+  return s.length <= maxLen ? s : s.slice(0, maxLen - 1) + '…';
+}
+
+function getKeyFossilSpecimen(stageData) {
+  if (stageData.key_fossils && stageData.key_fossils.length) {
+    const k = stageData.key_fossils[0];
+    return typeof k === 'string' ? k.split(',')[0].trim() : String(k);
+  }
+  if (stageData.fossil_refs) {
+    const refs = Array.isArray(stageData.fossil_refs) ? stageData.fossil_refs[0] : stageData.fossil_refs;
+    const match = String(refs).match(/['"]([^'"]+)['"]|([A-Z]{2,}\s*\d+|[A-Z]+-\w+-\d+)/);
+    if (match) return (match[1] || match[2] || '').trim();
+  }
+  return null;
+}
+
+function getPhotoMatchHint(stageIndex) {
+  if (stageIndex >= 10) {
+    return 'Photo-matched skull: morphed to headshot ratios, gracile modern sapiens baseline.';
+  }
+  if (stageIndex === 9) {
+    return 'Photo-matched estimate: high forehead / reduced brow → early sapiens lean.';
+  }
+  if (stageIndex === 7) {
+    return 'Photo-matched estimate: strong brow / jaw → Neanderthal lean on photo ratios.';
+  }
+  if (stageIndex <= 2) {
+    return 'Photo-matched overlay: archaic small vault + heavy brow on your head proportions.';
+  }
+  return 'Photo-matched skull: Grok analyzes headshot ratios, then blends fossil traits from this stage.';
+}
+
+function renderHeroImportDescriptor(stageData) {
+  const el = document.getElementById('hero-import-descriptor');
+  if (!el || !stageData) return;
+
+  const idx = stageData.stage_index ?? currentStageIndex;
+  const specimen = getKeyFossilSpecimen(stageData);
+  const skullDesc = truncateDescriptorText(
+    stageData.cranial_face_bones || stageData.bible_snippet || stageData.prompt_traits
+  );
+  const photoHint = getPhotoMatchHint(idx);
+
+  let html = `<span class="desc-stage">Stage ${idx} · ${stageData.name || 'Unknown'}</span>\n`;
+  html += `${stageData.era || ''}\n`;
+  if (specimen) {
+    html += `<span class="desc-specimen">Specimen: ${specimen}</span>\n`;
+  }
+  if (skullDesc) {
+    html += `${skullDesc}\n`;
+  }
+  html += `<span class="desc-photo">${photoHint}</span>`;
+
+  if (heroImportMeta.filename) {
+    const dims = heroImportMeta.width && heroImportMeta.height
+      ? ` · ${heroImportMeta.width}×${heroImportMeta.height}`
+      : '';
+    html += `\n<span class="desc-photo">Import: ${truncateDescriptorText(heroImportMeta.filename, 28)}${dims}</span>`;
+  }
+
+  el.innerHTML = html;
+}
+
+function getSkullTypeLabel(stageData) {
+  const name = stageData.name || '';
+  const parenIdx = name.indexOf('(');
+  if (parenIdx > 0) {
+    const binomial = name.slice(0, parenIdx).trim();
+    if (binomial.length <= 32) return binomial;
+  }
+  const short = parenIdx > 0 ? name.slice(0, parenIdx).trim() : name;
+  return short.length > 32 ? short.slice(0, 31) + '…' : short;
+}
+
+function getEraShort(stageData) {
+  const era = stageData.era || '';
+  const rangeMatch = era.match(/~?\s*[\d.]+\s*[-–→]+\s*[\d.]+\s*(kya|mya)/i);
+  if (rangeMatch) return rangeMatch[0].replace(/\s+/g, ' ').trim();
+  const singleMatch = era.match(/~?\s*[\d.]+\s*(kya|mya)/i);
+  if (singleMatch) return singleMatch[0].trim();
+  const arrowMatch = era.match(/~?\s*[\d.]+\s*(kya|mya)\s*→/i);
+  if (arrowMatch) return era.match(/~[\d.]+\s*kya\s*→\s*now/i)?.[0] || arrowMatch[0].trim();
+  return era.split(/[;,]/)[0].trim();
+}
+
+function getMigrationRegion(stageData) {
+  const lineage = stageData.unified_migration_lineage || '';
+  const solidMatch = lineage.match(/Solid column(?:\s+base)?:\s*'([^']+)/i);
+  if (solidMatch) {
+    const segment = solidMatch[1].split('|')[0].trim();
+    return segment.replace(/\s*\/\s*/g, '/').replace(/\s+/g, ' ');
+  }
+  const firstPart = lineage.split(/\.\s*Solid column(?:\s+base)?:/i)[0].split('.')[0].trim();
+  if (firstPart && firstPart.length <= 55) return firstPart;
+  if (stageData.migration_notes) {
+    const notes = stageData.migration_notes;
+    const regionMatch = notes.match(/^(East\/South Africa|East Africa|Central African[^.;]*|Africa[^.;]*|Eurasia[^.;]*|Asia[^.;]*|Europe[^.;]*)/i);
+    if (regionMatch) return regionMatch[0].trim();
+    return notes.split(/[.;]/)[0].trim().slice(0, 48);
+  }
+  return '';
+}
+
+function updateHeroSkullLabels(idx) {
+  const stageData = getStageByIndex(idx);
+  const typeEl = document.getElementById('hero-skull-type-label');
+  const metaEl = document.getElementById('hero-skull-meta-label');
+  if (!typeEl || !metaEl || !stageData) return;
+
+  typeEl.textContent = getSkullTypeLabel(stageData);
+
+  const eraShort = getEraShort(stageData);
+  const region = getMigrationRegion(stageData);
+  metaEl.textContent = [eraShort, region].filter(Boolean).join(' • ');
+}
+
+function getStageByIndex(idx) {
+  if (window.LineageEnrichment) {
+    const e = LineageEnrichment.getStage(idx);
+    if (e && e.name) return e;
+  }
+  if (window.HoloChrome) {
+    const c = HoloChrome.getStageByIndex(idx);
+    if (c && c.name) return c;
+  }
+  if (LINEAGE_STAGES) {
+    const s = LINEAGE_STAGES.find(st => st.stage_index === idx);
+    if (s) return s;
+  }
+  if (idx === 7) return CURRENT_CARD;
+  const summary = STAGES_SUMMARY.find(s => s.i === idx);
+  if (summary) {
+    return {
+      stage_index: summary.i,
+      name: summary.name,
+      era: summary.era,
+      unified_migration_lineage: `See hominin_lineage_timeline.json for stage ${summary.i} solid column`,
+      genetic_admixture_estimates: "Varies by stage — check lineage JSON",
+      cranial_face_bones: summary.skull,
+      ik_pose_shapes: "See Mixamo/Three.js guidance in full lineage data",
+      fossil_refs: "Full fossil list in hominin_lineage_timeline.json"
+    };
+  }
+  return CURRENT_CARD;
+}
+
+function selectStage(idx, options = {}) {
+  currentStageIndex = idx;
+  renderStageInfo(getStageByIndex(idx));
+  updateHeroSkullLabels(idx);
+  if (typeof setSkullType === 'function') setSkullType(idx);
+  if (!options.fromEnrichment && !options.fromChrome && window.HoloChrome) {
+    HoloChrome.setStageIndex(idx, { source: 'viewer' });
+  }
+}
+
+window.holoViewerSelectStage = selectStage;
+
+function renderStageInfo(stageData) {
+  renderHeroImportDescriptor(stageData);
+}
+
+function copyViewerPrompt() {
+  const text = document.getElementById('prompt-box').textContent.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = event.currentTarget ? event.currentTarget.textContent : '';
+    alert('Prompt copied! Paste into Grok Imagine with Product Showcase template + your headshot.');
+  }).catch(() => {
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    alert('Prompt copied (fallback).');
+  });
+}
+
+function showUsage() {
+  alert(`TURNKEY USAGE:
+
+1. Run: python create_holo_badge_deck.py --headshot your-headshot.jpg --stage 7 --out my-deck/
+
+2. Open my-deck/card-000/prompt.txt
+
+3. In Grok Imagine:
+   - Select "Product Showcase" (or Holo Skull Badge if available)
+   - Upload the headshot
+   - Paste the full prompt
+   - Generate image → then request video for the pan
+
+4. Drop results back into featured_templates/holo-skull-badge/ or your deck folder.
+
+5. View this file (holo-viewer.html) or open deck.html for the collection.
+
+The solid column (unified_migration_lineage) + fossil refs ensure every card has accurate, iterable ancestry data.`);
+}
+
+// Auto-show launch banner for file:// protocol
+function showLaunchBannerIfNeeded() {
+  const banner = document.getElementById('launch-banner');
+  if (banner && location.protocol === 'file:') {
+    banner.style.display = 'block';
+  }
+  initLaunchHint();
+}
+
+const LAUNCH_HINT_KEY = 'holo-viewer-launch-hint-collapsed';
+
+function setLaunchHintCollapsed(collapsed) {
+  const hint = document.getElementById('launch-hint');
+  const toggle = document.getElementById('launch-hint-toggle');
+  if (!hint || !toggle) return;
+  hint.classList.toggle('collapsed', collapsed);
+  toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+  try { localStorage.setItem(LAUNCH_HINT_KEY, collapsed ? '1' : '0'); } catch (_) {}
+}
+
+function toggleLaunchHint() {
+  const hint = document.getElementById('launch-hint');
+  if (!hint) return;
+  setLaunchHintCollapsed(!hint.classList.contains('collapsed'));
+}
+
+function initLaunchHint() {
+  const hint = document.getElementById('launch-hint');
+  if (!hint) return;
+  let collapsed = location.protocol !== 'file:';
+  try {
+    const saved = localStorage.getItem(LAUNCH_HINT_KEY);
+    if (saved !== null) collapsed = saved === '1';
+  } catch (_) {}
+  setLaunchHintCollapsed(collapsed);
+}
+
+const WHAT_SKULL_KEY = 'holo-viewer-what-skull-collapsed';
+
+function setWhatSkullSectionCollapsed(collapsed) {
+  const section = document.getElementById('what-skull-section');
+  const toggle = document.getElementById('what-skull-toggle');
+  if (!section || !toggle) return;
+  section.classList.toggle('collapsed', collapsed);
+  toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+  try { localStorage.setItem(WHAT_SKULL_KEY, collapsed ? '1' : '0'); } catch (_) {}
+}
+
+function toggleWhatSkullSection() {
+  const section = document.getElementById('what-skull-section');
+  if (!section) return;
+  setWhatSkullSectionCollapsed(!section.classList.contains('collapsed'));
+}
+
+function initWhatSkullSection() {
+  const section = document.getElementById('what-skull-section');
+  if (!section) return;
+  let collapsed = true;
+  try {
+    const saved = localStorage.getItem(WHAT_SKULL_KEY);
+    if (saved !== null) collapsed = saved === '1';
+  } catch (_) {}
+  setWhatSkullSectionCollapsed(collapsed);
+}
+
+function copyLaunchCommand() {
+  const cmd = 'python -m http.server 8000';
+  navigator.clipboard.writeText(cmd).then(() => {
+    const btns = document.querySelectorAll('#launch-banner button');
+    if (btns.length) {
+      const orig = btns[0].textContent;
+      btns[0].textContent = 'Copied!';
+      setTimeout(() => { if (btns[0]) btns[0].textContent = orig; }, 1500);
+    }
+  }).catch(() => {
+    alert('Run this in terminal from the imagine project root:\n\n' + cmd + '\n\nOr simply: python launch-viewer.py (from inside this holo-skull-badge folder)');
+  });
+}
+
+// Call early
+setTimeout(showLaunchBannerIfNeeded, 50);
+
+function initHeroImport() {
+  const input = document.getElementById('hero-headshot-input');
+  const preview = document.getElementById('hero-headshot-preview');
+  const zone = document.getElementById('hero-import-zone');
+  if (!input || !preview || !zone) return;
+
+  function loadFile(file) {
+    if (!file || !file.type.startsWith('image/')) return;
+    const url = URL.createObjectURL(file);
+    preview.onload = () => {
+      heroImportMeta = {
+        filename: file.name,
+        width: preview.naturalWidth || null,
+        height: preview.naturalHeight || null
+      };
+      renderHeroImportDescriptor(getStageByIndex(currentStageIndex));
+      URL.revokeObjectURL(url);
+    };
+    preview.src = url;
+    preview.alt = file.name;
+  }
+
+  input.addEventListener('change', () => {
+    if (input.files && input.files[0]) loadFile(input.files[0]);
+  });
+
+  zone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    zone.classList.add('dragover');
+  });
+  zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+  zone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    zone.classList.remove('dragover');
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) loadFile(e.dataTransfer.files[0]);
+  });
+}
+
+function initViewerUi() {
+  renderStageInfo(getStageByIndex(currentStageIndex));
+  updateHeroSkullLabels(currentStageIndex);
+  const promptBox = document.getElementById('prompt-box');
+  if (promptBox) promptBox.textContent = PROMPT_TEXT;
+  initThreeSkull();
+  initHeroImport();
+  initWhatSkullSection();
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '?' && !(e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA'))) {
+      showUsage();
+    }
+  });
+  console.log('%c[Holo Skull Badge Viewer] Ready. Open via http server for best video + 3D experience.', 'color:#555');
+}
+
+async function boot() {
+  await HoloChrome.init({ page: 'viewer', defaultStage: 7 });
+  LINEAGE_STAGES = HoloChrome.getStages().length ? HoloChrome.getStages() : null;
+  if (window.LineageEnrichment) await LineageEnrichment.init();
+  const saved = HoloChrome.getStageIndex();
+  selectStage(saved, { fromChrome: true });
+  initViewerUi();
+}
+
+// ==================== THREE.JS PANABLE HOLO SKULL SURFACE ====================
+
+function initThreeSkull() {
+  const container = document.getElementById('three-container');
+  const canvas = document.getElementById('three-canvas');
+  
+  renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  
+  scene = new THREE.Scene();
+  
+  camera = new THREE.PerspectiveCamera(55, container.clientWidth / container.clientHeight, 0.1, 100);
+  camera.position.set(0, 0.3, 3.2);
+  
+  // Lighting for holo look
+  const ambient = new THREE.AmbientLight(0x112233, 0.6);
+  scene.add(ambient);
+  
+  const hemi = new THREE.HemisphereLight(0x00f0ff, 0x220033, 0.8);
+  scene.add(hemi);
+  
+  const dir = new THREE.DirectionalLight(0xffffff, 0.7);
+  dir.position.set(2, 3, 2);
+  scene.add(dir);
+  
+  skullGroup = new THREE.Group();
+  scene.add(skullGroup);
+  
+  createSkull(currentSkullType);
+  
+  // Mouse controls (simple orbit)
+  let isDragging = false;
+  let prevX = 0, prevY = 0;
+  
+  canvas.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    prevX = e.clientX;
+    prevY = e.clientY;
+  });
+  
+  window.addEventListener('mouseup', () => isDragging = false);
+  
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging || !skullGroup) return;
+    const deltaX = e.clientX - prevX;
+    const deltaY = e.clientY - prevY;
+    
+    skullGroup.rotation.y += deltaX * 0.005;
+    skullGroup.rotation.x += deltaY * 0.005;
+    skullGroup.rotation.x = Math.max(-1.2, Math.min(1.2, skullGroup.rotation.x));
+    
+    prevX = e.clientX;
+    prevY = e.clientY;
+  });
+  
+  // Zoom with wheel
+  canvas.addEventListener('wheel', (e) => {
+    camera.position.z += e.deltaY * 0.003;
+    camera.position.z = Math.max(1.5, Math.min(6, camera.position.z));
+    e.preventDefault();
+  });
+  
+  // Reveal slider
+  const slider = document.getElementById('reveal-slider');
+  const valueEl = document.getElementById('reveal-value');
+  
+  slider.addEventListener('input', () => {
+    revealPercent = parseInt(slider.value);
+    valueEl.textContent = revealPercent + '%';
+    updateSkullReveal();
+  });
+  
+  // Handle resize
+  function onResize() {
+    camera.aspect = container.clientWidth / container.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.clientWidth, container.clientHeight);
+  }
+  window.addEventListener('resize', onResize);
+  
+  // Initial reveal
+  updateSkullReveal();
+  
+  // Animation loop
+  function animate() {
+    requestAnimationFrame(animate);
+    // Subtle idle rotation
+    if (skullGroup && !isDragging) {
+      skullGroup.rotation.y += 0.0008;
+    }
+    renderer.render(scene, camera);
+  }
+  animate();
+  
+  // Load Three.js if not present (CDN fallback)
+  console.log('%c[Three.js] Panable holo skull surface initialized. Drag to rotate.', 'color:#555');
+}
+
+function createSkull(type) {
+  if (!skullGroup) return;
+  // Clear previous
+  while (skullGroup.children.length > 0) {
+    skullGroup.remove(skullGroup.children[0]);
+  }
+  
+  const isEarly = type <= 2;
+  const isRobust = type === 7 || type === 3;
+  const isGracile = type >= 9;
+  
+  // Holo material
+  const holoMat = new THREE.MeshPhongMaterial({
+    color: 0xaaddff,
+    emissive: 0x003366,
+    shininess: 80,
+    transparent: true,
+    opacity: 0.75,
+    specular: 0x88ffff,
+    side: THREE.DoubleSide
+  });
+  
+  const wireMat = new THREE.MeshBasicMaterial({
+    color: 0x00f0ff,
+    wireframe: true,
+    transparent: true,
+    opacity: 0.35
+  });
+  
+  // Cranium (main sphere, stretched for type)
+  const craniumScaleX = isRobust ? 1.05 : (isGracile ? 0.95 : 1.0);
+  const craniumScaleY = isEarly ? 0.85 : (isGracile ? 1.05 : 0.95);
+  const cranium = new THREE.Mesh(
+    new THREE.SphereGeometry(0.85, 32, 24),
+    holoMat
+  );
+  cranium.scale.set(craniumScaleX, craniumScaleY, 1.0);
+  cranium.position.y = 0.15;
+  skullGroup.add(cranium);
+  
+  // Wire overlay for holo tech look
+  const wireCranium = new THREE.Mesh(
+    new THREE.SphereGeometry(0.855, 32, 24),
+    wireMat
+  );
+  wireCranium.scale.set(craniumScaleX, craniumScaleY, 1.0);
+  wireCranium.position.y = 0.15;
+  skullGroup.add(wireCranium);
+  
+  // Brow ridge (strong for robust/early)
+  if (isRobust || isEarly) {
+    const brow = new THREE.Mesh(
+      new THREE.BoxGeometry(1.6, 0.18, 0.9),
+      holoMat
+    );
+    brow.position.set(0, 0.35, 0.55);
+    skullGroup.add(brow);
+  }
+  
+  // Jaw (more projecting for early/robust, smaller for gracile)
+  const jawHeight = isGracile ? 0.55 : 0.7;
+  const jaw = new THREE.Mesh(
+    new THREE.BoxGeometry(1.0, jawHeight, 0.7),
+    holoMat
+  );
+  jaw.position.set(0, -0.55, 0.35);
+  skullGroup.add(jaw);
+  
+  // Nasal / midface
+  const nasal = new THREE.Mesh(
+    new THREE.ConeGeometry(0.22, 0.6, 4),
+    holoMat
+  );
+  nasal.rotation.x = Math.PI;
+  nasal.position.set(0, 0.05, 0.85);
+  skullGroup.add(nasal);
+  
+  // Eye sockets (holes via darker material or just indicators)
+  const eyeMat = new THREE.MeshPhongMaterial({ color: 0x001122, transparent: true, opacity: 0.9 });
+  const leftEye = new THREE.Mesh(new THREE.SphereGeometry(0.18, 16, 12), eyeMat);
+  leftEye.position.set(-0.42, 0.22, 0.72);
+  skullGroup.add(leftEye);
+  const rightEye = leftEye.clone();
+  rightEye.position.x = 0.42;
+  skullGroup.add(rightEye);
+  
+  // Teeth hint
+  const teeth = new THREE.Mesh(
+    new THREE.BoxGeometry(0.7, 0.12, 0.25),
+    new THREE.MeshPhongMaterial({ color: 0xccddee, shininess: 30 })
+  );
+  teeth.position.set(0, -0.85, 0.55);
+  skullGroup.add(teeth);
+  
+  // Occipital bun for Neanderthal-like
+  if (type === 7) {
+    const bun = new THREE.Mesh(new THREE.SphereGeometry(0.35, 16, 12), holoMat);
+    bun.position.set(0, 0.1, -0.7);
+    bun.scale.set(1.0, 0.9, 0.7);
+    skullGroup.add(bun);
+  }
+  
+  // Store for reveal updates
+  skullGroup.userData.meshes = skullGroup.children;
+}
+
+function updateSkullReveal() {
+  if (!skullGroup) return;
+  const p = revealPercent / 100;
+  
+  skullGroup.children.forEach((mesh, i) => {
+    if (mesh.material) {
+      // Fade opacity for holo reveal effect
+      const baseOpacity = (i % 2 === 0) ? 0.75 : 0.35; // solid vs wire
+      mesh.material.opacity = baseOpacity * (0.3 + p * 0.7);
+      mesh.visible = p > 0.15;
+    }
+  });
+  
+  // Optional: slight scale or position shift to simulate "emerging" from head
+  skullGroup.position.y = (p - 0.5) * 0.1;
+}
+
+function setSkullType(type) {
+  currentSkullType = type;
+  if (!skullGroup) return;
+  createSkull(type);
+  updateSkullReveal();
+  
+  // Update info text if possible
+  const info = document.querySelector('#three-container + div') || document.createElement('div');
+  console.log('Switched 3D skull to stage type:', type);
+}
+
+function resetCamera() {
+  if (!camera || !skullGroup) return;
+  camera.position.set(0, 0.3, 3.2);
+  skullGroup.rotation.set(0, 0, 0);
+}
+
+// Make sure Three.js is loaded (add to head if needed when using)
+if (typeof THREE === 'undefined') {
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js';
+  script.onload = () => {
+    console.log('Three.js loaded dynamically for the panable surface.');
+    // Re-init if the container exists
+    const c = document.getElementById('three-canvas');
+    if (c && !window.threeInitialized) {
+      window.threeInitialized = true;
+      // The initThreeSkull is already called in main init
+    }
+  };
+  document.head.appendChild(script);
+}
+
+HoloChrome.onStageChange((idx) => {
+  selectStage(idx, { fromChrome: true });
+});
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', boot);
+} else {
+  boot();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Sports Teams Collector Cards - Haze Holo Style",
+    "description": "Analogous to ancestry for sports teams: player portraits morphed or styled with team 'identity', using haze holo for trading/collector cards."
+  },
+  "teams": [
+    {
+      "slug": "lakers-legend",
+      "display": "Lakers Legend (e.g. Kobe style)",
+      "type": "basketball",
+      "specimen_id": "Player 24",
+      "era": "2000s dynasty",
+      "prompt_addition": "Professional basketball player in Lakers jersey, athletic build, intense focus, team colors purple gold, championship vibe.",
+      "traits": "athletic, determined, iconic",
+      "base_ref": "your-sports-headshot.jpg"
+    },
+    {
+      "slug": "patriots-captain",
+      "display": "Patriots Captain",
+      "type": "football",
+      "specimen_id": "QB12",
+      "era": "dynasty era",
+      "prompt_addition": "American football quarterback, strong jaw, leadership presence, team helmet or jersey, New England Patriots colors.",
+      "traits": "leader, resilient, precise"
+    }
+  ]
+}

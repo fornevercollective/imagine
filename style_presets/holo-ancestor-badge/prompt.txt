@@ -1,0 +1,29 @@
+Holographic ancestor ID badge / digital playing card presented in clean Product Showcase style. Studio product photography of a premium collectible holographic trading card or ID badge featuring the subject.
+
+[CRITICAL SKULL MATCHING — this is the key fix for head size/shape mismatch]
+Analyze the reference headshot photo in detail first to estimate the real underlying skull:
+- Cranial height to width ratio
+- Overall head shape and proportions (oval, round, square, heart, oblong etc.)
+- Brow ridge projection and angle
+- Jaw width, angle, and position
+- Temple width, cheekbone placement, eye socket depth
+- Midface and nose bridge projection
+- Exact scale and aspect ratio of the visible head
+
+The holographic skull reveal MUST be precisely morphed and scaled so it fits the head **exactly like a real skull would** — same width, height, proportions, brow position, jaw line as measured from THIS photo. The skull is an anatomical underlayer for this specific person, not a generic one. Then blend accurate hominin fossil traits on top of the photo-matched skull shape.
+
+The card has a glossy iridescent holographic surface with rainbow refraction, subtle scanlines, floating 3D depth, sci-fi glass-like material. Centered composition, soft studio lighting with gentle rim and fill, clean minimal dark gradient backdrop with faint reflections, sharp tack focus, high-end premium product look exactly like the Product Showcase template.
+
+The main visual on the card is a headshot portrait of the exact person from the reference photo that seamlessly holographically morphs and left-pans through shimmering holo effects into the photo-accurate skull (precise bone structure, cranial features, teeth, sutures based on real hominin fossil reconstruction from Bone Clones cast or Smithsonian 3D scan of the chosen or photo-estimated lineage stage, but proportions forced to match the headshot analysis), then continues the smooth pan and transition through the full skull to cervical vertebrae, clavicles, ribcage, humerus, and upper skeleton in the same holographic iridescent style. The reveal shows evolutionary bone details with subtle glowing accents on key landmarks.
+
+Preserve 100% exact identity, face structure, skin tone, hair, expression, and head scale from the input headshot photo in the initial non-holo portrait state of the card. The holo effect only applies to the transition and bone layers.
+
+Cinematic smooth left-to-right or horizontal pan animation showing the full sequence: clear headshot portrait -> holographic dissolve/pan left to detailed skull (photo-matched proportions) -> augmented final portrait state with holo overlay -> continued holo pan revealing skull/bones/skeleton structure. Short 5-7 second video loop or single smooth take with gentle motion, high production value, no text unless small elegant lineage marker.
+
+For stills: the final presented card in perfect Product Showcase framing, as if the holo badge is the luxury product being photographed on a clean surface.
+
+Use accurate hominin skull/bone anatomy for the reveal layer from the lineage timeline (see character_bibles/ancestory/hominin_data/hominin_lineage_timeline.json). Choose or let Grok estimate the best fitting stage(s) from visible facial features while always enforcing the photo's skull dimensions. Reference exact casts: "skull exactly matching Bone Clones [specimen] or Smithsonian 3D scan, but scaled and shaped to perfectly match this headshot's measured proportions".
+
+High detail on bone textures, realistic holographic transparency and light refraction on the card material, premium collectible playing card / ID badge aesthetic suitable for a digital deck or physical print with AR holo effect. Generate consistent front/side/depth views suitable for importing into Spline.design or Three.js to create panable/scrubbable 3D surfaces.
+
+For the "what skull am I" question: the preset can auto-estimate the closest hominin influence (e.g. robust features → Neanderthal blend) while the skull geometry always comes from the photo.

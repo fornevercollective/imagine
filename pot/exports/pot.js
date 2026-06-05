@@ -1,0 +1,1345 @@
+// pot.js — ES module export of the Point of Truth
+// Generated from pot/pot.json — do not edit directly.
+
+export const POT = {
+  "meta": {
+    "title": "Film Genres: Literary Parallels Timeline — AI Content Provenance Point of Truth",
+    "source_share_url": "https://grok.com/share/bGVnYWN5LWNvcHk_99ba3a1a-72bf-4ec1-96c9-bf9e145e8665",
+    "source_title": "Film Genres: Literary Parallels Timeline | Shared Grok Conversation",
+    "version": "0.3.0",
+    "last_updated": "2026-06-03",
+    "description": "Canonical structured data for every film/video/gif/stream/content tag, genre-literary parallels timeline, provenance stages, and the full psychological loop from real-life EXIF photo shoot source material through to AI-generated concept content. Extended with full hominin ancestry lineage (face/body/bones/IK/poses/shapes, fossil refs from 3d.si.edu / Australian Museum / Bone Clones, Mixamo/Three.js, holo ID badges). Single source of truth for iteration across md/js/json/python/txt/csv/xlsx/binary/html exports.",
+    "generated_by": "pot/generators/build_all.py",
+    "intended_outputs": [
+      "md",
+      "js",
+      "json",
+      "py",
+      "txt",
+      "csv",
+      "xlsx",
+      "binary",
+      "html"
+    ]
+  },
+  "timeline": [
+    {
+      "id": "t-1902-scifi",
+      "era": "Early Cinema (1895-1915)",
+      "year": 1902,
+      "decade": "1900s",
+      "film_genre": "Science Fiction / Fantasy / Trick Film",
+      "literary_parallel": "Jules Verne, H.G. Wells, Mary Shelley (Gothic SF)",
+      "key_lit_works": [
+        "A Trip to the Moon (Verne)",
+        "Frankenstein",
+        "The War of the Worlds"
+      ],
+      "key_film": "A Trip to the Moon (Georges Méliès)",
+      "tags": [
+        "sci-fi",
+        "fantasy",
+        "early-cinema",
+        "special-effects",
+        "trick-film",
+        "literary-adaptation",
+        "verne",
+        "melies",
+        "proto-sci-fi"
+      ],
+      "description": "Birth of cinematic spectacle directly from literary scientific romance and gothic novel. Méliès was a stage magician translating prose wonder into visual effects.",
+      "visual_signatures": [
+        "hand-tinted",
+        "theatrical sets",
+        "stop-motion substitution",
+        "multiple exposure"
+      ]
+    },
+    {
+      "id": "t-1920-german",
+      "era": "German Expressionism / Silent Horror",
+      "year": 1920,
+      "decade": "1920s",
+      "film_genre": "Horror / Psychological Thriller / Expressionist Drama",
+      "literary_parallel": "German Romanticism, E.T.A. Hoffmann, Edgar Allan Poe, Gothic",
+      "key_lit_works": [
+        "The Cabinet of Dr. Caligari (from original screenplay + Hoffmann influence)",
+        "Nosferatu (Stoker Dracula)"
+      ],
+      "key_film": "The Cabinet of Dr. Caligari (1920), Nosferatu (1922)",
+      "tags": [
+        "horror",
+        "expressionism",
+        "german-expressionism",
+        "psychological",
+        "shadow-play",
+        "distorted-perspective",
+        "gothic",
+        "vampire",
+        "poe"
+      ],
+      "description": "The psyche made visible through set design and lighting. Literary gothic + romantic madness translated into angular painted sets and extreme chiaroscuro.",
+      "visual_signatures": [
+        "painted shadows",
+        "tilted angles",
+        "elongated forms",
+        "high-contrast b&w"
+      ]
+    },
+    {
+      "id": "t-1930-western",
+      "era": "Classical Hollywood / Sound Western",
+      "year": 1939,
+      "decade": "1930s",
+      "film_genre": "Western",
+      "literary_parallel": "Dime novels, James Fenimore Cooper (Leatherstocking Tales), Zane Grey, Owen Wister (The Virginian), Karl May",
+      "key_lit_works": [
+        "The Virginian",
+        "Riders of the Purple Sage",
+        "Winnetou series"
+      ],
+      "key_film": "Stagecoach (John Ford, 1939), Destry Rides Again",
+      "tags": [
+        "western",
+        "classical-hollywood",
+        "dime-novel",
+        "frontier-myth",
+        "john-ford",
+        "landscape-as-character",
+        "moral-tale",
+        "pulp-western"
+      ],
+      "description": "The American Western as national myth, drawing on 19th-century literary frontier romances and pulp serials. Landscape cinematography becomes the equivalent of epic prose description.",
+      "visual_signatures": [
+        "monument valley",
+        "dust",
+        "long shadows",
+        "stagecoach",
+        "six-gun"
+      ]
+    },
+    {
+      "id": "t-1941-noir",
+      "era": "Film Noir / Hardboiled",
+      "year": 1941,
+      "decade": "1940s",
+      "film_genre": "Film Noir, Crime, Mystery, Neo-Realist Thriller",
+      "literary_parallel": "Hardboiled detective fiction: Dashiell Hammett, Raymond Chandler, James M. Cain, Cornell Woolrich",
+      "key_lit_works": [
+        "The Maltese Falcon",
+        "The Big Sleep",
+        "Double Indemnity",
+        "The Postman Always Rings Twice"
+      ],
+      "key_film": "The Maltese Falcon (Huston 1941), Double Indemnity (Wilder 1944), Out of the Past",
+      "tags": [
+        "film-noir",
+        "neo-noir",
+        "hardboiled",
+        "hammett",
+        "chandler",
+        "cain",
+        "femme-fatale",
+        "venetian-blind",
+        "voiceover",
+        "fatalism",
+        "urban-night",
+        "low-key"
+      ],
+      "description": "Post-war disillusionment + German expressionist lighting + hardboiled prose rhythm. The private eye narrator is Chandler's Marlowe prose made flesh and fedora.",
+      "visual_signatures": [
+        "venetian blinds",
+        "cigarette smoke",
+        "rain-slick streets",
+        "flashback structure",
+        "ashtrays"
+      ]
+    },
+    {
+      "id": "t-1950-scifi",
+      "era": "Atomic Age Sci-Fi & Invasion",
+      "year": 1951,
+      "decade": "1950s",
+      "film_genre": "Sci-Fi, Invasion, Monster, Cold War Paranoia",
+      "literary_parallel": "John W. Campbell, Isaac Asimov, Ray Bradbury, 1950s pulp + Golden Age SF magazines",
+      "key_lit_works": [
+        "Who Goes There?",
+        "The Martian Chronicles",
+        "Fahrenheit 451 (later)"
+      ],
+      "key_film": "The Thing from Another World (1951), Invasion of the Body Snatchers (1956), Forbidden Planet",
+      "tags": [
+        "sci-fi",
+        "atomic-age",
+        "invasion",
+        "cold-war",
+        "paranoia",
+        "monster-movie",
+        "flying-saucer",
+        "body-snatchers",
+        "bradbury",
+        "asimov"
+      ],
+      "description": "Literary SF's rational speculation collides with pulp monster movies and Red Scare politics. The alien other is both external threat and internal (communist, conformity).",
+      "visual_signatures": [
+        "rubber-suit",
+        "miniature-cities",
+        "desert-tests",
+        "radiation-glow",
+        "voice-of-authority"
+      ]
+    },
+    {
+      "id": "t-1960-spaghetti",
+      "era": "Spaghetti Western / Revisionist",
+      "year": 1964,
+      "decade": "1960s",
+      "film_genre": "Spaghetti Western, Revisionist Western, Zapata Western",
+      "literary_parallel": "American Western pulp + Italian fumetti + Japanese samurai films (Kurosawa) + European picaresque",
+      "key_lit_works": [
+        "Django novels (Italian pulp)",
+        "Kurosawa's Yojimbo (itself from Dashiell Hammett)"
+      ],
+      "key_film": "A Fistful of Dollars (1964), The Good the Bad and the Ugly (1966), Once Upon a Time in the West",
+      "tags": [
+        "spaghetti-western",
+        "sergio-leone",
+        "revisionist-western",
+        "dollars-trilogy",
+        "ennio-morricone",
+        "close-up-eyes",
+        "extreme-wide",
+        "cigar",
+        "eclectic-score",
+        "operatic-violence"
+      ],
+      "description": "European (mostly Italian) filmmakers re-reading the American Western through a cynical, operatic, hyper-stylized lens. Literary roots in pulp but aesthetic from opera + samurai + noir.",
+      "visual_signatures": [
+        "extreme-close-up-on-eyes",
+        "whip-pan",
+        "dusty-long-shot",
+        "ecu-on-gun",
+        "no-horses-talking"
+      ]
+    },
+    {
+      "id": "t-1970s-hyper-masculine",
+      "era": "1970s Epic / Macho / Roman Empire Fantasy",
+      "year": 1970,
+      "decade": "1970s",
+      "film_genre": "Historical Epic, Sword & Sandal Revival, Macho Action, Gladiator",
+      "literary_parallel": "Classical history (Suetonius, Plutarch), Ben-Hur novel, modern sword & sorcery (Howard), hyper-masculine pulps",
+      "key_lit_works": [
+        "Ben-Hur",
+        "The Robe",
+        "Conan stories",
+        "I, Claudius"
+      ],
+      "key_film": "Patton, The Godfather (epic family), later Gladiator (2000) as spiritual successor, Caligula (extreme)",
+      "tags": [
+        "roman-empire",
+        "sword-and-sandal",
+        "gladiator",
+        "epic",
+        "hyper-masculine",
+        "jawline",
+        "colosseum",
+        "imperial-decadence",
+        "historical-epic",
+        "macho-hero"
+      ],
+      "description": "The Roman Empire as fantasy of absolute power, sculpted bodies, marble, blood, and order. Often used psychologically as projection of idealized male form and civilizational grandeur (or decay).",
+      "visual_signatures": [
+        "chiseled-jaw",
+        "marble-columns",
+        "dawn-light-on-temples",
+        "bronze-armor",
+        "dramatic-low-angle"
+      ]
+    },
+    {
+      "id": "t-1980s-neon",
+      "era": "Neon Noir / Cyberpunk / MTV Aesthetic",
+      "year": 1982,
+      "decade": "1980s",
+      "film_genre": "Cyberpunk, Neo-Noir, Tech Thriller, Synthwave Visual",
+      "literary_parallel": "William Gibson (Neuromancer 1984), Philip K. Dick, Bruce Sterling, 80s cyberpunk short fiction",
+      "key_lit_works": [
+        "Neuromancer",
+        "Do Androids Dream of Electric Sheep?",
+        "Mirrorshades anthology"
+      ],
+      "key_film": "Blade Runner (1982), The Terminator (1984), Videodrome, Escape from New York",
+      "tags": [
+        "cyberpunk",
+        "neo-noir",
+        "neon",
+        "synthwave",
+        "blade-runner",
+        "gibson",
+        "dick",
+        "rain-neon",
+        "hologram",
+        "high-tech-low-life",
+        "vhs",
+        "retrowave"
+      ],
+      "description": "Literary cyberpunk's information-overload future + 80s practical effects + Japanese/Asian megacity influence + MTV editing. The rain and neon are pure mood from Chandler filtered through video dystopia.",
+      "visual_signatures": [
+        "neon-signs",
+        "steam",
+        "flying-cars",
+        "asian-street-food",
+        "cigarettes-in-rain",
+        "replicants"
+      ]
+    },
+    {
+      "id": "t-1990s-2000s-indie",
+      "era": "Indie / Tarantino / Pulp Revival + Literary Adaptation Wave",
+      "year": 1994,
+      "decade": "1990s",
+      "film_genre": "Crime / Pulp Fiction / Non-linear / Indie Drama",
+      "literary_parallel": "Elmore Leonard, Quentin Tarantino's own dialogue style, short story cycles, graphic novels",
+      "key_lit_works": [
+        "Rum Punch (Leonard)",
+        "Pulp magazines",
+        "Get Shorty"
+      ],
+      "key_film": "Pulp Fiction (1994), Reservoir Dogs, Jackie Brown, Memento, Fight Club (Palahniuk)",
+      "tags": [
+        "pulp-fiction",
+        "tarantino",
+        "non-linear",
+        "indie-crime",
+        "dialogue-driven",
+        "pop-culture-ref",
+        "graphic-novel-adjacent",
+        "90s-grit"
+      ],
+      "description": "Literature of the streets and pop culture (Leonard, Bukowski, comics) meets hyper-stylized film language. The 'pulp' is both homage and deconstruction.",
+      "visual_signatures": [
+        "trunk-shots",
+        "diner-booths",
+        "suitcases",
+        "chapter-titles",
+        "pop- Needle-drops"
+      ]
+    },
+    {
+      "id": "t-2010s-stream",
+      "era": "Streaming / Prestige / Genre Hybrid / Meme Culture",
+      "year": 2010,
+      "decade": "2010s-2020s",
+      "film_genre": "Prestige TV / Limited Series / Cinematic Universe / Elevated Horror / Multiverse",
+      "literary_parallel": "Long-form prestige novels, comic runs (Watchmen, Saga), fanfiction, internet lore, true-crime podcasts as modern gothic",
+      "key_lit_works": [
+        "The Underground Railroad (Whitehead)",
+        "Watchmen",
+        "Station Eleven",
+        "My Brilliant Friend"
+      ],
+      "key_film": "True Detective S1 (2014), The Mandalorian, Chernobyl, Succession, Everything Everywhere All at Once, The Bear",
+      "tags": [
+        "streaming",
+        "prestige",
+        "elevated-horror",
+        "multiverse",
+        "anthology",
+        "limited-series",
+        "comic-adaptation",
+        "true-crime",
+        "slow-burn",
+        "world-building",
+        "memeable",
+        "gif-able"
+      ],
+      "description": "Long-arc literary novels + comic book continuity culture + algorithm-driven episodic release. Every frame is now also a gif, a meme, a reaction image, a still for Twitter discourse. The 'film' is now a node in a transmedia stream.",
+      "visual_signatures": [
+        "aspect-ratio-shifts",
+        "chapter-cards",
+        "cold-open",
+        "post-credit",
+        "vertical-video-crop",
+        "ig-story-teaser"
+      ]
+    }
+  ],
+  "genres": {
+    "western": {
+      "slug": "western",
+      "display": "Western",
+      "parent": null,
+      "literary_roots": [
+        "dime novel",
+        "cooper",
+        "grey",
+        "wister",
+        "may"
+      ],
+      "film_eras": [
+        "silent",
+        "classical-hollywood",
+        "spaghetti",
+        "revisionist",
+        "neo-western"
+      ],
+      "core_tags": [
+        "western",
+        "frontier",
+        "cowboy",
+        "outlaw",
+        "desert",
+        "horse",
+        "six-shooter",
+        "saloon",
+        "dust",
+        "moral-ambiguity"
+      ],
+      "project_refs": [
+        "spaghetti-western",
+        "western-sepia"
+      ]
+    },
+    "film-noir": {
+      "slug": "film-noir",
+      "display": "Film Noir / Neo-Noir",
+      "parent": null,
+      "literary_roots": [
+        "hammett",
+        "chandler",
+        "cain",
+        "woolrich",
+        "hardboiled"
+      ],
+      "film_eras": [
+        "classic-noir-40s-50s",
+        "neo-noir-70s-90s",
+        "tech-noir",
+        "elevated-noir"
+      ],
+      "core_tags": [
+        "film-noir",
+        "neo-noir",
+        "hardboiled",
+        "femme-fatale",
+        "venetian-blind",
+        "cigarette",
+        "rain",
+        "voiceover",
+        "fatalism",
+        "urban"
+      ],
+      "project_refs": [
+        "film-noir",
+        "neo-noir",
+        "teal-orange-blockbuster",
+        "moody-teal-drama"
+      ]
+    },
+    "sci-fi": {
+      "slug": "sci-fi",
+      "display": "Science Fiction",
+      "parent": null,
+      "literary_roots": [
+        "verne",
+        "wells",
+        "shelley",
+        "asimov",
+        "bradbury",
+        "gibson",
+        "dick"
+      ],
+      "film_eras": [
+        "early-trick",
+        "atomic",
+        "new-wave",
+        "cyberpunk",
+        "space-opera-blockbuster",
+        "hard-sci-fi"
+      ],
+      "core_tags": [
+        "sci-fi",
+        "cyberpunk",
+        "space",
+        "future",
+        "alien",
+        "dystopia",
+        "technology",
+        "speculative"
+      ],
+      "project_refs": [
+        "dune-sci-fi",
+        "cyberpunk-neon",
+        "cybercore"
+      ]
+    },
+    "horror": {
+      "slug": "horror",
+      "display": "Horror",
+      "parent": null,
+      "literary_roots": [
+        "poe",
+        "stoker",
+        "lovecraft",
+        "shelley",
+        "king",
+        "barker",
+        "gothic"
+      ],
+      "film_eras": [
+        "german-exp",
+        "universal-monster",
+        "hammer",
+        "70s-possession",
+        "slasher",
+        "elevated-horror",
+        "folk-horror"
+      ],
+      "core_tags": [
+        "horror",
+        "gothic",
+        "supernatural",
+        "body-horror",
+        "psychological-horror",
+        "folk-horror",
+        "slash",
+        "vampire",
+        "zombie"
+      ],
+      "project_refs": [
+        "horror-grain"
+      ]
+    },
+    "roman-epic": {
+      "slug": "roman-epic",
+      "display": "Roman Empire / Sword & Sandal / Historical Epic",
+      "parent": "historical",
+      "literary_roots": [
+        "plutarch",
+        "suetonius",
+        "wallace-ben-hur",
+        "i-claudius",
+        "conan-pulp"
+      ],
+      "film_eras": [
+        "peplum-50s-60s",
+        "70s-macho",
+        "gladiator-revival-2000s",
+        "prestige-historical"
+      ],
+      "core_tags": [
+        "roman-empire",
+        "gladiator",
+        "sword-and-sandal",
+        "colosseum",
+        "marble",
+        "imperial",
+        "hyper-masculine",
+        "epic",
+        "historical"
+      ],
+      "project_refs": [
+        "roman-empire"
+      ]
+    },
+    "spaghetti-western": {
+      "slug": "spaghetti-western",
+      "display": "Spaghetti Western",
+      "parent": "western",
+      "literary_roots": [
+        "italian-pulp",
+        "kurosawa",
+        "hammett-via-yojimbo"
+      ],
+      "film_eras": [
+        "dollars-trilogy",
+        "leone-operatic",
+        "revisionist"
+      ],
+      "core_tags": [
+        "spaghetti-western",
+        "sergio-leone",
+        "dollars",
+        "morricone",
+        "close-up",
+        "ecu-eyes",
+        "cigar",
+        "revenge",
+        "operatic"
+      ],
+      "project_refs": [
+        "spaghetti-western"
+      ]
+    }
+  },
+  "tag_categories": {
+    "medium": [
+      "film",
+      "video",
+      "gif",
+      "stream",
+      "photo",
+      "illustration",
+      "comic",
+      "painting",
+      "3d-render",
+      "product-viz",
+      "portrait",
+      "landscape"
+    ],
+    "format_delivery": [
+      "35mm",
+      "medium-format",
+      "large-format",
+      "vhs",
+      "betacam",
+      "digital-cinema",
+      "dvd",
+      "bluray",
+      "streaming",
+      "ig-story",
+      "tiktok",
+      "youtube",
+      "proof-sheet"
+    ],
+    "film_stock_emulation": [
+      "kodak-portra-400",
+      "kodak-ektar-100",
+      "kodak-gold-200",
+      "kodak-ultramax-400",
+      "kodak-tri-x-400-bw",
+      "fuji-velvia-50",
+      "fuji-superia-400",
+      "fuji-pro-400h",
+      "fuji-acros-100-bw",
+      "fuji-eterna-500",
+      "cinestill-50d",
+      "cinestill-800t",
+      "ilford-hp5-400-bw",
+      "kodachrome-64",
+      "kodak-vision3-500t",
+      "arri-alexa-logc-to-rec709",
+      "heavy-35mm-film-grain-gate-weave"
+    ],
+    "cinematic_style": [
+      "anamorphic-cinematic",
+      "panavision-c-series-anamorphic",
+      "cooke-anamorphic",
+      "anamorphic-lens-breathing-flare",
+      "teal-orange-blockbuster",
+      "teal-orange-hollywood-cc",
+      "bleach-bypass-lut",
+      "cross-process-e-6-to-c-41",
+      "day-for-night-lut",
+      "j-cut-l-cut-audio-lead",
+      "fisheye-extreme-distortion"
+    ],
+    "pinterest_aesthetic": [
+      "cottagecore",
+      "dark-academia",
+      "light-academia",
+      "fairycore",
+      "old-money-aesthetic",
+      "clean-girl",
+      "y2k-aesthetic",
+      "cybercore",
+      "grunge-90s",
+      "barbiecore"
+    ],
+    "genre_core": [
+      "action",
+      "adventure",
+      "comedy",
+      "crime",
+      "drama",
+      "fantasy",
+      "historical",
+      "horror",
+      "mystery",
+      "romance",
+      "sci-fi",
+      "thriller",
+      "western",
+      "musical",
+      "war",
+      "biopic",
+      "documentary",
+      "experimental"
+    ],
+    "film_specific": [
+      "film-noir",
+      "neo-noir",
+      "spaghetti-western",
+      "german-expressionism",
+      "french-new-wave",
+      "italian-neo-realism",
+      "new-hollywood",
+      "blockbuster",
+      "indie",
+      "elevated-horror",
+      "folk-horror",
+      "cyberpunk",
+      "space-opera",
+      "sword-and-sandal",
+      "peplum",
+      "gladiator",
+      "roman-empire",
+      "samurai",
+      "kaiju"
+    ],
+    "visual_technique": [
+      "grain",
+      "halation",
+      "light-leak",
+      "gate-weave",
+      "lens-flare",
+      "anamorphic-flare",
+      "bokeh",
+      "shallow-dof",
+      "deep-focus",
+      "long-take",
+      "whip-pan",
+      "dutch-angle",
+      "venetian-blind",
+      "double-exposure",
+      "chromatic-aberration",
+      "vignette",
+      "teal-orange",
+      "bleach-bypass",
+      "cross-process",
+      "high-contrast",
+      "low-key",
+      "silhouette"
+    ],
+    "narrative_device": [
+      "voiceover",
+      "flashback",
+      "non-linear",
+      "chapter-structure",
+      "unreliable-narrator",
+      "frame-story",
+      "parallel-timeline",
+      "in-medias-res",
+      "macguffin",
+      "femme-fatale",
+      "anti-hero",
+      "hero-journey",
+      "tragic-arc"
+    ],
+    "provenance": [
+      "real-life-event",
+      "photo-shoot",
+      "exif-grounded",
+      "scanned",
+      "raw-import",
+      "reference-asset",
+      "character-bible",
+      "style-ref",
+      "master-ref",
+      "ai-ghosted",
+      "composite-source",
+      "prompt-engineered",
+      "grok-imagine",
+      "iteration",
+      "ghosted",
+      "final",
+      "training-source-potential"
+    ],
+    "psych_loop_stage": [
+      "real-life-ground",
+      "perception-memory",
+      "photo-shoot-selection",
+      "idealization-pressure",
+      "lit-film-injection",
+      "intertextuality",
+      "prompt-negotiation",
+      "ai-dream-completion",
+      "human-review-catharsis",
+      "ghosting-erasure",
+      "new-memory-formation",
+      "derivative-work"
+    ],
+    "project_specific": [
+      "superheavy",
+      "kodak-instapix",
+      "watercolor-master-ref",
+      "text-bible-reconstruction",
+      "dark-academia",
+      "cyberpunk-neon",
+      "haze-portrait",
+      "roman-empire",
+      "spaghetti-western",
+      "comic-book",
+      "80s-anime",
+      "chibi",
+      "professional-headshot",
+      "product-showcase",
+      "glossy-product-shot",
+      "quality-enhancer",
+      "object-remover",
+      "logo-editor",
+      "3d-animation",
+      "video-game",
+      "funky-dance",
+      "future-family",
+      "future-past",
+      "sunny-morning",
+      "laser-fight",
+      "ad-astra",
+      "add-girlfriend",
+      "holo-skull-badge"
+    ],
+    "hominin_ancestry": [
+      "sahelanthropus",
+      "ardipithecus",
+      "australopithecus-afarensis",
+      "lucy",
+      "paranthropus-boisei",
+      "homo-habilis",
+      "homo-erectus",
+      "turkana-boy",
+      "homo-heidelbergensis",
+      "neanderthal",
+      "denisovan",
+      "early-homo-sapiens",
+      "jebel-irhoud",
+      "anatomically-modern-sapiens",
+      "regional-populations"
+    ],
+    "fossil_refs": [
+      "smithsonian-3d-hominin",
+      "australian-museum-skulls",
+      "bone-clones-fossil-hominid",
+      "bone-clones-set",
+      "turkana-boy-cast",
+      "kabwe-broken-hill",
+      "neanderthal-amud",
+      "lucy-skeleton",
+      "zinjanthropus"
+    ],
+    "mixamo_threejs": [
+      "mixamo-auto-rig",
+      "mixamo-ik-pose",
+      "mixamo-animation-library",
+      "threejs-skinning",
+      "threejs-additive-blending",
+      "skinned-mesh",
+      "morph-target",
+      "additive-clip",
+      "fbx-export",
+      "rig-ik-fk"
+    ],
+    "holo_id_badge": [
+      "holo-id-card",
+      "holographic-badge",
+      "spline-3d",
+      "iridescent-glass",
+      "floating-portrait",
+      "timeline-scrubber",
+      "genetic-pie",
+      "migration-path-viz",
+      "ancestor-recon",
+      "interactive-lineage"
+    ],
+    "lineage_migration": [
+      "out-of-africa",
+      "first-exodus-1.8mya",
+      "main-ooa-55kya",
+      "neanderthal-admixture",
+      "denisovan-admixture",
+      "erectus-dispersal",
+      "heidelbergensis-lca",
+      "solid-column-lineage",
+      "genetic-estimation",
+      "reticulate-evolution"
+    ]
+  },
+  "all_tags_flat": [
+    "action",
+    "adventure",
+    "comedy",
+    "crime",
+    "drama",
+    "fantasy",
+    "historical",
+    "horror",
+    "mystery",
+    "romance",
+    "sci-fi",
+    "thriller",
+    "western",
+    "musical",
+    "war",
+    "biopic",
+    "documentary",
+    "experimental",
+    "film-noir",
+    "neo-noir",
+    "spaghetti-western",
+    "german-expressionism",
+    "cyberpunk",
+    "roman-empire",
+    "gladiator",
+    "sword-and-sandal",
+    "elevated-horror",
+    "folk-horror",
+    "kodak-portra-400",
+    "kodak-ektar-100",
+    "kodak-gold-200",
+    "cinestill-800t",
+    "fuji-velvia-50",
+    "ilford-hp5-400-bw",
+    "kodachrome-64",
+    "heavy-35mm-film-grain-gate-weave",
+    "anamorphic-cinematic",
+    "teal-orange-blockbuster",
+    "bleach-bypass-lut",
+    "panavision-c-series-anamorphic",
+    "cottagecore",
+    "dark-academia",
+    "light-academia",
+    "fairycore",
+    "old-money-aesthetic",
+    "cybercore",
+    "y2k-aesthetic",
+    "barbiecore",
+    "grunge-90s",
+    "clean-girl",
+    "grain",
+    "halation",
+    "lens-flare",
+    "anamorphic-flare",
+    "venetian-blind",
+    "double-exposure",
+    "chromatic-haze",
+    "low-key",
+    "shallow-dof",
+    "real-life-event",
+    "photo-shoot",
+    "exif-grounded",
+    "scanned",
+    "reference-asset",
+    "character-bible",
+    "ai-ghosted",
+    "composite-source",
+    "master-ref",
+    "prompt-engineered",
+    "grok-imagine",
+    "iteration",
+    "ghosted",
+    "final",
+    "comic-book",
+    "80s-anime",
+    "watercolor-portrait",
+    "product-showcase",
+    "glossy-product-shot",
+    "professional-headshot",
+    "haze-portrait",
+    "roman-empire",
+    "spaghetti-western",
+    "voiceover",
+    "flashback",
+    "non-linear",
+    "parallel-timeline",
+    "femme-fatale",
+    "anti-hero",
+    "35mm",
+    "medium-format",
+    "vhs",
+    "streaming",
+    "gif-able",
+    "memeable",
+    "superheavy",
+    "kodak-instapix",
+    "text-bible",
+    "watercolor-ref",
+    "sahelanthropus",
+    "lucy",
+    "turkana-boy",
+    "neanderthal",
+    "denisovan",
+    "hominin-stage",
+    "fossil-ref",
+    "mixamo-rig",
+    "threejs-blend",
+    "holo-badge",
+    "solid-lineage-column",
+    "genetic-migration",
+    "holo-skull-badge"
+  ],
+  "provenance_stages": [
+    {
+      "stage": 0,
+      "name": "Real Life / Event / Memory",
+      "short": "real-life-ground",
+      "exif_applicable": false,
+      "psych_keywords": [
+        "perception",
+        "memory-distortion",
+        "emotional-charge",
+        "selection-bias",
+        "personal-myth"
+      ],
+      "typical_artifacts": [
+        "lived experience",
+        "eyewitness account",
+        "dream",
+        "family story",
+        "location memory"
+      ],
+      "tags": [
+        "real-life-event",
+        "memory",
+        "autobiographical",
+        "witnessed"
+      ]
+    },
+    {
+      "stage": 1,
+      "name": "Photo Shoot (EXIF Source Material)",
+      "short": "photo-shoot",
+      "exif_applicable": true,
+      "psych_keywords": [
+        "framing",
+        "idealization-pressure",
+        "technical-aesthetic-choice",
+        "decisive-moment",
+        "performance"
+      ],
+      "typical_artifacts": [
+        "RAW/JPEG",
+        "full EXIF + XMP + IPTC",
+        "lighting diagram",
+        "contact sheet",
+        "model release",
+        "film negatives",
+        "shot list"
+      ],
+      "exif_fields": [
+        "Make",
+        "Model",
+        "LensModel",
+        "FNumber",
+        "ExposureTime",
+        "ISOSpeedRatings",
+        "DateTimeOriginal",
+        "GPS*",
+        "FilmStock",
+        "Artist",
+        "Copyright"
+      ],
+      "tags": [
+        "photo-shoot",
+        "exif-grounded",
+        "film-stock",
+        "35mm",
+        "location",
+        "studio",
+        "golden-hour",
+        "practical-light"
+      ]
+    },
+    {
+      "stage": 2,
+      "name": "Digitization / Ingestion",
+      "short": "digitize",
+      "exif_applicable": true,
+      "psych_keywords": [
+        "nostalgia-filter",
+        "first-idealization",
+        "curation"
+      ],
+      "typical_artifacts": [
+        "scanned TIFF",
+        "color profile",
+        "embedded metadata",
+        "initial keywords"
+      ],
+      "tags": [
+        "scanned",
+        "raw-import",
+        "color-managed",
+        "first-pass-tags"
+      ]
+    },
+    {
+      "stage": 3,
+      "name": "Reference Asset Curation",
+      "short": "reference-curation",
+      "exif_applicable": true,
+      "psych_keywords": [
+        "library-building",
+        "selection",
+        "grouping-into-bibles"
+      ],
+      "typical_artifacts": [
+        "master-ref.jpg",
+        "sidecar.json",
+        "character_bibles/",
+        "style refs",
+        "composites (some AI-GHOSTED)"
+      ],
+      "tags": [
+        "reference-asset",
+        "character-bible",
+        "style-ref",
+        "master-ref",
+        "ai-ghosted",
+        "composite-source"
+      ]
+    },
+    {
+      "stage": 4,
+      "name": "Concept + Literary/Film Parallel Injection",
+      "short": "concept-injection",
+      "exif_applicable": false,
+      "psych_keywords": [
+        "intertextuality",
+        "myth-making",
+        "narrative-compression",
+        "desire-projection",
+        "archetype-mapping"
+      ],
+      "typical_artifacts": [
+        "timeline entry chosen",
+        "genre tags",
+        "lit parallel note",
+        "mood board",
+        "treatment doc"
+      ],
+      "tags": [
+        "literary-parallel",
+        "film-genre-ref",
+        "intertextual",
+        "archetype",
+        "narrative-device"
+      ]
+    },
+    {
+      "stage": 5,
+      "name": "Prompt Engineering & Ref Selection",
+      "short": "prompt",
+      "exif_applicable": true,
+      "psych_keywords": [
+        "negotiation-fidelity-vs-fiction",
+        "weighting-refs",
+        "style-preset-choice"
+      ],
+      "typical_artifacts": [
+        "long prompt text",
+        "ref image list + weights",
+        "chosen style_preset slug",
+        "featured_template",
+        "negative prompt"
+      ],
+      "tags": [
+        "prompt-engineered",
+        "style-preset",
+        "template",
+        "preserve-identity",
+        "heavy-transform"
+      ]
+    },
+    {
+      "stage": 6,
+      "name": "AI Generation",
+      "short": "ai-gen",
+      "exif_applicable": false,
+      "psych_keywords": [
+        "model-completion",
+        "training-haunt",
+        "surprise",
+        "uncanny"
+      ],
+      "typical_artifacts": [
+        "grok-image-*.jpg",
+        "grok-video-*.mp4",
+        "seed",
+        "model id",
+        "generation params"
+      ],
+      "tags": [
+        "grok-imagine",
+        "video-gen",
+        "img2img",
+        "seed-fixed"
+      ]
+    },
+    {
+      "stage": 7,
+      "name": "Review, Ghosting, Iteration",
+      "short": "iteration",
+      "exif_applicable": true,
+      "psych_keywords": [
+        "catharsis",
+        "disappointment",
+        "ritual-reprompt",
+        "erasure",
+        "overpainting"
+      ],
+      "typical_artifacts": [
+        "iteration-01.jpg",
+        "AI-GHOSTED composites",
+        "new prompt notes",
+        "object-remover passes",
+        "quality-enhancer"
+      ],
+      "tags": [
+        "iteration",
+        "ghosted",
+        "composite",
+        "human-review-pass",
+        "approved",
+        "rejected"
+      ]
+    },
+    {
+      "stage": 8,
+      "name": "Final Output + New Memory",
+      "short": "final",
+      "exif_applicable": false,
+      "psych_keywords": [
+        "closure",
+        "publication",
+        "new-reference-formation",
+        "cultural-entry"
+      ],
+      "typical_artifacts": [
+        "proof-sheet.html",
+        "registered template",
+        "client delivery",
+        "portfolio piece",
+        "social post",
+        "the image now becomes someone else's 'real' ref"
+      ],
+      "tags": [
+        "final",
+        "proof-sheet",
+        "template-registered",
+        "public",
+        "client-delivery"
+      ]
+    }
+  ],
+  "project_sync": {
+    "style_presets_groups": {
+      "film_emulation": [
+        "kodak-portra-400",
+        "kodak-ektar-100",
+        "kodak-gold-200",
+        "kodak-ultramax-400",
+        "kodak-tri-x-400-bw",
+        "fuji-velvia-50",
+        "fuji-superia-400",
+        "fuji-pro-400h",
+        "fuji-acros-100-bw",
+        "fuji-eterna-500",
+        "cinestill-50d",
+        "cinestill-800t",
+        "ilford-hp5-400-bw",
+        "kodachrome-64",
+        "kodak-vision3-500t",
+        "fuji-eterna-250d",
+        "arri-alexa-logc-to-rec709",
+        "heavy-35mm-film-grain-gate-weave"
+      ],
+      "pinterest_aesthetic": [
+        "cottagecore",
+        "dark-academia",
+        "light-academia",
+        "fairycore",
+        "old-money-aesthetic",
+        "clean-girl",
+        "y2k-aesthetic",
+        "cybercore",
+        "grunge-90s",
+        "barbiecore"
+      ],
+      "cinematic_genre": [
+        "film-noir",
+        "neo-noir",
+        "cyberpunk-neon",
+        "teal-orange-blockbuster",
+        "western-sepia",
+        "horror-grain",
+        "dune-sci-fi",
+        "golden-hour-romance",
+        "vhs-80s",
+        "anamorphic-cinematic",
+        "ethereal-fantasy",
+        "gritty-documentary",
+        "vintage-35mm",
+        "moody-teal-drama",
+        "bleach-bypass-lut",
+        "teal-orange-hollywood-cc",
+        "panavision-c-series-anamorphic",
+        "cooke-anamorphic",
+        "anamorphic-lens-breathing-flare",
+        "fisheye-extreme-distortion",
+        "j-cut-l-cut-audio-lead",
+        "cross-process-e-6-to-c-41",
+        "day-for-night-lut"
+      ]
+    },
+    "featured_templates": [
+      "chibi",
+      "professional-headshot",
+      "logo-editor",
+      "70s-street-style",
+      "quality-enhancer",
+      "comic-book",
+      "object-remover",
+      "product-showcase",
+      "glossy-product-shot",
+      "80s-anime",
+      "watercolor-portrait",
+      "video-game",
+      "3d-animation",
+      "spaghetti-western",
+      "haze-portrait",
+      "funky-dance",
+      "future-family",
+      "future-past",
+      "ad-astra",
+      "add-girlfriend",
+      "laser-fight",
+      "sunny-morning",
+      "roman-empire"
+    ],
+    "notable_assets": [
+      "assets/composites/superheavy-iterations-kodak-instapix-AI-GHOSTED-v1.jpg",
+      "assets/references/original-watercolor-ref.jpg",
+      "0/ (many grok-image and grok-video with implicit provenance)"
+    ]
+  },
+  "example_prompts_from_source": [
+    "Transform the person in the input image into a cinematic chromatic haze portrait of the same person... subtle three-quarter side portrait... soft double-exposure-like chromatic offset... dreamy optic.",
+    "Black and white headshot... dramatically pronounced and increased jaw size... roman carving level jawline, overly exaggerated pronounced jawline... Young, good smooth skin, muscular updated neck and traps.",
+    "Transform the input image into the style of a classic 1960s–1970s American comic book illustration while preserving the subject’s recognizable identity...",
+    "Using the exact product in <IMAGE_0>, place it into a fresh, natural real-world lifestyle scene while keeping it 100% identical in every detail... Perfectly integrate with realistic lighting, shadows and reflections.",
+    "Using the uploaded product image as reference, create a crisp photoreal product hero shot on a smooth, minimal gradient backdrop... Soft studio lighting... high-end ecommerce photography, 70mm lens look."
+  ],
+  "apache_style_notes": "Raw Apache-style / plain text tag lists were specifically requested in the source conversation ('every film/video/gif/stream of content tag through all this document in a downloadable format'). The pot.txt export uses # headers and one-tag-per-line blocks for easy grepping, scripting, and .htaccess-like or robots-like consumption."
+};
+
+export const META = POT.meta;
+export const TIMELINE = POT.timeline;
+export const PROVENANCE_STAGES = POT.provenance_stages;
+export const TAG_CATEGORIES = POT.tag_categories;
+export const ALL_TAGS = POT.all_tags_flat;
+
+export function getTagsByCategory(cat) {
+  return TAG_CATEGORIES[cat] || [];
+}
+
+export function getTimelineEntry(id) {
+  return TIMELINE.find(t => t.id === id);
+}
+
+export function searchTags(q) {
+  const qq = q.toLowerCase();
+  return ALL_TAGS.filter(t => t.toLowerCase().includes(qq));
+}
+
+export default POT;

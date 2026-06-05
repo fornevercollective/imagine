@@ -1,0 +1,8 @@
+{
+  "slug": "holo-ancestor-badge",
+  "display": "Holo Ancestor Badge",
+  "category": "holo-product",
+  "notes": "Product Showcase framing applied to holographic ID badge / digital playing card. Headshot photo transforms via iridescent holo pan into accurate skull (use hominin_lineage_timeline.json for stage-specific fossil-accurate bone structure), then to full bones/skeleton. Turnkey for repeatable digital card decks. Pair with ancestry_bible madlibs for the skull layer accuracy. Use with headshot refs; request video for the pan sequence.",
+  "best_for": "holo badges, ancestor cards, lineage reveals, collectible digital playing cards, sci-fi ID concepts, bone/skull anatomy visualizations with portrait fidelity",
+  "prompt_additions": "Emphasize Product Showcase clean studio product presentation of the finished badge as the 'product'. For skull accuracy insert specific stage bible_snippet and fossil ref from character_bibles/ancestory/hominin_data/hominin_lineage_timeline.json (e.g. 'skull and bones exactly as the Bone Clones cast of [Neanderthal Amud 1 / Turkana Boy / Kabwe]'). Request smooth left pan holo transition video 5-7s."
+}

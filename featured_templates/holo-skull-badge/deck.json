@@ -1,0 +1,14 @@
+{
+  "deck_name": "Holo Ancestor Playing Cards",
+  "created": "2026-06-03T11:55:47.754490",
+  "headshot_source": "0/grok-image-651d93c1-202b-4cc5-b642-1927af80d4c6.jpg",
+  "num_cards": 1,
+  "lineage_source": "/Users/qbit/dev/imagine/character_bibles/ancestory/hominin_data/hominin_lineage_timeline.json",
+  "cards": [
+    {
+      "id": "card-20260603-000",
+      "stage": 7,
+      "name": "Homo neanderthalensis (Neanderthals)"
+    }
+  ]
+}

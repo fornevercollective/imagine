@@ -1,0 +1,42 @@
+Apply the Product Showcase featured template.
+
+[PRESET GOAL: Create a premium holographic ancestor ID badge / digital playing card. The final output must feel like a high-end collectible product shot in clean Product Showcase style.]
+
+Reference photo: Use the uploaded headshot exactly. Preserve 100% identity, face shape, proportions, skin tone, hair, expression, and head size/scale in the initial portrait layer.
+
+CRITICAL SKULL MATCHING INSTRUCTION (this fixes size/shape mismatch):
+First, carefully analyze the reference headshot photo to measure and estimate the underlying skull:
+- Cranial height vs width ratio
+- Overall head shape (oval, round, square, heart, oblong, etc.)
+- Brow ridge projection and angle
+- Jaw width, angle, and chin position
+- Temple width, cheekbone position, eye socket depth
+- Nose bridge and midface projection
+- Overall scale and aspect ratio of the visible head
+
+Then create the holographic skull reveal so the skull **perfectly matches the estimated dimensions, proportions, and shape from THIS specific headshot**. The skull must sit inside the head like a real anatomical layer — same width, same height, same jaw line, same brow position. Do not use a generic skull. Morph the skull to fit the photo's head exactly, then blend in accurate hominin fossil traits (see below).
+
+Holographic reveal sequence (for both still and especially video):
+Sharp clear headshot portrait on the holographic card → shimmering iridescent glass holo dissolve + smooth left pan → the photo-accurate skull is revealed (precise bone structure that fits the head measurements above) → continued left pan/reveal through the skull to upper skeleton (cervical vertebrae, clavicles, upper ribs, scapula, proximal humerus) in the same holo style with subtle emissive bone highlights.
+
+Style of the holo material: glossy iridescent holographic glass with strong rainbow refraction, scanlines, floating 3D depth, sci-fi high-tech aesthetic (match the motion and quality of the reference holo skull pan video and augmented final video in this folder).
+
+For the skull/skeleton layer:
+Use the expanded skull_types system (see data/skull_types.json for hominin + animal + mythical/animorph like vampire, werewolf, fairy, orc, satyr, chimp, wolf, etc.).
+- Choose or blend the best fitting type(s) based on the photo analysis or user spec (e.g. stronger brow → Neanderthal or orc; delicate → fairy; lupine → werewolf).
+- Apply accurate bone details from the chosen type, including Specimen ID.
+- Explicitly reference: "skull and bones exactly matching ${type.display} (Specimen ID: ${type.specimen_id}) from data/skull_types.json or Bone Clones/Smithsonian equivalent, but scaled and shaped to perfectly match the head measurements from the reference photo".
+
+Product Showcase framing (still and final card state):
+Clean studio product photography of the finished holographic badge as the central luxury "product". Centered composition, soft key + fill + rim lighting on the badge edges, clean minimal dark gradient or subtle reflective backdrop, tack sharp, premium collectible card look. The badge itself has the iridescent holo material.
+
+Video motion:
+5-7 second cinematic, high production value, smooth horizontal or left-to-right pan showing the complete sequence: portrait → holo skull reveal (photo-matched) → bones/skeleton. Gentle camera move, fluid morphs, match the left pan holographic skull style of the reference videos exactly. Loopable if possible.
+
+Small elegant text on card (optional, minimal): stage name + era or short migration hint (e.g. "Neanderthal influence • cold-adapted Eurasian lineage").
+
+Reference photo subject must be perfectly recognizable in the portrait state. The holo and bone layers are stylistic, transparent reveals only — they must respect the exact head size, shape, and proportions of the input photo.
+
+Use the ancestry bible + lineage solid column data for consistency if building a deck. Generate front/side views suitable for further 3D work in Spline or Three.js (for panable surfaces).
+
+This is the core preset prompt. For different people or different "what skull am I" results, change the stage reference in the prompt or let Grok auto-estimate the best hominin blend from facial features while always forcing the skull to match the photo's head measurements.

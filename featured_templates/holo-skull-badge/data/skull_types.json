@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Skull Types for Holo Badges",
+    "description": "Expanded skull types including hominin, animal, and mythical/animorph for Grok Imagine holo skull badge generation. Use with Product Showcase template for lenticular/holographic playing cards.",
+    "version": "1.0",
+    "last_updated": "2026-06-03"
+  },
+  "skull_types": [
+    {
+      "slug": "sahelanthropus",
+      "display": "Sahelanthropus tchadensis",
+      "type": "hominin",
+      "specimen_id": "TM 266-01-060-1 (Toumai)",
+      "era": "~7-6 mya",
+      "description": "Earliest proposed hominin, small brain, heavy brow torus, ape-like but bipedal hints.",
+      "prompt_addition": "Sahelanthropus tchadensis skull with small braincase ~360cc, thick continuous supraorbital torus, moderately projecting face, stocky build, accurate to fossil cast from Chad.",
+      "traits": "small cranium, heavy brow, reduced prognathism"
+    },
+    {
+      "slug": "australopithecus",
+      "display": "Australopithecus afarensis (Lucy)",
+      "type": "hominin",
+      "specimen_id": "AL 288-1 (Lucy)",
+      "era": "~3.2 mya",
+      "description": "Small stature, prognathic face, moderate brow, bipedal with arboreal traits.",
+      "prompt_addition": "Australopithecus afarensis Lucy skull, small ~450cc brain, moderate supraorbital development, prognathic face, small cranium on robust neck, accurate to Hadar fossils.",
+      "traits": "prognathic, moderate brow, small cranium"
+    },
+    {
+      "slug": "erectus",
+      "display": "Homo erectus / ergaster (Turkana Boy)",
+      "type": "hominin",
+      "specimen_id": "KNM-WT 15000 (Turkana Boy)",
+      "era": "~1.6 mya",
+      "description": "Low vault, heavy torus, modern body proportions, first major disperser.",
+      "prompt_addition": "Homo erectus Turkana Boy skull, low long cranium ~900-1000cc with heavy supraorbital torus, receding forehead, robust but reduced face, accurate to Nariokotome fossil.",
+      "traits": "low vault, heavy brow torus, robust face"
+    },
+    {
+      "slug": "neanderthal",
+      "display": "Homo neanderthalensis",
+      "type": "hominin",
+      "specimen_id": "Amud 1 / Le Moustier",
+      "era": "~400-40 kya",
+      "description": "Long low cranium, massive double brow, occipital bun, cold-adapted robust build.",
+      "prompt_addition": "Homo neanderthalensis skull with long low vault, massive double-arched supraorbital torus, occipital bun, large midface and broad nose, robust thick bones, accurate to Amud 1 and European fossils.",
+      "traits": "long low cranium, heavy brow, bun, large nose"
+    },
+    {
+      "slug": "chimpanzee",
+      "display": "Chimpanzee (Pan troglodytes)",
+      "type": "animal",
+      "specimen_id": "Modern Primate - Chimp",
+      "era": "Extant",
+      "description": "Large brow ridge, prognathic snout, small brain relative to face, powerful jaw.",
+      "prompt_addition": "Chimpanzee skull, prominent continuous supraorbital torus, projecting face, large canines, small braincase, accurate to modern primate anatomy.",
+      "traits": "heavy brow, prognathic snout, large canines"
+    },
+    {
+      "slug": "gorilla",
+      "display": "Gorilla (Gorilla gorilla)",
+      "type": "animal",
+      "specimen_id": "Modern Primate - Gorilla",
+      "era": "Extant",
+      "description": "Massive sagittal crest, huge jaw, heavy brow, very robust.",
+      "prompt_addition": "Gorilla skull, massive sagittal crest for jaw muscles, enormous brow ridge, huge projecting face and jaw, small braincase, accurate to modern gorilla anatomy.",
+      "traits": "sagittal crest, massive brow, huge jaw"
+    },
+    {
+      "slug": "wolf",
+      "display": "Gray Wolf (Canis lupus)",
+      "type": "animal",
+      "specimen_id": "Modern Carnivore - Wolf",
+      "era": "Extant",
+      "description": "Elongated snout, large canines, carnassial teeth, narrow cranium.",
+      "prompt_addition": "Gray wolf skull, long narrow snout, prominent canines, sharp carnassial teeth, sagittal ridge, accurate to modern wolf anatomy.",
+      "traits": "long snout, large canines, narrow cranium"
+    },
+    {
+      "slug": "vampire",
+      "display": "Vampire (Mythic Humanoid)",
+      "type": "mythical",
+      "specimen_id": "MYTH-VMP-001 (Eternal)",
+      "era": "Folklore",
+      "description": "Human-like but with elongated upper canines, pale, slightly elongated cranium, predatory.",
+      "prompt_addition": "Vampire skull, human proportions but with dramatically elongated sharp upper canines/fangs, slightly elongated cranium, sharp incisors, pale bone with subtle gothic details, accurate to classic horror anatomy.",
+      "traits": "elongated canines, predatory, pale human-like"
+    },
+    {
+      "slug": "werewolf",
+      "display": "Werewolf (Lupine Animorph)",
+      "type": "mythical",
+      "specimen_id": "MYTH-WRW-042 (Lunar)",
+      "era": "Folklore",
+      "description": "Hybrid human-wolf: heavy brow, elongated snout, large fangs, robust jaw, wolf-like but bipedal hints.",
+      "prompt_addition": "Werewolf animorph skull, hybrid human-wolf features: heavy brow ridge, elongated snout with large canines, powerful jaw, robust bone structure, accurate to dark fantasy lupine hybrid anatomy.",
+      "traits": "lupine snout, heavy brow, large fangs, robust"
+    },
+    {
+      "slug": "orc",
+      "display": "Orc (Tusked Brute)",
+      "type": "mythical",
+      "specimen_id": "MYTH-ORC-007 (Warlord)",
+      "era": "Fantasy",
+      "description": "Very robust, heavy brow, large tusks, wide jaw, thick skull.",
+      "prompt_addition": "Orc skull, extremely robust with heavy supraorbital torus, large protruding tusks, wide powerful jaw, thick cranial bones, dark fantasy brute anatomy.",
+      "traits": "heavy brow, tusks, wide jaw, thick bone"
+    },
+    {
+      "slug": "fairy",
+      "display": "Fairy (Ethereal Sprite)",
+      "type": "mythical",
+      "specimen_id": "MYTH-FRY-013 (Glimmer)",
+      "era": "Folklore/Fantasy",
+      "description": "Delicate small cranium, large eye orbits, fine features, perhaps subtle wing or avian influence.",
+      "prompt_addition": "Fairy skull, delicate small cranium with oversized eye sockets, fine graceful features, subtle ethereal bone structure, whimsical fantasy anatomy with large orbits.",
+      "traits": "delicate, large eyes, fine features"
+    },
+    {
+      "slug": "satyr",
+      "display": "Satyr (Caprine Hybrid)",
+      "type": "mythical",
+      "specimen_id": "MYTH-SAT-009 (Wild)",
+      "era": "Mythology/Fantasy",
+      "description": "Human face with goat horns, slightly elongated, playful but wild features.",
+      "prompt_addition": "Satyr skull, human-like cranium with prominent goat-like horns, slightly projecting face, fine but wild features, accurate to classical satyr hybrid anatomy.",
+      "traits": "goat horns, human face, wild features"
+    },
+    {
+      "slug": "satyr-no-horns",
+      "display": "Satyr (Humanized, No Horns)",
+      "type": "mythical",
+      "specimen_id": "MYTH-SAT-009 (Civilized)",
+      "era": "Mythology/Fantasy",
+      "description": "Human face with no horns, slightly elongated, playful but wild features, collared white linen shirt.",
+      "prompt_addition": "Satyr skull, human-like cranium with NO horns at all (fully human forehead and cranium), slightly projecting face, fine but wild features, accurate to classical satyr hybrid anatomy but humanized. Add a collared white linen shirt.",
+      "traits": "no horns, human face, wild features, white linen shirt"
+    }
+  ]
+}

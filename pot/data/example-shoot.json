@@ -1,0 +1,78 @@
+{
+  "provenance": {
+    "stage": 1,
+    "pot_version": "0.2.0",
+    "source_shoot_id": "shoot-2025-11-14-roman-jaw-study-01",
+    "description": "Example grounded source material for a 'Roman Empire' hyper-masculine hero portrait study. Shot specifically to feed AI concept work with full EXIF + notes. This is the real photo the later AI builds off (or ghosts over)."
+  },
+  "photo_shoot": {
+    "date": "2025-11-14T07:42:00-08:00",
+    "location": {
+      "name": "Griffith Observatory overlook, Los Angeles",
+      "lat": 34.1184,
+      "lon": -118.3004,
+      "notes": "Clear dawn light, distant city + hills. Used as stand-in for 'steps of an ancient Roman temple' + 'imperial cityscape' in prompt."
+    },
+    "subject": {
+      "name": "Alex R. (model release on file)",
+      "age_approx": 28,
+      "notes": "Athletic build, strong bone structure. Briefed on 'roman carving' heroic stillness. Wore simple black tank + light oil for skin specularity."
+    },
+    "camera": {
+      "make": "Leica",
+      "model": "M11",
+      "serial": "M11-XXXXXXX",
+      "lens": "Summilux-M 50mm f/1.4 ASPH",
+      "settings": {
+        "focal_length_mm": 50,
+        "aperture": "f/1.8",
+        "shutter": "1/250",
+        "iso": 160,
+        "white_balance": "daylight",
+        "file_format": "DNG + JPEG"
+      }
+    },
+    "film_stock_emulation": {
+      "intended": "kodak-portra-400 + slight push",
+      "notes": "Digital capture but shot + lit + post-intended to match Portra 400 creamy skin + delicate grain. Later used Cinestill 800T for night variants."
+    },
+    "lighting": {
+      "type": "natural + bounce",
+      "description": "Low sun from camera-left (dawn), large white foam board bounce from right for fill. No strobes. Wanted long sculpted shadows for jaw/cheekbone drama.",
+      "color_temp_k": 5200,
+      "notes": "Golden rim on left side of face/neck/traps. Deep but transparent shadows on right. Matches 'dramatic shadows, increased jaw size' direction."
+    },
+    "direction_notes": "Profile-ish three-quarter, gaze off to 'empire' (horizon + city). Chin slightly lifted. Shoulders back. Heroic but not smiling. 8 frames selected for 'still from 1972 sword-and-sandal epic'."
+  },
+  "exif_summary": {
+    "Make": "LEICA CAMERA AG",
+    "Model": "LEICA M11",
+    "LensModel": "Summilux-M 1:1.4/50 ASPH.",
+    "FNumber": 1.8,
+    "ExposureTime": "1/250",
+    "ISOSpeedRatings": 160,
+    "DateTimeOriginal": "2025:11:14 07:42:11",
+    "GPSLatitude": "34,7.104N",
+    "GPSLongitude": "118,18.024W",
+    "Artist": "Qbit / Imagine Archive",
+    "Copyright": "© 2025 Qbit. All rights reserved. Model release secured.",
+    "ImageDescription": "Source shoot for Roman Empire jaw study. Dawn at Griffith. Intended as ground truth for AI roman-heroic transformation. Full notes in this sidecar."
+  },
+  "custom_xmp_pot": {
+    "pot:provenanceStage": 1,
+    "pot:loopTags": ["photo-shoot", "exif-grounded", "roman-empire", "hyper-masculine", "dawn-light", "sculpted-shadows", "reference-asset"],
+    "pot:filmGenreRef": "roman-epic",
+    "pot:literaryParallel": "plutarch + i-claudius + conan-pulp + 1970s macho epics",
+    "pot:intendedStylePresets": ["kodak-portra-400", "roman-empire", "spaghetti-western"],
+    "pot:notes": "This file + the DNGs are the canonical source. Any AI output that claims 'roman carving jaw' without referencing this shoot or equivalent is ungrounded in the loop."
+  },
+  "downstream_usage": [
+    {
+      "date": "2025-11-14",
+      "prompt_hash": "sha256:7f8a9b...",
+      "generation": "grok-image-XXXX.jpg (the black & white roman jaw study)",
+      "tags_applied": ["roman-empire", "iteration-01", "ghosted-later"],
+      "notes": "First pass used this exact ref + 'roman carving level jawline' text. Later composite AI-GHOSTED the original face structure under the hyper-masculine render."
+    }
+  ]
+}

@@ -76,6 +76,11 @@ imagine/
 
 ## Quick start – batch one image through many styles
 
+See also the full **Featured Templates Contact Proof Sheet** (photographer’s raw negative development sheet + Vogue editor markup area) at:
+`featured_templates/proof-sheet.html` (re-generate anytime with `python featured_templates/make_proof_sheet.py` after new runs). 
+
+**This is the complete current catalog of Grok Imagine Featured Templates** (the exact presets Grok exposes in the UI). Drop one photo → batch it through every style using the prepare + image_edit calls (or just ask Grok "run the full featured batch on this photo"). You get the full visual set for a known cost factor so you can see what Grok can do with your subject all at once, pick the best looks, and only iterate on winners. The sheet shows real outputs + per-style time/cost + editor notes area + exportable feedback JSON.
+
 ```bash
 # See everything
 python sweep.py list --source all

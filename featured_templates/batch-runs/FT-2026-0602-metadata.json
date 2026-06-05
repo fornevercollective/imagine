@@ -1,0 +1,244 @@
+{
+  "batch_id": "FT-2026-0602-master-ref",
+  "ref": "assets/references/original-watercolor-ref.jpg",
+  "generated_at": "2026-06-03T04:47:26.835525+00:00",
+  "total_templates": 23,
+  "aggregate": {
+    "total_time_s": 360.3,
+    "total_images": 43,
+    "total_videos": 0,
+    "total_cost_factor": 29.1
+  },
+  "templates": {
+    "chibi": {
+      "display": "Chibi",
+      "category": "style",
+      "time_spent_s": 16.8,
+      "images": 1,
+      "videos": 0,
+      "cost_factor": 1.2,
+      "notes": "Cute exaggerated cartoon style, popular for characters.",
+      "status": "developed"
+    },
+    "professional-headshot": {
+      "display": "Professional Headshot",
+      "category": "portrait",
+      "time_spent_s": 14.2,
+      "images": 1,
+      "videos": 0,
+      "cost_factor": 1.0,
+      "notes": "Clean studio portrait, corporate / profile photo look.",
+      "status": "developed"
+    },
+    "logo-editor": {
+      "display": "Logo Editor",
+      "category": "graphic",
+      "time_spent_s": 11.9,
+      "images": 1,
+      "videos": 0,
+      "cost_factor": 1.3,
+      "notes": "For logo concepts, icons, branding from photo or text.",
+      "status": "developed"
+    },
+    "70s-street-style": {
+      "display": "70s Street Style",
+      "category": "fashion",
+      "time_spent_s": 13.8,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.1,
+      "notes": "Retro 1970s fashion, street photography vibe.",
+      "status": "developed"
+    },
+    "quality-enhancer": {
+      "display": "Quality Enhancer",
+      "category": "enhance",
+      "time_spent_s": 9.4,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.0,
+      "notes": "Upscale / polish / detail boost. Good base refiner.",
+      "status": "developed"
+    },
+    "comic-book": {
+      "display": "Comic Book",
+      "category": "style",
+      "time_spent_s": 13.4,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.2,
+      "notes": "Bold comic / graphic novel illustration style.",
+      "status": "developed"
+    },
+    "object-remover": {
+      "display": "Object Remover",
+      "category": "edit",
+      "time_spent_s": 11.2,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.5,
+      "notes": "Inpainting / removal tool. Prompt what to remove.",
+      "status": "developed"
+    },
+    "product-showcase": {
+      "display": "Product Showcase",
+      "category": "product",
+      "time_spent_s": 13.5,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.4,
+      "notes": "Clean product photography presentation.",
+      "status": "developed"
+    },
+    "glossy-product-shot": {
+      "display": "Glossy Product Shot",
+      "category": "product",
+      "time_spent_s": 14.1,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.4,
+      "notes": "High-end glossy / reflective product render.",
+      "status": "developed"
+    },
+    "80s-anime": {
+      "display": "80s Anime",
+      "category": "style",
+      "time_spent_s": 14.7,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.2,
+      "notes": "Retro 1980s anime / cel animation aesthetic.",
+      "status": "developed"
+    },
+    "watercolor-portrait": {
+      "display": "Watercolor Portrait",
+      "category": "style",
+      "time_spent_s": 9.8,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.2,
+      "notes": "Soft watercolor painting style, good for portraits.",
+      "status": "developed"
+    },
+    "video-game": {
+      "display": "Video Game",
+      "category": "style",
+      "time_spent_s": 18.2,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.2,
+      "notes": "Video game character / screenshot / render style.",
+      "status": "developed"
+    },
+    "3d-animation": {
+      "display": "3D Animation",
+      "category": "style",
+      "time_spent_s": 19.8,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.2,
+      "notes": "3D CGI / Pixar-like animation look.",
+      "status": "developed"
+    },
+    "spaghetti-western": {
+      "display": "Spaghetti Western",
+      "category": "style",
+      "time_spent_s": 19.3,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.2,
+      "notes": "Classic western movie, dusty, cinematic, Sergio Leone vibe.",
+      "status": "developed"
+    },
+    "haze-portrait": {
+      "display": "Haze Portrait",
+      "category": "portrait",
+      "time_spent_s": 12.3,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.0,
+      "notes": "Dreamy / hazy / soft focus portrait lighting.",
+      "status": "developed"
+    },
+    "funky-dance": {
+      "display": "Funky Dance",
+      "category": "motion",
+      "time_spent_s": 22.1,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.6,
+      "notes": "Energetic dance motion, great for photo-to-video animation.",
+      "status": "developed"
+    },
+    "future-past": {
+      "display": "Future Past",
+      "category": "style",
+      "time_spent_s": 15.9,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.2,
+      "notes": "Retro-futuristic blend, synthwave / 80s sci-fi mixed with vintage.",
+      "status": "developed"
+    },
+    "roman-empire": {
+      "display": "Roman Empire",
+      "category": "style",
+      "time_spent_s": 17.4,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.2,
+      "notes": "Ancient Roman aesthetic, togas, marble, epic historical.",
+      "status": "developed"
+    },
+    "ad-astra": {
+      "display": "Ad Astra",
+      "category": "style",
+      "time_spent_s": 21.5,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.2,
+      "notes": "Space / cosmic / astronaut epic journey feel.",
+      "status": "developed"
+    },
+    "add-girlfriend": {
+      "display": "Add Girlfriend",
+      "category": "edit",
+      "time_spent_s": 16.2,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.5,
+      "notes": "Composite / add a partner figure into scene (use carefully).",
+      "status": "developed"
+    },
+    "future-family": {
+      "display": "Future Family",
+      "category": "edit",
+      "time_spent_s": 18.7,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.5,
+      "notes": "Family scene generation or aging / future vision composites.",
+      "status": "developed"
+    },
+    "laser-fight": {
+      "display": "Laser Fight",
+      "category": "action",
+      "time_spent_s": 25.6,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.7,
+      "notes": "Sci-fi action, lasers, dynamic fight choreography (video strong).",
+      "status": "developed"
+    },
+    "sunny-morning": {
+      "display": "Sunny Morning",
+      "category": "mood",
+      "time_spent_s": 10.5,
+      "images": 2,
+      "videos": 0,
+      "cost_factor": 1.1,
+      "notes": "Bright warm morning light, cheerful natural vibe.",
+      "status": "developed"
+    }
+  }
+}

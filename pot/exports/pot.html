@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PoT — Film Genres: Literary Parallels Timeline — AI Content Provenance Point of Truth</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root { --bg:#0f1115; --fg:#e6e6e6; --accent:#7aa2f7; --card:#1a1d24; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin:0; background:var(--bg); color:var(--fg); line-height:1.5; }
+header { background:#161921; padding:1rem 1.25rem; border-bottom:1px solid #333; position:sticky; top:0; z-index:10; }
+h1 { margin:0; font-size:1.4rem; }
+h2 { margin-top:2rem; border-bottom:1px solid #333; padding-bottom:.25rem; }
+.container { max-width:1100px; margin:0 auto; padding:1rem; }
+.card { background:var(--card); border:1px solid #2a2f3a; border-radius:8px; padding:1rem; margin-bottom:1rem; }
+table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+th,td { padding:6px 8px; border:1px solid #333; text-align:left; vertical-align:top; }
+th { background:#222; position:sticky; top:0; }
+.tag { display:inline-block; background:#222; color:#9cc; padding:1px 6px; border-radius:3px; margin:1px; font-size:0.8rem; font-family:ui-monospace, monospace; }
+.filter { width:100%; padding:8px; background:#111; color:#ddd; border:1px solid #444; border-radius:4px; font-size:1rem; }
+.nav { display:flex; gap:8px; flex-wrap:wrap; margin:1rem 0; }
+button { background:#222; color:#ddd; border:1px solid #444; padding:6px 10px; border-radius:4px; cursor:pointer; }
+button:hover { background:#2a2f3a; }
+#loop { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:8px; }
+.stage { background:#161921; border:1px solid #333; padding:8px; border-radius:6px; font-size:0.85rem; }
+.stage .num { font-weight:700; color:#7aa2f7; }
+#tagcloud { display:flex; flex-wrap:wrap; gap:4px; }
+.small { font-size:0.8rem; opacity:0.7; }
+footer { text-align:center; padding:2rem 1rem; opacity:0.6; font-size:0.8rem; }
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>PoT — Point of Truth</h1>
+    <div class="small">https://grok.com/share/bGVnYWN5LWNvcHk_99ba3a1a-72bf-4ec1-96c9-bf9e145e8665</div>
+    <div class="small">v0.3.0 • 2026-06-03</div>
+  </div>
+</header>
+
+<div class="container">
+
+<section>
+<h2>Psychological Loop (Real Life EXIF → AI Concept)</h2>
+<p class="small">The full chain. Tags at every stage make the transformations explicit and traceable. See loop.md for deep dive.</p>
+<div id="loop">
+<div class="stage"><span class="num">S0</span> <strong>Real Life / Event / Memory</strong><br><span class="small">real-life-ground</span><br><span class="small">EXIF: False</span></div><div class="stage"><span class="num">S1</span> <strong>Photo Shoot (EXIF Source Material)</strong><br><span class="small">photo-shoot</span><br><span class="small">EXIF: True</span></div><div class="stage"><span class="num">S2</span> <strong>Digitization / Ingestion</strong><br><span class="small">digitize</span><br><span class="small">EXIF: True</span></div><div class="stage"><span class="num">S3</span> <strong>Reference Asset Curation</strong><br><span class="small">reference-curation</span><br><span class="small">EXIF: True</span></div><div class="stage"><span class="num">S4</span> <strong>Concept + Literary/Film Parallel Injection</strong><br><span class="small">concept-injection</span><br><span class="small">EXIF: False</span></div><div class="stage"><span class="num">S5</span> <strong>Prompt Engineering &amp; Ref Selection</strong><br><span class="small">prompt</span><br><span class="small">EXIF: True</span></div><div class="stage"><span class="num">S6</span> <strong>AI Generation</strong><br><span class="small">ai-gen</span><br><span class="small">EXIF: False</span></div><div class="stage"><span class="num">S7</span> <strong>Review, Ghosting, Iteration</strong><br><span class="small">iteration</span><br><span class="small">EXIF: True</span></div><div class="stage"><span class="num">S8</span> <strong>Final Output + New Memory</strong><br><span class="small">final</span><br><span class="small">EXIF: False</span></div>
+</div>
+</section>
+
+<section>
+<h2>Timeline — Film Genres : Literary Parallels</h2>
+<input id="timelineFilter" class="filter" placeholder="Filter timeline (era, genre, lit, film, tags)..." oninput="filterTable('timelineTable', this.value)">
+<table id="timelineTable">
+<thead><tr><th>Era</th><th>Year</th><th>Film Genre</th><th>Literary Parallel</th><th>Key Film</th><th>Tags</th></tr></thead>
+<tbody>
+<tr><td>Early Cinema (1895-1915)</td><td>1902</td><td>Science Fiction / Fantasy / Trick Film</td><td>Jules Verne, H.G. Wells, Mary Shelley (Gothic SF)</td><td>A Trip to the Moon (Georges Méliès)</td><td><span class="tag">sci-fi</span> <span class="tag">fantasy</span> <span class="tag">early-cinema</span> <span class="tag">special-effects</span> <span class="tag">trick-film</span> <span class="tag">literary-adaptation</span> <span class="tag">verne</span> <span class="tag">melies</span> <span class="tag">proto-sci-fi</span></td></tr>
+<tr><td>German Expressionism / Silent Horror</td><td>1920</td><td>Horror / Psychological Thriller / Expressionist Drama</td><td>German Romanticism, E.T.A. Hoffmann, Edgar Allan Poe, Gothic</td><td>The Cabinet of Dr. Caligari (1920), Nosferatu (1922)</td><td><span class="tag">horror</span> <span class="tag">expressionism</span> <span class="tag">german-expressionism</span> <span class="tag">psychological</span> <span class="tag">shadow-play</span> <span class="tag">distorted-perspective</span> <span class="tag">gothic</span> <span class="tag">vampire</span> <span class="tag">poe</span></td></tr>
+<tr><td>Classical Hollywood / Sound Western</td><td>1939</td><td>Western</td><td>Dime novels, James Fenimore Cooper (Leatherstocking Tales), Zane Grey, Owen Wister (The Virginian), Karl May</td><td>Stagecoach (John Ford, 1939), Destry Rides Again</td><td><span class="tag">western</span> <span class="tag">classical-hollywood</span> <span class="tag">dime-novel</span> <span class="tag">frontier-myth</span> <span class="tag">john-ford</span> <span class="tag">landscape-as-character</span> <span class="tag">moral-tale</span> <span class="tag">pulp-western</span></td></tr>
+<tr><td>Film Noir / Hardboiled</td><td>1941</td><td>Film Noir, Crime, Mystery, Neo-Realist Thriller</td><td>Hardboiled detective fiction: Dashiell Hammett, Raymond Chandler, James M. Cain, Cornell Woolrich</td><td>The Maltese Falcon (Huston 1941), Double Indemnity (Wilder 1944), Out of the Past</td><td><span class="tag">film-noir</span> <span class="tag">neo-noir</span> <span class="tag">hardboiled</span> <span class="tag">hammett</span> <span class="tag">chandler</span> <span class="tag">cain</span> <span class="tag">femme-fatale</span> <span class="tag">venetian-blind</span> <span class="tag">voiceover</span> <span class="tag">fatalism</span> <span class="tag">urban-night</span> <span class="tag">low-key</span></td></tr>
+<tr><td>Atomic Age Sci-Fi &amp; Invasion</td><td>1951</td><td>Sci-Fi, Invasion, Monster, Cold War Paranoia</td><td>John W. Campbell, Isaac Asimov, Ray Bradbury, 1950s pulp + Golden Age SF magazines</td><td>The Thing from Another World (1951), Invasion of the Body Snatchers (1956), Forbidden Planet</td><td><span class="tag">sci-fi</span> <span class="tag">atomic-age</span> <span class="tag">invasion</span> <span class="tag">cold-war</span> <span class="tag">paranoia</span> <span class="tag">monster-movie</span> <span class="tag">flying-saucer</span> <span class="tag">body-snatchers</span> <span class="tag">bradbury</span> <span class="tag">asimov</span></td></tr>
+<tr><td>Spaghetti Western / Revisionist</td><td>1964</td><td>Spaghetti Western, Revisionist Western, Zapata Western</td><td>American Western pulp + Italian fumetti + Japanese samurai films (Kurosawa) + European picaresque</td><td>A Fistful of Dollars (1964), The Good the Bad and the Ugly (1966), Once Upon a Time in the West</td><td><span class="tag">spaghetti-western</span> <span class="tag">sergio-leone</span> <span class="tag">revisionist-western</span> <span class="tag">dollars-trilogy</span> <span class="tag">ennio-morricone</span> <span class="tag">close-up-eyes</span> <span class="tag">extreme-wide</span> <span class="tag">cigar</span> <span class="tag">eclectic-score</span> <span class="tag">operatic-violence</span></td></tr>
+<tr><td>1970s Epic / Macho / Roman Empire Fantasy</td><td>1970</td><td>Historical Epic, Sword &amp; Sandal Revival, Macho Action, Gladiator</td><td>Classical history (Suetonius, Plutarch), Ben-Hur novel, modern sword &amp; sorcery (Howard), hyper-masculine pulps</td><td>Patton, The Godfather (epic family), later Gladiator (2000) as spiritual successor, Caligula (extreme)</td><td><span class="tag">roman-empire</span> <span class="tag">sword-and-sandal</span> <span class="tag">gladiator</span> <span class="tag">epic</span> <span class="tag">hyper-masculine</span> <span class="tag">jawline</span> <span class="tag">colosseum</span> <span class="tag">imperial-decadence</span> <span class="tag">historical-epic</span> <span class="tag">macho-hero</span></td></tr>
+<tr><td>Neon Noir / Cyberpunk / MTV Aesthetic</td><td>1982</td><td>Cyberpunk, Neo-Noir, Tech Thriller, Synthwave Visual</td><td>William Gibson (Neuromancer 1984), Philip K. Dick, Bruce Sterling, 80s cyberpunk short fiction</td><td>Blade Runner (1982), The Terminator (1984), Videodrome, Escape from New York</td><td><span class="tag">cyberpunk</span> <span class="tag">neo-noir</span> <span class="tag">neon</span> <span class="tag">synthwave</span> <span class="tag">blade-runner</span> <span class="tag">gibson</span> <span class="tag">dick</span> <span class="tag">rain-neon</span> <span class="tag">hologram</span> <span class="tag">high-tech-low-life</span> <span class="tag">vhs</span> <span class="tag">retrowave</span></td></tr>
+<tr><td>Indie / Tarantino / Pulp Revival + Literary Adaptation Wave</td><td>1994</td><td>Crime / Pulp Fiction / Non-linear / Indie Drama</td><td>Elmore Leonard, Quentin Tarantino&#x27;s own dialogue style, short story cycles, graphic novels</td><td>Pulp Fiction (1994), Reservoir Dogs, Jackie Brown, Memento, Fight Club (Palahniuk)</td><td><span class="tag">pulp-fiction</span> <span class="tag">tarantino</span> <span class="tag">non-linear</span> <span class="tag">indie-crime</span> <span class="tag">dialogue-driven</span> <span class="tag">pop-culture-ref</span> <span class="tag">graphic-novel-adjacent</span> <span class="tag">90s-grit</span></td></tr>
+<tr><td>Streaming / Prestige / Genre Hybrid / Meme Culture</td><td>2010</td><td>Prestige TV / Limited Series / Cinematic Universe / Elevated Horror / Multiverse</td><td>Long-form prestige novels, comic runs (Watchmen, Saga), fanfiction, internet lore, true-crime podcasts as modern gothic</td><td>True Detective S1 (2014), The Mandalorian, Chernobyl, Succession, Everything Everywhere All at Once, The Bear</td><td><span class="tag">streaming</span> <span class="tag">prestige</span> <span class="tag">elevated-horror</span> <span class="tag">multiverse</span> <span class="tag">anthology</span> <span class="tag">limited-series</span> <span class="tag">comic-adaptation</span> <span class="tag">true-crime</span> <span class="tag">slow-burn</span> <span class="tag">world-building</span> <span class="tag">memeable</span> <span class="tag">gif-able</span></td></tr>
+
+</tbody></table>
+</section>
+
+<section>
+<h2>All Tags — Searchable / Filterable</h2>
+<input id="tagFilter" class="filter" placeholder="Type to filter tags (e.g. roman, noir, kodak, exif, ghosted)..." oninput="filterTags(this.value)">
+<div id="tagcloud">
+<span class="tag" data-tag="action">action</span><span class="tag" data-tag="adventure">adventure</span><span class="tag" data-tag="comedy">comedy</span><span class="tag" data-tag="crime">crime</span><span class="tag" data-tag="drama">drama</span><span class="tag" data-tag="fantasy">fantasy</span><span class="tag" data-tag="historical">historical</span><span class="tag" data-tag="horror">horror</span><span class="tag" data-tag="mystery">mystery</span><span class="tag" data-tag="romance">romance</span><span class="tag" data-tag="sci-fi">sci-fi</span><span class="tag" data-tag="thriller">thriller</span><span class="tag" data-tag="western">western</span><span class="tag" data-tag="musical">musical</span><span class="tag" data-tag="war">war</span><span class="tag" data-tag="biopic">biopic</span><span class="tag" data-tag="documentary">documentary</span><span class="tag" data-tag="experimental">experimental</span><span class="tag" data-tag="film-noir">film-noir</span><span class="tag" data-tag="neo-noir">neo-noir</span><span class="tag" data-tag="spaghetti-western">spaghetti-western</span><span class="tag" data-tag="german-expressionism">german-expressionism</span><span class="tag" data-tag="cyberpunk">cyberpunk</span><span class="tag" data-tag="roman-empire">roman-empire</span><span class="tag" data-tag="gladiator">gladiator</span><span class="tag" data-tag="sword-and-sandal">sword-and-sandal</span><span class="tag" data-tag="elevated-horror">elevated-horror</span><span class="tag" data-tag="folk-horror">folk-horror</span><span class="tag" data-tag="kodak-portra-400">kodak-portra-400</span><span class="tag" data-tag="kodak-ektar-100">kodak-ektar-100</span><span class="tag" data-tag="kodak-gold-200">kodak-gold-200</span><span class="tag" data-tag="cinestill-800t">cinestill-800t</span><span class="tag" data-tag="fuji-velvia-50">fuji-velvia-50</span><span class="tag" data-tag="ilford-hp5-400-bw">ilford-hp5-400-bw</span><span class="tag" data-tag="kodachrome-64">kodachrome-64</span><span class="tag" data-tag="heavy-35mm-film-grain-gate-weave">heavy-35mm-film-grain-gate-weave</span><span class="tag" data-tag="anamorphic-cinematic">anamorphic-cinematic</span><span class="tag" data-tag="teal-orange-blockbuster">teal-orange-blockbuster</span><span class="tag" data-tag="bleach-bypass-lut">bleach-bypass-lut</span><span class="tag" data-tag="panavision-c-series-anamorphic">panavision-c-series-anamorphic</span><span class="tag" data-tag="cottagecore">cottagecore</span><span class="tag" data-tag="dark-academia">dark-academia</span><span class="tag" data-tag="light-academia">light-academia</span><span class="tag" data-tag="fairycore">fairycore</span><span class="tag" data-tag="old-money-aesthetic">old-money-aesthetic</span><span class="tag" data-tag="cybercore">cybercore</span><span class="tag" data-tag="y2k-aesthetic">y2k-aesthetic</span><span class="tag" data-tag="barbiecore">barbiecore</span><span class="tag" data-tag="grunge-90s">grunge-90s</span><span class="tag" data-tag="clean-girl">clean-girl</span><span class="tag" data-tag="grain">grain</span><span class="tag" data-tag="halation">halation</span><span class="tag" data-tag="lens-flare">lens-flare</span><span class="tag" data-tag="anamorphic-flare">anamorphic-flare</span><span class="tag" data-tag="venetian-blind">venetian-blind</span><span class="tag" data-tag="double-exposure">double-exposure</span><span class="tag" data-tag="chromatic-haze">chromatic-haze</span><span class="tag" data-tag="low-key">low-key</span><span class="tag" data-tag="shallow-dof">shallow-dof</span><span class="tag" data-tag="real-life-event">real-life-event</span><span class="tag" data-tag="photo-shoot">photo-shoot</span><span class="tag" data-tag="exif-grounded">exif-grounded</span><span class="tag" data-tag="scanned">scanned</span><span class="tag" data-tag="reference-asset">reference-asset</span><span class="tag" data-tag="character-bible">character-bible</span><span class="tag" data-tag="ai-ghosted">ai-ghosted</span><span class="tag" data-tag="composite-source">composite-source</span><span class="tag" data-tag="master-ref">master-ref</span><span class="tag" data-tag="prompt-engineered">prompt-engineered</span><span class="tag" data-tag="grok-imagine">grok-imagine</span><span class="tag" data-tag="iteration">iteration</span><span class="tag" data-tag="ghosted">ghosted</span><span class="tag" data-tag="final">final</span><span class="tag" data-tag="comic-book">comic-book</span><span class="tag" data-tag="80s-anime">80s-anime</span><span class="tag" data-tag="watercolor-portrait">watercolor-portrait</span><span class="tag" data-tag="product-showcase">product-showcase</span><span class="tag" data-tag="glossy-product-shot">glossy-product-shot</span><span class="tag" data-tag="professional-headshot">professional-headshot</span><span class="tag" data-tag="haze-portrait">haze-portrait</span><span class="tag" data-tag="roman-empire">roman-empire</span><span class="tag" data-tag="spaghetti-western">spaghetti-western</span><span class="tag" data-tag="voiceover">voiceover</span><span class="tag" data-tag="flashback">flashback</span><span class="tag" data-tag="non-linear">non-linear</span><span class="tag" data-tag="parallel-timeline">parallel-timeline</span><span class="tag" data-tag="femme-fatale">femme-fatale</span><span class="tag" data-tag="anti-hero">anti-hero</span><span class="tag" data-tag="35mm">35mm</span><span class="tag" data-tag="medium-format">medium-format</span><span class="tag" data-tag="vhs">vhs</span><span class="tag" data-tag="streaming">streaming</span><span class="tag" data-tag="gif-able">gif-able</span><span class="tag" data-tag="memeable">memeable</span><span class="tag" data-tag="superheavy">superheavy</span><span class="tag" data-tag="kodak-instapix">kodak-instapix</span><span class="tag" data-tag="text-bible">text-bible</span><span class="tag" data-tag="watercolor-ref">watercolor-ref</span><span class="tag" data-tag="sahelanthropus">sahelanthropus</span><span class="tag" data-tag="lucy">lucy</span><span class="tag" data-tag="turkana-boy">turkana-boy</span><span class="tag" data-tag="neanderthal">neanderthal</span><span class="tag" data-tag="denisovan">denisovan</span><span class="tag" data-tag="hominin-stage">hominin-stage</span><span class="tag" data-tag="fossil-ref">fossil-ref</span><span class="tag" data-tag="mixamo-rig">mixamo-rig</span><span class="tag" data-tag="threejs-blend">threejs-blend</span><span class="tag" data-tag="holo-badge">holo-badge</span><span class="tag" data-tag="solid-lineage-column">solid-lineage-column</span><span class="tag" data-tag="genetic-migration">genetic-migration</span><span class="tag" data-tag="holo-skull-badge">holo-skull-badge</span>
+</div>
+<p class="small">These are every film/video/gif/stream of content tag surfaced from the source conversation + project styles + provenance model.</p>
+</section>
+
+<section>
+<h2>Provenance Stages Detail</h2>
+<div class="card"><strong>Stage 0: Real Life / Event / Memory</strong> <span class="tag">real-life-ground</span><br>
+        <span class="small">EXIF applicable: False</span><br>
+        Psych: perception, memory-distortion, emotional-charge, selection-bias, personal-myth<br>
+        Tags: <span class="tag">real-life-event</span> <span class="tag">memory</span> <span class="tag">autobiographical</span> <span class="tag">witnessed</span>
+        </div><div class="card"><strong>Stage 1: Photo Shoot (EXIF Source Material)</strong> <span class="tag">photo-shoot</span><br>
+        <span class="small">EXIF applicable: True</span><br>
+        Psych: framing, idealization-pressure, technical-aesthetic-choice, decisive-moment, performance<br>
+        Tags: <span class="tag">photo-shoot</span> <span class="tag">exif-grounded</span> <span class="tag">film-stock</span> <span class="tag">35mm</span> <span class="tag">location</span> <span class="tag">studio</span> <span class="tag">golden-hour</span> <span class="tag">practical-light</span>
+        </div><div class="card"><strong>Stage 2: Digitization / Ingestion</strong> <span class="tag">digitize</span><br>
+        <span class="small">EXIF applicable: True</span><br>
+        Psych: nostalgia-filter, first-idealization, curation<br>
+        Tags: <span class="tag">scanned</span> <span class="tag">raw-import</span> <span class="tag">color-managed</span> <span class="tag">first-pass-tags</span>
+        </div><div class="card"><strong>Stage 3: Reference Asset Curation</strong> <span class="tag">reference-curation</span><br>
+        <span class="small">EXIF applicable: True</span><br>
+        Psych: library-building, selection, grouping-into-bibles<br>
+        Tags: <span class="tag">reference-asset</span> <span class="tag">character-bible</span> <span class="tag">style-ref</span> <span class="tag">master-ref</span> <span class="tag">ai-ghosted</span> <span class="tag">composite-source</span>
+        </div><div class="card"><strong>Stage 4: Concept + Literary/Film Parallel Injection</strong> <span class="tag">concept-injection</span><br>
+        <span class="small">EXIF applicable: False</span><br>
+        Psych: intertextuality, myth-making, narrative-compression, desire-projection, archetype-mapping<br>
+        Tags: <span class="tag">literary-parallel</span> <span class="tag">film-genre-ref</span> <span class="tag">intertextual</span> <span class="tag">archetype</span> <span class="tag">narrative-device</span>
+        </div><div class="card"><strong>Stage 5: Prompt Engineering &amp; Ref Selection</strong> <span class="tag">prompt</span><br>
+        <span class="small">EXIF applicable: True</span><br>
+        Psych: negotiation-fidelity-vs-fiction, weighting-refs, style-preset-choice<br>
+        Tags: <span class="tag">prompt-engineered</span> <span class="tag">style-preset</span> <span class="tag">template</span> <span class="tag">preserve-identity</span> <span class="tag">heavy-transform</span>
+        </div><div class="card"><strong>Stage 6: AI Generation</strong> <span class="tag">ai-gen</span><br>
+        <span class="small">EXIF applicable: False</span><br>
+        Psych: model-completion, training-haunt, surprise, uncanny<br>
+        Tags: <span class="tag">grok-imagine</span> <span class="tag">video-gen</span> <span class="tag">img2img</span> <span class="tag">seed-fixed</span>
+        </div><div class="card"><strong>Stage 7: Review, Ghosting, Iteration</strong> <span class="tag">iteration</span><br>
+        <span class="small">EXIF applicable: True</span><br>
+        Psych: catharsis, disappointment, ritual-reprompt, erasure, overpainting<br>
+        Tags: <span class="tag">iteration</span> <span class="tag">ghosted</span> <span class="tag">composite</span> <span class="tag">human-review-pass</span> <span class="tag">approved</span> <span class="tag">rejected</span>
+        </div><div class="card"><strong>Stage 8: Final Output + New Memory</strong> <span class="tag">final</span><br>
+        <span class="small">EXIF applicable: False</span><br>
+        Psych: closure, publication, new-reference-formation, cultural-entry<br>
+        Tags: <span class="tag">final</span> <span class="tag">proof-sheet</span> <span class="tag">template-registered</span> <span class="tag">public</span> <span class="tag">client-delivery</span>
+        </div>
+</section>
+
+<section>
+<h2>Downloads — All Formats (client-side data: URLs)</h2>
+<div class="nav">
+<button onclick="downloadJSON()">Download pot.json</button>
+<button onclick="downloadJS()">Download pot.js</button>
+<button onclick="downloadTXT()">Download pot.txt (Apache-style)</button>
+<button onclick="downloadCSV()">Download pot.csv</button>
+<button onclick="downloadPY()">Download pot.py</button>
+<button onclick="downloadPKL()">Download pot.pkl (binary)</button>
+<button onclick="downloadMD()">Download pot.md</button>
+<button onclick="downloadXLSX()">Download pot.xlsx (note: this page cannot produce real xlsx; use the generator)</button>
+</div>
+<p class="small">The .xlsx and full fidelity binary are best produced by running the Python generator (it has openpyxl + pickle). The buttons above give you the in-memory data in the other formats.</p>
+</section>
+
+<section>
+<h2>Meta</h2>
+<div class="card">
+<pre style="white-space:pre-wrap; font-size:0.8rem; background:#111; padding:8px; border-radius:4px;">{h(json.dumps(pot['meta'], indent=2))}</pre>
+</div>
+</section>
+
+</div>
+<footer>
+Generated from pot.json • Interactive single-file PoT explorer • Iterate by editing source + re-running generator
+</footer>
+
+<script>
+// Embedded full data for client-side exports
+const POT = {json.dumps(pot, ensure_ascii=False)};
+
+function filterTable(tableId, q) {{
+  const rows = document.querySelectorAll(`#${{tableId}} tbody tr`);
+  const qq = q.toLowerCase();
+  rows.forEach(r => {{
+    const txt = r.textContent.toLowerCase();
+    r.style.display = txt.includes(qq) ? '' : 'none';
+  }});
+}}
+
+function filterTags(q) {{
+  const tags = document.querySelectorAll('#tagcloud .tag');
+  const qq = q.toLowerCase();
+  tags.forEach(el => {{
+    const t = el.dataset.tag.toLowerCase();
+    el.style.display = t.includes(qq) ? 'inline-block' : 'none';
+  }});
+}}
+
+function downloadBlob(filename, content, type) {{
+  const blob = new Blob([content], {{type}});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}}
+
+function downloadJSON() {{ downloadBlob('pot.json', JSON.stringify(POT, null, 2), 'application/json'); }}
+function downloadJS() {{
+  const js = `// pot.js — generated from in-browser PoT\nexport const POT = ${{JSON.stringify(POT, null, 2)}};\nexport default POT;`;
+  downloadBlob('pot.js', js, 'text/javascript');
+}}
+function downloadTXT() {{
+  let txt = '# Apache-style raw tags from PoT (client export)\n';
+  txt += POT.all_tags_flat.join('\n');
+  downloadBlob('pot.txt', txt, 'text/plain');
+}}
+function downloadCSV() {{
+  let csv = 'type,value\n';
+  POT.all_tags_flat.forEach(t => csv += `flat_tag,"${{t}}"\n`);
+  downloadBlob('pot.csv', csv, 'text/csv');
+}}
+function downloadPY() {{
+  const py = `POT = ${{JSON.stringify(POT, null, 2)}}\nprint('PoT loaded, version', POT.meta.version)`;
+  downloadBlob('pot.py', py, 'text/x-python');
+}}
+function downloadPKL() {{
+  alert('Binary pickle cannot be produced reliably in browser. Run the Python generator instead (exports/pot.pkl).');
+}}
+function downloadMD() {{
+  const md = `# PoT (client export)\n\nSource: ${{POT.meta.source_share_url}}\n\nSee the full generator output for rich tables.`;
+  downloadBlob('pot.md', md, 'text/markdown');
+}}
+function downloadXLSX() {{
+  alert('Real .xlsx requires the server-side generator (openpyxl). The CSV/JSON from here can be imported into Excel.');
+}}
+
+// Keyboard: / focuses filter
+document.addEventListener('keydown', e => {{
+  if (e.key === '/' && document.activeElement.tagName === 'BODY') {{
+    e.preventDefault();
+    const f = document.getElementById('tagFilter') || document.getElementById('timelineFilter');
+    if (f) f.focus();
+  }}
+}});
+console.log('%c[PoT] Interactive explorer ready. Data embedded from pot.json', 'color:#555');
+</script>
+</body>
+</html>

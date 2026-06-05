@@ -30,6 +30,7 @@ featured_templates/
 6. comic-book
 7. object-remover
 8. product-showcase
+8b. holo-skull-badge (custom — Product Showcase framing for holographic skull/bone/skeleton ancestor ID badge reveals using ancestry lineage data; turnkey for digital playing card decks). Open `holo-skull-badge/holo-viewer.html` to browse the assets, videos, lineage data, and prompt.
 9. glossy-product-shot
 10. 80s-anime
 11. watercolor-portrait
@@ -95,3 +96,26 @@ Run `ls -d */ | grep -v inputs` to see current template folders.
 See templates.json for a scriptable list (name + display name + suggested category hints).
 
 Happy style-sweeping! 🚀
+
+## Batch Runs & Editor Contact Sheet (2026-06-02)
+
+This directory now contains a full batch run across all 23 featured templates using the master watercolor reference character (rugged man, top knot, silver beard, glasses, denim + camo).
+
+- `batch-runs/FT-2026-0602-prepare.txt` — Complete ready-to-paste `image_edit` + video prompts for the entire batch (from `python ../sweep.py prepare --source featured`).
+- `batch-runs/FT-2026-0602-metadata.json` — Per-template timing (seconds), cost factor (relative), image/video counts, status, and aggregates (total time ~6min, ~29× cost factor, 25+ outputs in this run).
+- `proof-sheet.html` — The repeatable photographer’s contact sheet / Vogue-style editorial proof sheet. Open in any browser. Film negative aesthetic + editor comment fields + exportable JSON log for feeding feedback back to Grok or other users.
+
+**How to reuse / repeat:**
+1. Drop a new reference photo in `inputs/`.
+2. `python ../sweep.py prepare --source featured -i inputs/your.jpg -p "your base description..."`
+3. Run the suggested `image_edit` calls (or ask Grok "run the full featured batch").
+4. `python make_proof_sheet.py` — regenerates `proof-sheet.html` with fresh thumbs, times, and the new editor notes area.
+
+The proof sheet is deliberately designed as a portable artifact: copy the whole `featured_templates/` tree (or just the HTML + the relevant `*/img/` folders) into new projects. The editor JSON export is perfect context for the next Grok session ("Here is the marked-up proof sheet...").
+
+See root `sweep.py` for the unified version that also sweeps the extended style_presets/.
+
+**Current batch aggregates (as of last make_proof_sheet.py run):**
+- Total development time: ~362s
+- Images produced: 25 (bases + developed proofs)
+- Est. relative cost factor: 29.1×
